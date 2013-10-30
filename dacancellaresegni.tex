@@ -1,0 +1,171 @@
+\documentclass[a4paper,oneside]{book}
+\usepackage[italian]{babel}
+\selectlanguage{italian}
+%\usepackage{cmap}%
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[frenchstyle]{kpfonts}
+\usepackage{microtype}
+\usepackage{bm}
+\usepackage[
+top=1.8cm, 
+bottom=1.8cm,
+left=1.5cm, right=1.5cm,
+paper=a4paper,%
+%centering,%
+pdftex,%
+%rfvcentering,%
+%marginratio=1:1
+]{geometry}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes,arrows}
+\tikzstyle{decision} = [diamond, draw, text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+
+
+\pagestyle{empty}
+\usepackage{graphicx}%
+\pdfcompresslevel=9%
+
+\usepackage{float}
+\usepackage{booktabs}  %gestione tabelle di qualità
+\usepackage{array}
+\newcolumntype{L}{>{$\displaystyle}l<{$}}
+\newcolumntype{C}{>{$\displaystyle}c<{$}}
+\newcolumntype{R}{>{$\displaystyle}r<{$}}
+\newcolumntype{T}{>{\centering\arraybackslash}p{1em}} 
+\newcolumntype{W}{>{\sffamily\Large $}c<{$}}
+\usepackage{multirow}
+\usepackage{subfig}
+\usepackage{caption}
+\DeclareCaptionStyle{ruled}{font=small,labelfont=bf,textfont=it}% caption caricato da subfig 
+\usepackage{gn-logic14}
+
+
+\usepackage{amsmath} %
+%\usepackage{empheq}
+%\fi%----------unita di misura
+\usepackage[np,autolanguage]{numprint}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+\listfiles
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{%
+\markboth{\thechapter.\ #1}{\thechapter.\ #1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\lfoot{Finito di stampare il \today  con  \LaTeX}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\addtolength{\headheight}{10.9pt}
+\frenchspacing%
+%--------- Indici localixcxddd  
+\include{simboli_operatori}
+%inizio		
+%\usepackage[bottom,flushmargin]{footmisc}
+%\footnotemargin=1em
+%\interfootnotelinepenalty =10000
+%\makeatletter
+%\let\orig@makefnmark\@makefnmark
+%\def\@makefnmark{\ifinner\hfill\fi\orig@makefnmark\ifinner\thinspace\fi}
+%\makeatother
+%\renewcommand*\hangfootparindent{1em}
+%fine
+\usepackage[pdftex,hyperindex]{hyperref}
+\hypersetup{
+	%bookmarks = true,
+	bookmarksnumbered=false,%nei bookmarks non metto i numeri di capitolo\sezione\sottosezione
+	%unicode = true,
+	pdftoolbar=true,
+	pdfmenubar=true,
+	pdftitle = {Tavole matematiche},
+	pdfauthor = {Claudio Duchi},
+	pdfcreator = {pdfLatex},
+	colorlinks=true,
+	linkcolor=blue,%il colore dei link tipo gli indici
+	citecolor=black,%il colore delle citazioni
+	filecolor=black,%per i file presenti sul pc
+	urlcolor=blue,%per il colore degli url
+	urlbordercolor={1 1 1},
+	linkbordercolor={1 1 1}
+}
+
+\begin{document}
+
+\begin{table}[H]
+\centering
+$
+\begin{array}{lcc}
+\toprule
+operazione&&segno\\
+\midrule
+\bm{-a-b}&&-\\
+\midrule
+\multirow{2}*{$\bm{-a+b}$}&\abs{a}>\abs{b}&-\\
+&\abs{a}<\abs{b}&+\\
+\midrule
+\multirow{2}*{$\bm{+a-b}$}&\abs{a}>\abs{b}&+\\
+&\abs{a}<\abs{b}&-\\
+\midrule
+\bm{+a+b}&&+\\
+\bottomrule
+\end{array}
+$
+\caption{Segno somma algebrica}
+\label{tab:segnosommaalgebrica}
+\end{table}
+
+\begin{table}[H]
+\centering
+$
+\begin{array}{lcc}
+\toprule
+operazione&&segno\\
+\midrule
+\bm{(-a)\cdot(-b)}&&+\\
+\midrule
+\bm{(+a)\cdot(-b)}&&-\\
+\midrule
+\bm{(-a)\cdot(+b)}&&-\\
+\midrule
+\bm{(+a)\cdot(+b)}&&+\\
+\bottomrule
+\end{array}
+$
+\caption{Segno prodotto algebrico}
+\label{tab:segnoprodottoalgebrico}
+\end{table}
+
+\begin{table}[H]
+\centering
+$
+\begin{array}{lcc}
+\toprule
+operazione&&segno\\
+\midrule
+\bm{(-a)\div(-b)}&&+\\
+\midrule
+\bm{(+a)\div(-b)}&&-\\
+\midrule
+\bm{(-a)\div(+b)}&&-\\
+\midrule
+\bm{(+a)\div(+b)}&&+\\
+\bottomrule
+\end{array}
+$
+\caption{Segno divisione algebrica}
+\label{tab:segnodivisioneoalgebrica}
+\end{table}
+
+
+
+
+
+\end{document}

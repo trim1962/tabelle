@@ -1,0 +1,320 @@
+\chapter{Esempi}
+\label{cha:Esempi}
+\minitoc
+\mtcskip                                % put some skip here
+\minilof                                % a minilof
+\mtcskip                                % put some skip here
+\minilot
+\opt{prima}{
+\section{Frazioni numeriche}
+\label{sec:Frazioninumeriche}
+\begin{table}[H]
+	\caption{Trovare la somma di due frazioni con denominatore diverso}
+	\label{tab:Trovaresommaduefrazionidenominatorediverso1}
+\begin{enumerate}
+	\item Prerequisiti 
+\begin{itemize}
+	\item frazioni
+	\item mcm
+	 \item precedenza operazioni
+ \item somma fra frazioni
+\end{itemize}
+  \item Scopo: Determinare la somma fra due frazioni irriducibili
+  \item Testo: Dato $\dfrac{7}{3}+\dfrac{5}{4}$  determinarne la somma.
+  \item Svolgimento: 
+  \begin{enumerate}
+  \item calcolo il $mcm$ fra $3$ e $4$ $mcm(3,4)=12$
+	\item applico la formula per la somma di due frazioni con denominatore diverso\nobs\vref{tab:prodottifrazioni} \[\dfrac{(12\div 3)\cdot 7+(12\div 4)\cdot 5}{12}\]
+	\item Per la regola delle precedenze\nobs\vref{Tab:precedenze} devo fare prima la divisone $12\div 3$ e poi la divisione $12\div 4$
+	\item la somma diviene \[\dfrac{4\cdot 7+3\cdot 5}{12}\]
+	\item Per la regola delle precedenze\nobs\vref{Tab:precedenze} prima devo fare la moltiplicazione $4\cdot 7$ e poi la moltiplicazione $3\cdot 5$
+	\item la somma diviene \[\dfrac{28+15}{12}=\dfrac{43}{12}\]
+\end{enumerate}
+  \end{enumerate}
+\end{table}
+%2
+\begin{table}[H]
+	\caption{Trovare la somma di due frazioni con denominatore diverso}
+	\label{tab:Trovaresommaduefrazionidenominatorediverso2}
+\begin{enumerate}
+	\item Prerequisiti 
+\begin{itemize}
+	\item frazioni
+	\item mcm
+	 \item precedenza operazioni
+ \item somma fra frazioni
+\end{itemize}
+  \item Scopo: Determinare la somma fra due frazioni irriducibili
+  \item Testo: Dato $\dfrac{3}{5}+\dfrac{7}{8}$  determinarne la somma.
+  \item Svolgimento: 
+  \begin{enumerate}
+  \item calcolo il $mcm$ fra $5$ e $8$ $mcm(5,8)=40$
+	\item applico la formula per la somma di due frazioni con denominatore diverso\nobs\vref{tab:prodottifrazioni} \[\dfrac{(40\div 5)\cdot \cdots+(\cdots\div 8)\cdot 5}{12}\]
+	\item Per la regola delle precedenze\nobs\vref{Tab:precedenze} devo fare prima la divisone $40\div 5$ e poi la divisione $\cdots\div 8$
+	\item la somma diviene \[\dfrac{8\cdot 3+5\cdot \cdots}{40}\]
+	\item Per la regola delle precedenze\nobs\vref{Tab:precedenze} prima devo fare la moltiplicazione $8\cdot 3$ e poi la moltiplicazione $5\cdot\cdots$
+	\item la somma diviene \[\dfrac{24+\cdots}{40}=\dfrac{59}{40}\]
+ \end{enumerate}
+  \end{enumerate}
+\end{table}
+\section{Polinomi}
+\label{sec:Polinomi}
+\begin{equation}
+\underbrace{\underbrace{[\overbrace{(a-2b)(a-2b+c)}^{\text{1}}+\overbrace{(3a-2b)(a+b)}^{\text{2}}]}_{\text{3}}(a+2b)}_{\text{4}}
+\label{es:esercizio1}
+\end{equation}
+Per risolvere l'esercizio\nobs\vref{es:esercizio1} inizio a controllare la tavola delle precedenze\nobs\vref{tab:precedenzaparentesi}. Vi sono cinque parentesi tonde. All'interno di esse non vi sono operazioni da eseguire passo alla parentesi quadre. 
+Osservo che fra le parentesi quadre vi sono due moltiplicazioni $(1)$ e $(2)$ e una somma $(3)$ mentre fuori vi è la moltiplicazione $(4)$.
+Controllo la tabella delle precedenze per le operazioni\nobs\vref{tab:precedenzaoperazioni} devo fare prima le moltiplicazioni  $(1)$ e $(2)$ poi la somma $(3)$.
+Inizio con $(1)$ 
+\renewcommand\arraystretch{2}
+\[
+\begin{tabular}{C|C|C|C}
+%
+\bm{a}&+a^2&-2ab&+ac\\
+\hline
+\bm{-2b}&-2ab&+4b^2&-2bc\\
+\hline
+&\bm{a}&\bm{-2b}&\bm{c}\\
+%
+\end{tabular}
+=a^2\overline{-2ab}+ac\overline{-2ab}+4b^2-bc=
+\]
+sommo i monomi simili e ottengo la soluzione di $(1)$ 
+\[=a^2-3ab+ac+2b^2-bc\]
+Continuo con $(2)$  
+\[
+\begin{tabular}{C|C|C}
+%
+\bm{3a}&+3a^2&3ab\\
+\hline
+\bm{-2b}&-2ab&-2b^2\\
+\hline
+&\bm{a}&\bm{b}\\
+%
+\end{tabular}
+=
+3a^2+\overline{3ab}-\overline{2ab}-2b^2=
+\]
+sommo i monomi simili e ottengo la soluzione di $(2)$ 
+ \[=3a^2+ab-2b^2\]
+Per cui $(3)$ diviene
+\[ [\underbrace{a^2-3ab+ac+\cancel{2b^2}-bc}_{\text{1}}+\underbrace{3a^2+ab\cancel{-2b^2}}_{\text{2}}]\]
+\[ [\underbrace{4a^2-2ab+ac-bc}_{\text{3}}]\]
+Resta da fare la moltiplicazione $(4)$ 
+\[\underbrace{[4a^2-2ab+ac-bc](a+2b)}_{\text{4}}\]
+\[
+\begin{tabular}{C|C|C|C|C}
+%
+\bm{a}&4a^3&-2a^2b&a^2c&-abc\\
+\hline
+\bm{2b}&8a^2b&-4ab^2&2abc&-2b^2c\\
+\hline
+&\bm{4a^2}&\bm{-2ab}&\bm{ac}&\bm{-bc}\\
+%
+\end{tabular}
+=4a^3-2a^2b+a^2c-abc+8a^2b-4ab^2+2abc-2b^2c=
+\]
+Sommando i monomi simili
+\[=4a^3+a^2c+6a^2b-4ab^2+abc-2b^2c\]
+\renewcommand\arraystretch{1}
+} %FINE PRIMA
+\opt{secondo}{
+	\section{Circuiti e reti}
+	\label{sec:CircuitieReti}
+	\begin{table}[H]
+		\caption{In un circuito con due resistenze $R_1$ e $R_2$ in parallelo, trovare la formula che da $R_2$ note $R_1$ e $R_{eq}$}
+		\label{tab:Trovarediffangoli}
+		\begin{enumerate}
+			\item Prerequisiti 
+			\begin{itemize}
+				\item mcm
+				\item Equazioni di primo grado
+				\item Resistenze in parallelo
+				\item $\dfrac{1}{R_{eq}}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots+\dfrac{1}{R_n}$			
+			\end{itemize}
+			\item Scopo: Determinare una resistenza note l'altra e la resistenza equivalente in un circuito in parallelo
+			\item Testo: Determinare $R_1$ noti $R_2$ e $R_{eq}$
+			\item Svolgimento: Si usa la formula che da la resistenza equivalente in parallelo.
+			\begin{enumerate}
+				\item $\dfrac{1}{R_{eq}}=\dfrac{1}{R_1}+\dfrac{1}{R_2}+\cdots+\dfrac{1}{R_n}$
+				\item $\dfrac{1}{R_{eq}}=\dfrac{1}{R_1}+\dfrac{1}{R_2}$
+				\item trovo mcm fra $R_1$, $R_2$ e $R_{eq}$
+				\item $\dfrac{R_1\cdot R_2=R_{eq}\cdot (R_1+R_2)}{R_1\cdot R_2\cdot R_{eq}}$
+				\item $R_1\cdot R_2=R_{eq}\cdot (R_1+R_2)$
+				\item $R_1\cdot R_2=R_{eq}\cdot R_1+R_{eq}\cdot R_2$
+				\item $R_1\cdot R_2-R_{eq}\cdot R_1=R_{eq}\cdot R_2$
+				\item $R_1\cdot (R_2-R_{eq})=R_{eq}\cdot R_2$
+				\item $R_1=\dfrac{R_{eq}\cdot R_2}{(R_2-R_{eq})}$
+			\end{enumerate}
+		\end{enumerate}
+	\end{table}
+} % % % % % % % % % % % %FINE SECONDO
+\opt{terzo}{
+\section{Goniometria}
+\label{sec:EsempiGoniometria}
+\begin{table}[H]
+	\caption{Trovare seno coseno tangente cotangente noti seno o coseno.}
+	\label{tab:trovaresencosnoti}
+\begin{enumerate}
+	\item Prerequisiti 
+\begin{itemize}
+	\item I radicali
+	\item Circonferenza goniometrica\index{Circonferenza goniometrica}
+	\item Seno\index{Funzione!Seno}, Coseno\index{Funzione!Coseno}, Tangente\index{Funzione!Tangente}, Cotangente\index{Funzione!Cotangente}
+  \begin {align*}
+	\cos\alpha=\pm\sqrt{1-\sen^2\alpha}\\
+	\sen\alpha=\pm\sqrt{1-\cos^2\alpha}\\
+	\tg\alpha=\dfrac{\sen\alpha}{\cos\alpha}\\
+	\cotg\alpha=\dfrac{1}{\tg\alpha}
+	\end{align*}
+\end{itemize}
+  \item Scopo: Determinare le funzioni goniometriche dato il valore del seno o il coseno di un angolo.
+  \item Testo: Dato $\sen\alpha=\dfrac{3}{5}$ con l'angolo $\alpha$ tale che $\ang{90}<\alpha<\ang{180}$ determinare: coseno, tangente e cotangente di $\alpha$
+  \item Svolgimento: Si inizia con il determinare il coseno di un angolo successivamente la tangente e per finire la cotangente, quantità che possiamo conoscere noti seno e coseno. 
+  \begin{enumerate}
+	\item coseno: Dato che il coseno di un angolo è un numero relativo bisogna definire un segno ed un modulo
+	\begin{enumerate}
+	\item segno: Per valori dell'angolo  $\ang{90}<\alpha<\ang{180}$, secondo quadrante, il coseno è negativo. 
+	\item modulo: $\cos\alpha=-\sqrt{1-\sen^2\alpha}=-\sqrt{1-\left(\dfrac{3}{5}\right)^2}=-\sqrt{1-\dfrac{9}{25}}=-\sqrt{\dfrac{25-9}{25}}=-\sqrt{\dfrac{16}{25}}=-\dfrac{4}{5}$
+\end{enumerate}
+	\item tangente:$\tg\alpha=\dfrac{\sen\alpha}{\cos\alpha}=\dfrac{\dfrac{3}{5}}{-\dfrac{4}{5}}=\dfrac{3}{5}\cdot\left(-\dfrac{5}{4} \right)=-\dfrac{3}{4}$
+  \item cotangente:$\cotg\alpha=\dfrac{1}{\tg\alpha}=\dfrac{1}{-\dfrac{3}{4}}=-\dfrac{4}{3}$
+\end{enumerate}
+ \end{enumerate}
+\end{table}
+%\clearpage
+\begin{table}[H]
+	\caption{Trovare seno coseno nota la tangente}
+	\label{tab:sommadifangoli}
+	\begin{enumerate}
+		\item Prerequisiti 
+		\begin{itemize}
+			\item I radicali
+			\item Circonferenza goniometrica
+			\item Seno, Coseno, Tangente, Cotangente
+			\begin {align*}
+			\cos\alpha=\pm\dfrac{1}{\sqrt{1+\tg^2\alpha}}\\
+			\sen\alpha=\pm\dfrac{\tg\alpha}{\sqrt{1+\tg^2\alpha}}\\
+			\sen\alpha=\cos\alpha\cdot\tg\alpha\\
+			\tg\alpha=\dfrac{1}{\cotg\alpha}
+		\end{align*}
+	\end{itemize}
+	\item Scopo: Determinare le funzioni goniometriche dato il valore della tangente di un angolo.
+	\item Testo: Dato $\cotg\alpha=\dfrac{2}{5}$ con l'angolo $\alpha$ tale che $\ang{180}<\alpha<\ang{270}$ determinare: coseno e seno di $\alpha$
+	\item Svolgimento: Nell'esercizio non è nota la tangente dell'angolo quindi inizio a trovare la tangente dell'angolo, poi si passa al coseno infine al seno di un angolo.
+	\begin{enumerate}
+		\item tangente: $\tg\alpha=\dfrac{1}{\cotg\alpha}=\dfrac{1}{\dfrac{2}{5}}=\dfrac{5}{2}$
+		\item coseno: Dato che il coseno di un angolo è un numero relativo bisogna definire un segno ed un modulo.
+		\begin{enumerate}
+			\item segno: Per valori dell'angolo  $\ang{180}<\alpha<\ang{270}$, terzo quadrante, il coseno è negativo. 
+			\item modulo:
+			\begin{align*}
+			\cos\alpha&=-\dfrac{1}{\sqrt{1+\tg^2\alpha}}
+			=-\dfrac{1}{\sqrt{1+\left(\dfrac{5}{2}\right)^2}}=-\dfrac{1}{\sqrt{1+\dfrac{25}{4}}}
+			=-\dfrac{1}{\sqrt{\dfrac{4+25}{4}}}=-\dfrac{1}{\sqrt{\dfrac{29}{4}}}\\
+			&=-\dfrac{1}{\dfrac{\sqrt{29}}{\sqrt{4}}}=-\dfrac{1}{\dfrac{\sqrt{29}}{2}}=-\dfrac{2}{\sqrt{29}}=-\dfrac{2\sqrt{29}}{29}
+			\end{align*}
+		\end{enumerate}
+		\item seno: per determinare il valore del seno ho due vie: utilizzare il valore del coseno appena determinato o calcolarlo direttamente 
+		\begin{enumerate}
+			\item primo caso: $\sen\alpha=\cos\alpha\cdot\tg\alpha=-\dfrac{2\sqrt{29}}{29}\cdot\dfrac{5}{2}=-\dfrac{5\sqrt{29}}{29}$
+			\item secondo caso: Dato che il seno è un numero relativo bisogna determinarne segno e modulo
+			\begin{enumerate}
+				\item segno:  Per valori dell'angolo  $\ang{180}<\alpha<\ang{270}$, terzo quadrante, il seno è negativo.
+				\item modulo:
+				\begin{align*}
+				\sen\alpha&=-\dfrac{\tg\alpha}{\sqrt{1+\tg^2\alpha}}
+				=\dfrac{\dfrac{5}{2}}{\sqrt{1+\left(\dfrac{5}{2}\right)^2}}
+				=-\dfrac{\dfrac{5}{2}}{\sqrt{1+\dfrac{25}{4}}}
+				=-\dfrac{\dfrac{5}{2}}{\sqrt{\dfrac{4+25}{4}}}
+				=-\dfrac{\dfrac{5}{2}}{\sqrt{\dfrac{29}{4}}}
+				=-\dfrac{\dfrac{5}{2}}{\dfrac{\sqrt{29}}{\sqrt{4}}}\\
+				&=-\dfrac{\dfrac{5}{2}}{\dfrac{\sqrt{29}}{2}}
+				=-\dfrac{5}{2}\dfrac{2}{\sqrt{29}}
+				=-\dfrac{5\sqrt{29}}{29}
+				\end{align*} %$\sen\alpha=-\dfrac{\tg\alpha}{\sqrt{1+\tg^2\alpha}}=\dfrac{\dfrac{5}{2}}{\sqrt{1+\left(\dfrac{5}{2}\right\}}}=-\dfrac{\dfrac{5}{2}}{\sqrt{1+\dfrac{25}{4}}}=-\dfrac{\dfrac{5}{2}}{\sqrt{\dfrac{4+25}{4}}}=-\dfrac{\dfrac{5}{2}}{\sqrt{\dfrac{29}{4}}}=-\dfrac{\dfrac{5}{2}}{\dfrac{\sqrt{29}}{\sqrt{4}}}=-\dfrac{\dfrac{5}{2}}{\dfrac{\sqrt{29}}{2}}=-\dfrac{5}{2}\dfrac{2}{\sqrt{29}}=-\dfrac{5\sqrt{29}}{29}$
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+\end{table}
+\begin{table}[H]
+	\caption{Trovare il seno e il coseno di un angolo come somma di angoli}
+	\label{tab:Trovaresenocosenonotatangenteangolo}
+	\begin{enumerate}
+		\item Prerequisiti 
+		\begin{itemize}
+			\item I radicali
+			\item Circonferenza goniometrica
+			\item Seno, Coseno, Tangente, Cotangente
+			\item Tabella angoli noti
+			\begin {align*}
+%			\cos(\alpha-\beta)=	{}&\cos\alpha\cos\beta+\sen\alpha\sen\beta \\ 
+			\cos(\alpha+\beta)=	{}&\cos\alpha\cos\beta-\sen\alpha\sen\beta \\ 
+%			\sen\left(\alpha-\beta\right)={} &\sen\alpha\cos\beta-\cos\alpha\sen\beta\\
+			\sen\left(\alpha+\beta\right)={}&\sen\alpha\cos\beta+\cos\alpha\sen\beta
+		\end{align*}
+	\end{itemize}
+	\item Scopo: Determinare le funzioni goniometriche di una angolo somma di angoli
+	\item Testo: Determinare il valore di $\cos(\ang{75})$ e di $\sen(\ang{75})$
+	\item Svolgimento: Si usano le formule di somma  del seno e del coseno.
+	\begin{enumerate}
+		\item $\ang{70}=\ang{45}+\ang{30}$
+		\item coseno:
+		\begin{enumerate}
+			\item $\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sen\alpha\sen\beta$
+			\item $\cos(\ang{45}+\ang{30})=\cos\ang{45}\cos\ang{30}-\sen\ang{45}\sen\ang{30}$
+			\item $=\dfrac{\sqrt{2}}{2}\dfrac{\sqrt{3}}{2}-\dfrac{\sqrt{2}}{2}\dfrac{1}{2}$
+			\item $=\dfrac{\sqrt{6}}{4}-\dfrac{\sqrt{2}}{4}=\dfrac{\sqrt{6}-\sqrt{2}}{4}$
+		\end{enumerate}
+		\item seno:
+		\begin{enumerate}
+			\item $\sen\left(\alpha+\beta\right)=\sen\alpha\cos\beta+\cos\alpha\sen\beta$
+			\item $\sen\left(\ang{45}+\ang{30}\right)=\sen\ang{45} \cos\ang{30}+\cos\ang{45}\sen\ang{30} $
+			\item $\dfrac{\sqrt{2}}{2}\dfrac{\sqrt{3}}{2}+\dfrac{\sqrt{2}}{2}$
+			\item $=\dfrac{\sqrt{6}}{4}+\dfrac{\sqrt{2}}{4}=\dfrac{\sqrt{6}+\sqrt{2}}{4}$
+		\end{enumerate}
+	 \end{enumerate}
+\end{enumerate}
+\end{table}
+\begin{table}[H]
+	\caption{Trovare il seno e il coseno di un angolo come differenza di angoli}
+	\label{tab:Trovarediffangoli1}
+	\begin{enumerate}
+		\item Prerequisiti 
+		\begin{itemize}
+			\item I radicali
+			\item Circonferenza goniometrica
+			\item Seno, Coseno, Tangente, Cotangente
+			\item Tabella angoli noti
+			\begin {align*}
+			\cos(\alpha-\beta)=	{}&\cos\alpha\cos\beta+\sen\alpha\sen\beta \\ 
+			%\cos(\alpha+\beta)=	{}&\cos\alpha\cos\beta-\sen\alpha\sen\beta \\ 
+			\sen\left(\alpha-\beta\right)={} &\sen\alpha\cos\beta-\cos\alpha\sen\beta\\
+			%\sen\left(\alpha+\beta\right)={}&\sen\alpha\cos\beta+\cos\alpha\sen\beta
+		\end{align*}
+	\end{itemize}
+	\item Scopo: Determinare le funzioni goniometriche di una angolo somma di angoli
+	\item Testo: Determinare il valore di $\cos(\ang{15})$ e di $\sen(\ang{15})$
+	\item Svolgimento: Si usano le formule di somma  del seno e del coseno.
+	\begin{enumerate}
+		\item $\ang{10}=\ang{45}-\ang{30}$
+		\item coseno:
+		\begin{enumerate}
+			\item $\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sen\alpha\sen\beta$
+			\item $\cos(\ang{45}-\ang{30})=\cos\ang{45}\cos\ang{30}+\sen\ang{45}\sen\ang{30}$
+			\item $=\dfrac{\sqrt{2}}{2}\dfrac{\sqrt{3}}{2}+\dfrac{\sqrt{2}}{2}\dfrac{1}{2}$
+			\item $=\dfrac{\sqrt{6}}{4}+\dfrac{\sqrt{2}}{4}=\dfrac{\sqrt{6}+\sqrt{2}}{4}$
+		\end{enumerate}
+		\item seno:
+		\begin{enumerate}
+			\item $\sen\left(\alpha-\beta\right)=\sen\alpha\cos\beta-\cos\alpha\sen\beta$
+			\item $\sen\left(\ang{45}-\ang{30}\right)=\sen\ang{45} \cos\ang{30}-\cos\ang{45}\sen\ang{30} $
+			\item $\dfrac{\sqrt{2}}{2}\dfrac{\sqrt{3}}{2}-\dfrac{\sqrt{2}}{2}$
+			\item $=\dfrac{\sqrt{6}}{4}-\dfrac{\sqrt{2}}{4}=\dfrac{\sqrt{6}-\sqrt{2}}{4}$
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+\end{table}
+} %FINE TERZO

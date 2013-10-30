@@ -1,0 +1,27 @@
+% Tikz File 'mytikz.tex'
+\documentclass{standalone}
+\input{../Mod_base/grafica}
+
+%\usetikzlibrary{...}
+\begin{document}
+
+	\begin{tikzpicture}[>=triangle  45]
+	\pgfmathsetmacro{\raggio}{2};
+	\coordinate (C) at (0,0);
+	\coordinate (A) at (1.8,2);
+	\coordinate (B) at (2,0);
+	\draw[name path=cc] (C) circle (\raggio);
+	\path [name path=C--A] (C) -- (A);
+	\path [name path=C--B] (C) -- (B);
+	\draw [name intersections={of=cc and C--B,by=M}] (C) -- (M) node[above right]{$A$};
+	\draw [name intersections={of=cc and C--A,by=N}] (C) -- (N) node[above]{$P$};
+	\node(angolo)at(0.3,.3) [label=right:$\alpha$] {};
+	\node(OO)at(-0.5,-.2) [label=right:$O$] {};
+	\node(AA)at(-0.1,2.1) [label=right:$B$] {};
+	\node(BB)at(-0.1,-2.1) [label=right:$D$] {};
+	\node(CC)at(-2.4,.12) [label=right:$C$] {};	
+	\draw [->] (1,0) arc(0:48:1);
+	\draw[->](-2.5,0)--(2.5,0);
+	\draw[->](0,-2.5)--(0,2.5);
+	\end{tikzpicture}
+\end{document}

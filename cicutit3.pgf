@@ -1,0 +1,28 @@
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\begin{tikzpicture}
+  \node (A) at (0,0) {A};
+    \node (B) at (0.5,0) {B};
+    \node (C) at (1,0) {C};
+ \node[not gate US, draw] at ($(A)+(1.8,-1)$) (not1) {};
+\node [not gate US, draw] at ($(A)+(1.8,-1.8)$)(not2) {}; 
+\node [and gate US, draw, logic gate inputs=nn, anchor=input 1]  at ($(not1)+(1,0)$) (and1){};
+\node [and gate US, draw, logic gate inputs=nn, anchor=input 1]  at ($(not2)+(1,0)$) (and2){};
+\node [and gate US, draw, logic gate inputs=nn, anchor=input 1]  at ($(not2)+(1,-.75)$) (and3){};
+\node [or gate US, draw, logic gate inputs=nnn, anchor=input 2]  at ($(and1.output)+(1,-.8)$) (or1){};
+
+\draw(A)|-node[branch] {}(not1);
+\draw(B)|-node[branch] {}(and1.input 2);
+\draw(not1.output)--([xshift=0.3cm]not1.output)|-(and1.input 1);
+
+\draw(A)|-node[branch] {}(not2);
+\draw(C)|-node[branch] {}(and2.input 2);
+\draw(not2.output)--([xshift=0.3cm]not2.output)|-(and2.input 1);
+
+\draw(B)|-node[branch] {}(and3.input 1);
+\draw(C)|-node[branch] {}(and3.input 2);
+\draw(and1.output)--([xshift=0.3cm]and1.output)|-(or1.input 1);
+\draw(and2.output)--([xshift=0.3cm]and2.output)|-(or1.input 2);
+\draw(and3.output)--([xshift=0.3cm]and3.output)|-(or1.input 3);
+ \draw (or1.output) -- ([xshift=0.5cm]or1.output) node[above] {};
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+% Tikz File 'mytikz.tex'
+\documentclass{standalone}
+%\input{../../Mod_base/grafica}
+\input{../Mod_base/grafica}
+\input{simboli_operatori}
+\input{../Mod_base/unita_misura}
+%\usetikzlibrary{...}
+\begin{document}
+\begin{NodesList}
+	\centering
+	\begin{align*}
+		6<&8\AddNode\\
+		6-3<&8-3\AddNode\\ 
+		3<&5\AddNode\\
+	\end{align*}
+	%\tikzset{LabelStyle/.style = {left=0.1cm,pos=0.5,text=red,fill=white}}
+	\LinkNodes{sommo $-3$}%    
+	\LinkNodes{\begin{minipage}[h]{3cm}
+			La disuguaglianza è ancora verificata
+		\end{minipage}}%
+	\end{NodesList}
+\end{document}

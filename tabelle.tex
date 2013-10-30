@@ -1,0 +1,213 @@
+ %\documentclass[a4paper,oneside,openany]{book}
+\input{../Mod_base/base}
+\input{../Mod_base/grafica}
+\pgfplotsset{compat=1.8}
+%\newcommand{\stampa}[3]{%
+%	\ifcase#1\relax\or
+%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[above] {$#3$};\or
+%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[above right] {$#3$};\or
+%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[above left] {$#3$};\or
+%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[below] {$#3$};\or
+%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[below right] {$#3$};\or
+%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[below left] {$#3$};%
+%	\fi
+%}
+%\newcommand{\stampAng}[4]{%
+%	\ifcase#1\relax\or
+%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[above] {$#4$};\or
+%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[above right] {$#4$};\or
+%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[above left] {$#4$};\or
+%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[below] {$#4$};\or
+%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[below right] {$#4$};\or
+%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[below left] {$#4$};%
+%	\fi
+%}
+%\usetikzlibrary{external}
+%\usepackage[mode=buildnew,subpreambles=true]{standalone}
+\input{../Mod_base/matematica}
+\input{../Mod_base/tabelle}
+\DeclareCaptionFormat{grafico}{\textbf{Grafico \thefigure}#2#3}
+\DeclareCaptionFormat{esempio}{\textbf{Esempio \thefigure}#2#3}
+\newcolumntype{L}{>{$\displaystyle}l<{$}}
+\newcolumntype{C}{>{$\displaystyle}c<{$}}
+\newcolumntype{R}{>{$\displaystyle}r<{$}}
+\newcolumntype{T}{>{\centering\arraybackslash}p{1em}} 
+\newcolumntype{W}{>{\sffamily\Large $}c<{$}}
+%\newcolumntype{N}[1]{>{\centering\rule[-1mm]{0pt}{4.75mm}}m{#1}}
+\newcolumntype{M}[1]{>{\centering}p{#1}}
+\newcommand\pilH{\rule{0pt}{2.5ex}}
+\newcommand\pilD{\rule[-1ex]{0pt}{0pt}}
+\newlength{\gnat}
+\newlength{\gnam}
+\input{../Mod_base/rifIndici}
+\makeindex[options=-s ../Mod_base/oldclaudio.sti]
+\input{../Mod_base/pagina}
+\input{../Mod_base/date}
+\input{../Mod_base/loghi}
+\input{../Mod_base/unita_misura}
+\newcommand{\function}[5]{%
+  \begin{array}{@{}r<{{}}@{}c@{}c@{}l@{}}
+  #1\colon & #2 & {}\to{}     & #3 \\
+           & #4 & {}\mapsto{} & #5
+  \end{array}}
+\newcommand{\nobs}{\nobreakspace}
+%per le semplificazioni
+\usepackage{cancel}
+
+%Simboli logici
+\usepackage{gn-logic14}
+\newcommand{\tabincludegraphics}[2][]{%
+  $\vcenter{\hbox{\includegraphics[#1]{#2}}}$}
+\newcommand{\tabincludestandalone}[2][]{%
+	$\centering\vcenter{\hbox{\includestandalone[#1]{#2}}}$}
+
+%--------- Indici localixcxddd  
+\include{simboli_operatori}
+\include{macro_xlop} % scomposizione in fattori primi e operazioni
+\getprime{20}%
+% % % % % % % % % % % % % % % % % braille
+\usepackage[puttinydots]{braille}
+
+\newcommand{\mytable}[1]{%
+	\enskip\begin{tabular}[t]{r|l} 
+		\hline #1 \hline
+	\end{tabular}\enskip}
+
+% % % % % % % % % % % % % % % % % % % % % %
+
+\newenvironment{truthtable}[2][3]
+{\begin{tabular}{*{#1}{c}}
+	\multicolumn{1}{l}{#2}\\}
+	{\end{tabular}}
+	\newcommand{\cport}[1]{%
+		\begin{circuitikz}
+			\draw (0,0) node [#1 port] {};
+		\end{circuitikz}} 
+
+
+%todo inizio
+\usepackage[italian,colorinlistoftodos]{todonotes}
+%\usepackage{todonotes}
+
+\newcommand{\bassapriorita}[1]{\todo[color=green!40]{#1}}
+\newcommand{\mediapriorita}[1]{\todo[color=blue!40]{#1}}
+\newcommand{\altapriorita}[1]{\todo[color=red!40]{#1}}
+%todofine
+
+
+
+
+%\usepackage{imakeidx}
+%\makeindex[options=-s oldclaudio.sti]
+\newcommand{\prodcroce}[4]{%
+	\begin{tikzpicture}[thick]
+	\def\x{2.8mm}
+	\def\h{2.4mm}
+	\def\dist{12mm}%1cm
+	\node at (0,0) {$\displaystyle \frac{#1}{#2}$};
+	\node at (\dist,0) {$\displaystyle \frac{#3}{#4}$};
+	\node at (2.5*\dist,0) {$#1\cdot #4=#2\cdot #3$};
+	% collegamento termini
+	\draw[-stealth] (\x, \h)--(\dist-\x,-\h);
+	\draw[-stealth] (\x,-\h)--(\dist-\x, \h);
+	\end{tikzpicture}%
+}
+% % % % % % % loghi
+%\usepackage{guit}
+%\usepackage[copyright]{ccicons}
+%%\usepackage{metalogo}
+% % % % % % % %
+% % % % % % % % % % % % % % % % % % % %TITOLO % % % % % % % % % % % % % % % % % % % % % % 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % %gestione data % % % % % % % % % % % % %
+%\usepackage{datetime}
+%\longdate
+%\settimeformat{hhmmsstime}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%\usepackage{cleveref}
+
+\listfiles
+ \usepackage[italian,checkfiles]{minitoc}
+ \usepackage{placeins} 
+ %\setcounter{secnumdepth}{3}     % fino a che livello le sezioni saranno numerate
+% \setcounter{tocdepth}{3}       % profondit� indice globale
+% \setcounter{minitocdepth}{3}
+ \begin{document}
+\frontmatter
+\begin{titlepage}
+	
+	\begin{center}
+		
+		
+		% Upper part of the page
+		\input{../Deposito_loghi/Lgrande}\\[1cm]    
+		
+		\textsc{\LARGE Claudio Duchi}\\[1.5cm]
+		
+		%\textsc{\Large Final year project}\\[0.5cm]
+		
+		
+		% Title
+		\HRule \\[0.4cm]
+		{ \huge \bfseries Tabelle matematica}\\[0.4cm]
+		\opt{prima}{{\bfseries PRIMO}\\[0.4cm]}
+		\opt{secondo}{{\bfseries SECONDO}\\[0.4cm]}
+		\opt{terzo}{{\bfseries TERZO}\\[0.4cm]}
+		\opt{quarto}{{\bfseries QUARTO}\\[0.4cm]}
+		\opt{extra}{{\bfseries EXTRA}\\[0.4cm]}
+		\HRule \\[1.5cm]
+		
+		% Author and supervisor
+		%		\begin{minipage}{0.4\textwidth}
+		%		%	\begin{flushleft} \large
+		%				\emph{Author:}\\
+		%				John \textsc{Smith}
+		%		%	\end{flushleft}
+		%		\end{minipage}
+		%		\begin{minipage}{0.4\textwidth}
+		%			\begin{flushright} \large
+		%				\emph{Supervisor:} \\
+		%				Dr.~Mark \textsc{Brown}
+		%			\end{flushright}
+		%		\end{minipage}
+		
+		\vfill
+		
+		% Bottom of the page
+		{\large \today $-$\currenttime}
+		
+	\end{center}
+	
+\end{titlepage}
+\input{../Deposito_loghi/copyright}
+\dominitoc
+\dominilof                  % centers title of minilof's
+\dominilot
+\tableofcontents 
+\mtcaddchapter
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\numberline{}\listtablename}
+\listoftables
+\mtcaddchapter
+\adjustptc
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
+\listoffigures
+\mtcaddchapter
+%\todototoc
+\cleardoublepage
+%\addcontentsline{toc}{chapter}{\numberline{}\listoftodos}
+\todototoc
+\listoftodos
+\mainmatter%
+\opt{prima}{\input{prima}}
+\opt{secondo}{\input{secondo}}
+\opt{terzo}{\input{terzo}}
+\opt{quarto}{\input{quarto}}
+\opt{extra}{\input{extra}}
+
+\input{../Deposito_loghi/MezziUsati}
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+\end{document}

@@ -1,0 +1,86 @@
+\chapter{Filtri Passivi primo ordine}
+\label{cha:Filtripassiviprimoord}
+\minitoc
+\mtcskip                                % put some skip here
+\minilof                                % a minilof
+\mtcskip                                % put some skip here
+\minilot
+\begin{table}
+\begin{minipage}[t]{0.6\textwidth}
+      \centering
+       \begin{align*}
+A&=\dfrac{V_{u}}{V_{i}}
+&=\dfrac{R}{R+\dfrac{1}{J2\pi fC}}=\\
+&=\dfrac{J2\pi fRC}{1+J2\pi cfRC}=
+&=\dfrac{1}{1+\dfrac{1}{J2\pi fRC}}\\
+f_{c}&=\dfrac{1}{2\pi RC}
+        \end{align*}
+       %\caption{Formule}
+     \end{minipage}\hfill
+     \begin{minipage}{0.4\textwidth}
+      \centering
+       \includegraphics{filtro_PA_CR}
+       %\caption{Passa alto}
+     \end{minipage}
+%\caption{Filtro passa alto}
+%\end{table}
+%\begin{table}[t]
+\begin{minipage}[t]{0.4\textwidth}
+      \centering
+       \begin{align*}
+A&=\dfrac{V_{u}}{V_{i}}&=\dfrac{J2\pi fL}{R+J2\pi cfL}=\\
+&=\dfrac{J2\pi f\dfrac{L}{R}}{1+J2\pi f\dfrac{L}{R}}
+&=\dfrac{1}{1+\dfrac{1}{J2\pi f\dfrac{L}{R}}}\\
+f_{c}&=\dfrac{1}{2\pi \dfrac{L}{R}}\\
+        \end{align*}
+       %\caption{Formule}
+     \end{minipage}\hfill
+     \begin{minipage}{0.4\textwidth}
+      \centering
+       \includegraphics{filtro_PA_RL}
+      % \caption{Passa alto}
+     \end{minipage}
+\begin{minipage}{0.4\textwidth}
+      \centering
+       \includegraphics{fig09}
+      % \caption{Passa alto}
+     \end{minipage}
+\caption{Filtro passa alto}
+\end{table}
+\begin{table}
+\begin{minipage}{0.4\textwidth}
+      \centering
+       \begin{align*}
+A&=\dfrac{V_{u}}{V_{i}}
+&=\dfrac{\dfrac{1}{J2\pi fC}}{R+\dfrac{1}{J2\pi fC}}\\
+&=\dfrac{1}{1+J2\pi fRC}\\
+f_{c}&=\dfrac{1}{2\pi RC}
+        \end{align*}
+       %\caption{Formule}
+     \end{minipage}\hfill
+     \begin{minipage}{0.5\textwidth}
+      \centering
+       \includegraphics{filtro_PB_RC}
+       %\caption{Passa basso}
+     \end{minipage}
+%\caption{Filtro passa basso}
+%\end{table}
+%\begin{table}[t]
+\begin{minipage}{0.4\textwidth}
+      \centering
+
+       \begin{align*}
+A&=\dfrac{V_{u}}{V_{i}}
+&=\dfrac{R}{R+J2\pi fL}=\\
+&=\dfrac{1}{1+\dfrac{1}{1+J2\pi f\dfrac{L}{R}}}\\
+f_{c}&=\dfrac{1}{2\pi \dfrac{L}{R}}
+        \end{align*}
+       %\caption{Formule}
+     \end{minipage}\hfill
+     \begin{minipage}{0.4\textwidth}
+      \centering
+       \includegraphics{filtro_PB_LR}
+       %\caption{Passa Basso}
+     \end{minipage}
+\caption{Filtro passa basso}
+\end{table}
