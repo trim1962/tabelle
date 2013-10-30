@@ -372,12 +372,47 @@ Possiamo quindi dire che il seno
 \label{sec:RelazioniFondamentali}
 \subsection{Seno e coseno}
 \label{sec:RelazioniFondamentaliSenoCoseno}
-\begin{definizione}[Relazione fondamentale goniometria]\index{Relazione!fondamentale goniometria}\index{Funzione!Seno}\index{Funzione!Coseno}
+\begin{teorema}[Relazione fondamentale goniometria]\index{Relazione!fondamentale goniometria}\index{Funzione!Seno}\index{Funzione!Coseno}
 Dato un angolo $\alpha$ allora vale quanto segue:
 \begin{equation}
 \cos^2\alpha+\sen^2\alpha=1\label{eqn:RelazioneFondamentaleTrigonometria1}
 \end{equation}
-\end{definizione}
+\end{teorema}
+\begin{figure}
+	\centering
+\begin{tikzpicture}[>=triangle  45]
+% draw the coordinates
+
+\pgfmathsetmacro{\raggio}{4};
+\pgfmathsetmacro{\mraggio}{\raggio/6};
+
+\pgfmathsetmacro{\sraggio}{1.9*\raggio};
+\draw[->] (0,-\raggio/2-\mraggio/2) -- (0,\raggio+\mraggio) node[above,fill=white] {$y$};
+\draw[->] (-\raggio/2-\mraggio/2,0) -- (\raggio+\mraggio,0) node[right,fill=white] {$x$};
+\node(OO)at(0,0) [label= above left:$O$] {};
+\foreach \x/ \y/\arco  in {
+	55/5/{\alpha}%,
+}
+{
+	\draw[->] (\sraggio/\y,0 ) arc (0:\x:\sraggio/\y);% node[above ] {$\arco$};
+	\node (aa) at   ({cos(\x/2} , {sin(\x/2} ) [label=above:$\arco$] {};
+	\draw(0,0) -- ({\raggio*cos(\x} , {\raggio*sin(\x})node[midway ]{a} node [above]{P};
+	\draw[dashed] ({\raggio*cos(\x} , 0 ) -- ({\raggio*cos(\x} , {\raggio*sin(\x} )node[midway ]{c}  ;
+	\draw [dashed](0, {\raggio*sin(\x} ) -- ({\raggio*cos(\x} , {\raggio*sin(\x} );
+	\draw[dashed] (0 , 0 ) -- (0 , {\raggio*sin(\x} )node [above]{K};
+	\draw [dashed](0, 0 ) -- ({\raggio*cos(\x} , 0 )node[midway ]{b} node [above]{H};;
+}
+\draw plot[domain=0:90,smooth] ({\raggio*cos(\x} , {\raggio*sin(\x});
+\end{tikzpicture}
+\caption{Relazione fondamentale goniometria}
+\label{fig:relFondGonio}
+\end{figure}
+\begin{proof}
+	Consideriamo la figura\nobs\vref{fig:relFondGonio} per il triangolo POH vale il teorema di Pitagora\index{Teorema!Pitagora} \[a^2=b^2+c^2\] Dato che la circonferenza è una circonferenza goniometrica\[a=1\] \[c=\sen\alpha\]
+	\[b=\cos\alpha\]
+	otteniamo
+	\[\cos^2\alpha+\sen^2\alpha=1 \]
+\end{proof}
 Dalla relazione\nobs\vref{eqn:RelazioneFondamentaleTrigonometria1} è possibile ottenere le seguenti
 \begin{align}
 &\cos^{2}\alpha={}1-\sen^{2}\alpha\\
