@@ -1,0 +1,14 @@
+*.dll
+*.log
+*.toc
+*.aux
+*.gz
+*.idx
+*.ind
+*.lof
+*.lot
+*.maf
+*.mlf*
+*.mtc
+*.mtc*
+*.toc
