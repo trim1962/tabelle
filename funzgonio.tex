@@ -304,14 +304,14 @@ Al variare dell'angolo varia anche il valore della tangente\index{Funzione!Tange
 \end{description}
 Analogo discorso per angoli di ampiezza  maggiore di un angolo  piatto come nella figura~\vref{fig:AndamentoTangente2}.
 \begin{description}
-	\item [$\alpha_4$] L'angolo è piatto. Il  $P_4$ incontra l'asse delle ordinate nel punto $(-1;0)$. In questo  $\tg\alpha_4$ vale zero.
-	\item [$\alpha_5$] L'angolo è compreso tra \ang{180} e \ang{270}. Il prolungamento del raggio incontra la retta tangente  nel primo quadrante. Quindi $\tg\alpha_2$ è positivo.
+	\item [$\alpha_4$] L'angolo è piatto. Incontra l'asse delle ordinate nel punto $(-1;0)$. In questo  $\tg\alpha_4$ vale zero.
+	\item [$\alpha_5$] L'angolo è compreso tra \ang{180} e \ang{270}. Il prolungamento del raggio incontra la retta tangente  nel primo quadrante. Quindi $\tg\alpha_5$ è positivo.
 	\item [$\alpha_6$] L'angolo è di duecentosettanta gradi. Il prolungamento del raggio non incontra la retta  tangente. In questo caso  $\tg\alpha_6$ non esiste. 
 	\item [$\alpha_7$] L'angolo è compreso tra \ang{180} e \ang{360}. Il prolungamento del raggio incontra la retta tangente nel quarto quadrante. Quindi $\tg\alpha_7$ è negativo.
 	\item [$\alpha_8$] L'angolo è di trecentosessanta gradi. Il punto ha ordinata zero quindi  $\tg\alpha_8=0$.
 \end{description}
 Per angoli superiori a \ang{360} otteniamo gli stessi casi illustrati in precedenza. 
-Possiamo quindi dire che il seno
+Possiamo quindi dire che la tangente:
 \begin{enumerate}
 	\item è illimitata.
 	\item è periodica, di periodo pari a \ang{180} o $\pi$
@@ -346,6 +346,28 @@ Possiamo quindi dire che il seno
 \end{definizione}
 \subsection{Andamento Cotangente}
 \label{sec:AndamentoCotangente}
+Al variare dell'angolo varia anche il valore della cotangente\index{Funzione!Cotangente}, consideriamo la figura\nobs\vref{fig:AndamentoCotangente1}. Supponiamo di far variare l'angolo $\alpha$ da zero a centottanta gradi, quindi che $\ang{0}\leq\alpha\leq\ang{180}$ o se utilizziamo i radianti $0\leq\alpha\leq\pi$. 
+\begin{description}
+	\item[$\alpha_0$] L'angolo ha ampiezza zero. Il raggio non incontra la retta tangente. In questo caso  la cotangente  dell'angolo $\alpha$ cioè $\cotg\alpha_0$  non esiste.
+	\item [$\alpha_1$] l'angolo è compreso fra zero e novanta gradi, il prolungamento del raggio  incontra la retta nel punto $T_1$. La cotangente di $\alpha_1$ è un numero positivo.
+	\item [$\alpha_2$] L'angolo  è retto. In questo caso il prolungamento del raggio incontra la parallela all'asse $x$. in $T_2$. In questo    $\cotg\alpha_2$ vale zero. 
+	\item [$\alpha_3$]  L'angolo è ottuso. Il prolungamento del raggio incontra le retta in $T_3$  con valori dell'ascissa negativi. Quindi $\tg\alpha_3$ è negativo.
+	\item [$\alpha_4$] L'angolo  è  piatto. Il  prolungamento non incontra la retta tangente. In questo  $\cotg\alpha_4$ non esiste.
+\end{description}
+Analogo discorso per angoli di ampiezza  maggiore di un angolo  piatto come nella figura~\vref{fig:AndamentoCotangente2}.
+\begin{description}
+	\item [$\alpha_4$] L'angolo  è  piatto. Il  prolungamento non incontra la retta tangente. In questo  $\cotg\alpha_4$ non esiste.
+	\item [$\alpha_5$] L'angolo è compreso tra \ang{180} e \ang{270}. Il prolungamento del raggio incontra la retta tangente  nel primo quadrante. Quindi $\cotg\alpha_5$ è positivo.
+	\item [$\alpha_6$] L'angolo è di duecentosettanta gradi.  In questo caso il prolungamento del raggio incontra la parallela all'asse $x$. in $T_6$. In questo    $\tg\alpha_6$ vale zero. 
+	\item [$\alpha_7$] L'angolo è compreso tra \ang{180} e \ang{360}. Il prolungamento del raggio incontra la retta tangente nel secondo quadrante. Quindi $co\tg\alpha_7$ è negativo.
+	\item [$\alpha_8$] L'angolo è di trecentosessanta gradi. Il raggio non incontra la retta tangente. In questo caso  la cotangente  dell'angolo $\alpha_8$ cioè $\cotg\alpha_8$  non esiste.
+\end{description}
+Per angoli superiori a \ang{360} otteniamo gli stessi casi illustrati in precedenza. 
+Possiamo quindi dire che cotangente:
+\begin{enumerate}
+	\item è illimitata.
+	\item è periodica, di periodo pari a \ang{180} o $\pi$
+\end{enumerate} 
 \begin{figure}
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/cotangenteandamento1}
@@ -356,7 +378,10 @@ Possiamo quindi dire che il seno
 	\includestandalone[width=8.5cm]{funzgonioTikz/cotangenteandamento2}
 	\captionof{figure}{Andamento cotangente $\ang{180}<\alpha<\ang{360}$}\label{fig:AndamentoCotangente2}
 \end{figure}%
-\altapriorita{Inserire testo}
+
+
+\section{Relazioni fondamentali}
+\label{sec:RelazioniFondamentali}
 \begin{table}[tbp]
 	\centering
 	\renewcommand{\arraystretch}{2}
@@ -378,8 +403,7 @@ Possiamo quindi dire che il seno
 	\label{tab:SenoCosenoTangenteCotangente}
 \end{table}
 \renewcommand{\arraystretch}{1}
-\section{Relazioni fondamentali}
-\label{sec:RelazioniFondamentali}
+
 \subsection{Seno e coseno}
 \label{sec:RelazioniFondamentaliSenoCoseno}
 \begin{teorema}[Relazione fondamentale goniometria]\index{Relazione!fondamentale goniometria}\index{Funzione!Seno}\index{Funzione!Coseno}
