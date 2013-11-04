@@ -458,7 +458,46 @@ Dalla relazione\nobs\vref{eqn:RelazioneFondamentaleTrigonometria1} è possibile 
 &\sen^{2}\alpha={}1-\cos^{2}\alpha \\
 &\sen^{2}\alpha={}\pm\sqrt{1-\cos^{2}\alpha}
 \end{align}
-Nella sezione\nobs\vref{sec:EsempiGoniometria} vi sono esempi per l'uso di queste formule
+Nella sezione\nobs\vref{sec:EsempiGoniometria} vi sono esempi per l'uso di queste formule. 
+
+Supponiamo di voler trovare il valore del coseno di un angolo noto il seno. Per esempio poniamo 
+\begin{align*}
+\sen\alpha&{}=\dfrac{3}{5}\\
+\cos\alpha&=\pm\sqrt{1-\sen^2\alpha}\\
+&=\pm\sqrt{1-\left(\dfrac{3}{5}\right)^2}\\
+&=\pm\sqrt{1-\dfrac{9}{25}}\\
+&=\pm\sqrt{\dfrac{25-9}{25}}\\
+&=\pm\sqrt{\dfrac{16}{25}} \\
+&=\pm\dfrac{4}{5} 
+\end{align*}
+Geometricamente il doppio segno davanti alla radice è spiegabile in questo modo:
+\begin{enumerate}
+	\item Riporto $M(0,\dfrac{3}{5})$\nobs\vref{fig:CosenoNotoSeno1}
+	\item A $M$ corrispondono due punti sulla circonferenza $Q$ e $P$\nobs\vref{fig:CosenoNotoSeno2}
+	\item $P$ e $Q$ permettono di costruire due angoli $\alpha$ e $\beta$\nobs\vref{fig:CosenoNotoSeno3}
+	\item a $P$ e $Q$ corrispondono due valori opposti $x_1$ e $x_2$\nobs\vref{fig:CosenoNotoSeno4}
+	\end{enumerate}
+e quini è spiegato il doppio segno.
+\begin{figure}
+	\begin{subfigure}[b]{.5\linewidth}
+		\caption{}\centering\includestandalone[width=0.6\textwidth]{funzgonioTikz/CosenoNotoSeno1}
+		\label{fig:CosenoNotoSeno1}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering\includestandalone[width=0.6\textwidth]{funzgonioTikz/CosenoNotoSeno2}
+			\caption{}\label{fig:CosenoNotoSeno2}
+	\end{subfigure}
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering\includestandalone[width=0.6\textwidth]{funzgonioTikz/CosenoNotoSeno3}
+			\caption{}\label{fig:CosenoNotoSeno3}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering\includestandalone[width=0.6\textwidth]{funzgonioTikz/CosenoNotoSeno4}
+			\caption{}\label{fig:CosenoNotoSeno4}
+	\end{subfigure}
+	\captionof{figure}{Coseno noto seno}
+	\label{tab:CosenoNotoSenoEs1}
+\end{figure}
 \subsection{Tangente cotangente}
 \label{sec:TangenteCotangente}
 \begin{definizione}[Tangente Cotangente]
