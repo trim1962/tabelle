@@ -86,7 +86,7 @@ Convertiamo $7,42^{\circ}$ in gradi minuti e secondi:
 	&=\ang{7;25;}+\ang{;0,2;}\\
 	&=\ang{7;25;}+0,2\cdot\ang{;1;}\\
 	&=\ang{7;25;}+0,2\cdot\ang{;;60}\\
-	&=\ang{7;25;12}\\
+	&=\ang{7;25;12}
 \end{align*} 
 \end{esempio}
 \subsection{Radianti}
@@ -101,7 +101,7 @@ Data una circonferenza di raggio $r$ e  un angolo $\alpha$ con il vertice nel ce
 \end{figure}
 Avremo quindi che un angolo ha l'ampiezza di un radiante\index{Radiante} se l'arco di circonferenza $l$ è uguale al raggio $r$.
 
-In un angolo giro\index{Angolo!giro} l'arco è lungo quanto la circonferenza. La sua misura in radianti è \[\rho=\dfrac{2\pi r}{r}=2\pi\]. 
+In un angolo giro\index{Angolo!giro} l'arco è lungo quanto la circonferenza. La sua misura in radianti è \[\rho=\dfrac{2\pi r}{r}=2\pi\]
 
 Un angolo piatto, meta di un giro,  misura  \[\rho=\pi\]\index{Angolo!piatto} e  un angolo retto\index{Angolo!retto} misura \[\rho=\dfrac{\pi}{2} \] 
 
@@ -128,7 +128,7 @@ Quanto corrisponde in gradi un radiante
 	Quanto corrisponde in radianti un grado
 	\begin{align*}
 	\rho&=\dfrac{\pi}{\ang{180}}\alpha \\
-	&==\dfrac{\pi}{\ang{180}}\cdot 1\\
+	&=\dfrac{\pi}{\ang{180}}\cdot 1\\
 	&\simeq\ang{0.01745}\cdot 1\\
 	&\simeq\ang{0.017}
 	\end{align*} 
@@ -402,9 +402,9 @@ Possiamo quindi dire che cotangente:
 \label{sec:RelazioniFondamentaliSenoCoseno}
 \begin{teorema}[Relazione fondamentale goniometria]\index{Relazione!fondamentale goniometria}\index{Funzione!Seno}\index{Funzione!Coseno}
 Dato un angolo $\alpha$ allora vale quanto segue:
-\begin{equation}
+\begin{equation*}
 \cos^2\alpha+\sen^2\alpha=1\label{eqn:RelazioneFondamentaleTrigonometria1}
-\end{equation}
+\end{equation*}
 \end{teorema}
 \begin{figure}
 	\centering
@@ -446,12 +446,12 @@ Dato un angolo $\alpha$ allora vale quanto segue:
 	\end{align*}
 \end{proof}
 Dalla relazione\nobs\vref{eqn:RelazioneFondamentaleTrigonometria1} è possibile ottenere le seguenti
-\begin{align}
+\begin{align*}
 &\cos^{2}\alpha={}1-\sen^{2}\alpha\\
 &\cos\alpha={}\pm\sqrt{1-\sen^{2}\alpha}\\
 &\sen^{2}\alpha={}1-\cos^{2}\alpha \\
 &\sen\alpha={}\pm\sqrt{1-\cos^{2}\alpha}
-\end{align}
+\end{align*}
 Nella sezione\nobs\vref{sec:EsempiGoniometria} vi sono esempi per l'uso di queste formule. 
 
 Supponiamo di voler trovare il valore del coseno di un angolo noto il seno. Per esempio poniamo 
@@ -524,12 +524,12 @@ e quini è spiegato il doppio segno.
 \end{align}
 \end{definizione}
 Dalle formule\nobs\vrefrange{equ:tangente1}{equ:cotangente1} è possibile ottenere le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos^{2}\alpha=&{}\dfrac{1}{1+{\tg}^{2}\alpha} &\alpha&{}\neq\dfrac{\pi}{2}+k\pi\\
 \cos\alpha=&{}\pm\dfrac{1}{\sqrt{1+{\tg}^{2}\alpha}} &\alpha{}&\neq\dfrac{\pi}{2}+k\pi\\
 \sen^{2}\alpha=&{}\dfrac{\tg^{2}\alpha}{1+\tg^{2}\alpha}&\alpha{}&\neq\dfrac{\pi}{2}+k\pi\\
 \sen\alpha=&{}\pm\dfrac{\tg\alpha}{\sqrt{1+\tg^{2}\alpha}}&\alpha{}&\neq\dfrac{\pi}{2}+k\pi
-\end{align}
+\end{align*}
 \section{Angoli associati}
 \label{sec:goniometriaAngoliAssociati}
 \subsection{Angoli supplementari}
@@ -541,27 +541,28 @@ Sono angoli la cui somma è $\ang{180}$, $\alpha$, $\ang{180}-\alpha$ la figura 
 	\label{fig:AngoliAssociatisupplementari}
 \end{figure}
 Per questi angoli valgono le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos\alpha=&{}-\cos(\ang{180}-\alpha)\\
 \sen\alpha=&{}\sen(\ang{180}-\alpha)\\
 \tg\alpha=&{}-\tg(\ang{180}-\alpha)\\
 \cotg\alpha=&{}-\cotg(\ang{180}-\alpha)
-\end{align}
+\end{align*}
 \subsection{Angoli che differiscono di $\ang{180}$}
 Sono angoli la cui differenza è $\ang{180}$, $\alpha$, $\ang{180}+\alpha$ la figura corrispondente è la\nobs\vref{fig:AngoliAssociatidiff180}
 \begin{figure}[H]
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angoliassociati2}
+	
 			\caption{Angoli che differiscono di $\ang{180}$ $\alpha$ e $\ang{180}+\alpha$}
 			\label{fig:AngoliAssociatidiff180}
 \end{figure}
 Per questi angoli valgono le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos\alpha=&{}-\cos(\ang{180}+\alpha)\\
 \sen\alpha=&{}-\sen(\ang{180}+\alpha)\\
 \tg\alpha=&{}\tg(\ang{180}+\alpha)\\
 \cotg\alpha=&{}\cotg(\ang{180}+\alpha)
-\end{align}
+\end{align*}
 \subsection{Angoli esplementari}
 Sono angoli la cui somma è $\ang{360}$, $\alpha$, $\ang{360}-\alpha$ la figura corrispondente è la\nobs\vref{fig:Angolidif360}
 \begin{figure}[H]
@@ -571,12 +572,12 @@ Sono angoli la cui somma è $\ang{360}$, $\alpha$, $\ang{360}-\alpha$ la figura 
 			\label{fig:Angolidif360}
 	\end{figure}
 Per questi angoli valgono le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos\alpha=&{}\cos(\ang{360}-\alpha)\\
 \sen\alpha=&{}-\sen(\ang{360}-\alpha)\\
 \tg\alpha=&{}-\tg(\ang{360}-\alpha)\\
 \cotg\alpha=&{}-\cotg(\ang{360}-\alpha)
-\end{align}
+\end{align*}
 \subsection{Angoli opposti}
 Sono angoli la cui somma è $\ang{0}$, $\alpha$, $-\alpha$ la figura corrispondente è la\nobs\vref{fig:angoliopposti}
 \begin{figure}[H]
@@ -586,12 +587,12 @@ Sono angoli la cui somma è $\ang{0}$, $\alpha$, $-\alpha$ la figura corrisponde
 	\label{fig:angoliopposti}
 \end{figure}
 Per questi angoli valgono le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos\alpha=&{}-\cos(-\alpha)\\
 \sen\alpha=&{}-\sen(-\alpha)\\
 \tg\alpha=&{}\tg(-\alpha)\\
-\cotg\alpha=&{}\cotg(-\alpha)\\
-\end{align}
+\cotg\alpha=&{}\cotg(-\alpha)
+\end{align*}
 \subsection{Angoli complementari}
 Sono angoli la cui somma è $\ang{90}$, $\alpha$ e $\ang{90}-\alpha$ la figura corrispondente è la\nobs\vref{fig:angolicomplementari1}
 \begin{figure}[H]
@@ -601,13 +602,13 @@ Sono angoli la cui somma è $\ang{90}$, $\alpha$ e $\ang{90}-\alpha$ la figura c
 		\label{fig:angolicomplementari1}
 \end{figure}
 Per questi angoli valgono le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos\alpha=&{}\sen(\ang{90}-\alpha)\\
 \sen\alpha=&{}\cos(\ang{90}-\alpha)\\
 \tg\alpha=&{}\cotg(\ang{90}-\alpha)\\
 \cotg\alpha=&{}\tg(\ang{90}-\alpha)
-\end{align}
-\subsection{Angoli che differiscono di $\ang{90}$}
+\end{align*}
+\subsection{Angoli la cui differenza è $\ang{90}$}
 Sono angoli la cui differenza è $\ang{90}$, $\alpha$ e $\ang{90}+\alpha$ la figura corrispondente è la\nobs\vref{fig:angolicomplementari2}
 \begin{figure}[H]
 	\centering
@@ -616,12 +617,12 @@ Sono angoli la cui differenza è $\ang{90}$, $\alpha$ e $\ang{90}+\alpha$ la fig
 \label{fig:angolicomplementari2}
 \end{figure}
 Per questi angoli valgono le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos\alpha=&{}\sen(\ang{90}+\alpha)\\
 \sen\alpha=&{}-\cos(\ang{90}+\alpha)\\
 \tg\alpha=&{}-\cotg(\ang{90}+\alpha)\\
 \cotg\alpha=&{}-\tg(\ang{90}+\alpha)
-\end{align}
+\end{align*}
 \subsection{Angoli la cui somma è $\ang{270}$}
 Sono angoli la cui somma è $\ang{270}$, $\alpha$ e $\ang{270}-\alpha$ la figura corrispondente è la\nobs\vref{tab:angolicomplementari3}
 \begin{figure}[H]
@@ -631,13 +632,13 @@ Sono angoli la cui somma è $\ang{270}$, $\alpha$ e $\ang{270}-\alpha$ la figura
 		\label{tab:angolicomplementari3}
 \end{figure}
 Per questi angoli valgono le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos\alpha=&{}-\sen(\ang{270}-\alpha)\\
 \sen\alpha=&{}-\cos(\ang{270}-\alpha)\\
 \tg\alpha=&{}\cotg(\ang{270}-\alpha)\\
 \cotg\alpha=&{}\tg(\ang{270}-\alpha)
-\end{align}
-\subsection{Angoli la cui somma è $\ang{270}$}
+\end{align*}
+\subsection{Angoli la cui differenza è $\ang{270}$}
 Sono angoli la cui differenza è $\ang{270}$, $\alpha$ e $\ang{270}+\alpha$ la figura corrispondente è la\nobs\vref{tab:angolicomplementari4}
 \begin{figure}[H]
 	\centering
@@ -646,12 +647,12 @@ Sono angoli la cui differenza è $\ang{270}$, $\alpha$ e $\ang{270}+\alpha$ la f
 		\label{tab:angolicomplementari4}
 \end{figure}
 Per questi angoli valgono le seguenti relazioni
-\begin{align}
+\begin{align*}
 \cos\alpha=&{}-\sen(\ang{270}+\alpha)\\
 \sen\alpha=&{}\cos(\ang{270}+\alpha)\\
 \tg\alpha=&{}-\cotg(\ang{270}+\alpha)\\
 \cotg\alpha=&{}-\tg(\ang{270}+\alpha)
-\end{align}
+\end{align*}
 %\mediapriorita{Manca la tabella 270+$\alpha$}
 \begin{table}
 
