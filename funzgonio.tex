@@ -531,11 +531,22 @@ Dalle formule\nobs\vrefrange{equ:tangente1}{equ:cotangente1} è possibile ottene
 \sen^{2}\alpha=&{}\dfrac{\tg^{2}\alpha}{1+\tg^{2}\alpha}&\alpha{}&\neq\dfrac{\pi}{2}+k\pi\\
 \sen\alpha=&{}\pm\dfrac{\tg\alpha}{\sqrt{1+\tg^{2}\alpha}}&\alpha{}&\neq\dfrac{\pi}{2}+k\pi
 \end{align*}
+Supponiamo di conoscere un valore di $\tg\alpha$
+\begin{align*}
+\tg\alpha&{}=\dfrac{3}{5}\\
+\cos\alpha=&{}\pm\dfrac{1}{\sqrt{1+\left(\dfrac{3}{5}\right)^2}}\\
+\cos\alpha=&{}\pm\dfrac{1}{\sqrt{1+\dfrac{9}{25}}}\\
+\cos\alpha=&{}\pm\dfrac{1}{\sqrt{\dfrac{25+9}{25}}}\\
+\cos\alpha=&{}\pm\dfrac{1}{\dfrac{\sqrt{34}}{5}}\\
+\cos\alpha=&{}\pm\dfrac{5}{\sqrt{34}}\cdot\dfrac{\sqrt{34}}{\sqrt{34}}=\pm\dfrac{5\sqrt{34}}{34}\\
+\sen\alpha=&{}\pm\dfrac{\dfrac{3}{5}}{\sqrt{1+\left(\dfrac{3}{5}\right)^2}}\\
+\sen\alpha=&{}\pm\dfrac{\dfrac{3}{5}}{\dfrac{\sqrt{34}}{5}}=\pm\dfrac{3}{5}\cdot\dfrac{5}{\sqrt{34}}=\pm\dfrac{3}{\sqrt{34}}\cdot\dfrac{\sqrt{34}}{\sqrt{34}}=\pm\dfrac{3\sqrt{34}}{34}
+\end{align*}
 \section{Angoli associati}
 \label{sec:goniometriaAngoliAssociati}
 \subsection{Angoli supplementari}
 Sono angoli la cui somma è $\ang{180}$, $\alpha$, $\ang{180}-\alpha$ la figura corrispondente è la\nobs\vref{fig:AngoliAssociatisupplementari}
-\begin{figure}[H]
+\begin{figure}
 	\centering
 \includestandalone[width=8.5cm]{funzgonioTikz/angoliassociati1}
 	\caption{Angoli supplementari $\alpha$ $\ang{180}-\alpha$}
@@ -550,11 +561,10 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli che differiscono di $\ang{180}$}
 Sono angoli la cui differenza è $\ang{180}$, $\alpha$, $\ang{180}+\alpha$ la figura corrispondente è la\nobs\vref{fig:AngoliAssociatidiff180}
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angoliassociati2}
-	
-			\caption{Angoli che differiscono di $\ang{180}$ $\alpha$ e $\ang{180}+\alpha$}
+	\caption{Angoli che differiscono di $\ang{180}$ $\alpha$ e $\ang{180}+\alpha$}
 			\label{fig:AngoliAssociatidiff180}
 \end{figure}
 Per questi angoli valgono le seguenti relazioni
