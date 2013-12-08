@@ -10,7 +10,7 @@
 	\begin{tikzpicture}[>=triangle  45]
 	\tikzset{samples=600}
 	\pgfmathsetmacro{\raggio}{2};
-	\pgfmathsetmacro{\angolo}{40};
+	\pgfmathsetmacro{\angolo}{50};
 	\pgfmathsetmacro{\angolon}{180-\angolo};
 	\pgfmathsetmacro{\y}{3};
 	\pgfmathsetmacro{\xy}{4};
@@ -32,8 +32,10 @@
 \filldraw[black] (Q) circle(1pt);
 \draw[dashed](Q)-- (P) ;
 %	\coordinate [label=above left :$\sin(\alpha)$] (M) at ($(Q)!0.5!(oo)$);
-	\draw[->] (\sraggio/\y,0 ) arc (0:\angolo:\sraggio/\y) node[ right=3pt] {$\alpha$};
-\draw[->] (\sraggio/\xy,0 ) arc (0:\angolon:\sraggio/\xy) node[ right=3pt] {$\beta$};
+\draw[->] (\sraggio/\y,0 ) arc (0:\angolo:\sraggio/\y) ;
+\draw (\angolo/2:\sraggio/\y) node[ above right]  {$\alpha$};
+\draw[->] (\sraggio/\xy,0 ) arc (0:\angolon:\sraggio/\xy) ;
+\draw (\angolon/2:\sraggio/\xy) node[above left]  {$\beta$};
 	\draw (oo)-- (P) ;
 	\draw (oo)-- (Q) ;	
 

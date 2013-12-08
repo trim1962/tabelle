@@ -10,7 +10,7 @@
 	\begin{tikzpicture}[>=triangle  45]
 	\tikzset{samples=600}
 	\pgfmathsetmacro{\raggio}{2};
-	\pgfmathsetmacro{\angolob}{40};
+	\pgfmathsetmacro{\angolob}{60};
 	\pgfmathsetmacro{\angolo}{180 -\angolob};
 	\pgfmathsetmacro{\angolon}{\angolob+180};
 	\pgfmathsetmacro{\y}{3};
@@ -25,8 +25,8 @@
 	\coordinate[label=above:$P$] (P) at ({\raggio*cos(\angolo)},{\raggio*sin(\angolo)});
 	\coordinate[label=below:$Q$] (Q) at ({\raggio*cos(\angolon)},{\raggio*sin(\angolon )});
 	\coordinate [label=above left:$M$] (M) at ($((-\raggio,0)!(\angolo:\raggio)!(\raggio,0)$);
-	\coordinate[label=above right:$y_1$] (X1) at (0,{\raggio*sin(\angolo)});
-	\coordinate[label=below right:$y_2$] (X2) at (0,{\raggio*sin(\angolon)});
+	\coordinate[label= right:$y_1$] (X1) at (0,{\raggio*sin(\angolo)});
+	\coordinate[label= right:$y_2$] (X2) at (0,{\raggio*sin(\angolon)});
 	\filldraw[black] (oo) circle(1pt);
 	\filldraw[black] (M) circle(1pt);
 	\filldraw[black] (P) circle(1pt);
@@ -36,8 +36,10 @@
 	\draw[dashed](Q)-- (P) ;
 	\draw[dashed](X1)-- (P) ;
 	\draw[dashed](X2)-- (Q) ;
-	\draw[->] (\sraggio/\y,0 ) arc (0:\angolo:\sraggio/\y) node[ right=3pt] {$\alpha$};
-	\draw[->] (\sraggio/\xy,0 ) arc (0:\angolon:\sraggio/\xy) node[ right=3pt] {$\beta$};
+	\draw[->] (\sraggio/\y,0 ) arc (0:\angolo:\sraggio/\y) ;
+	\draw (\angolo/2:\sraggio/\y) node[ above right]  {$\alpha$};
+	\draw[->] (\sraggio/\xy,0 ) arc (0:\angolon:\sraggio/\xy) ;
+	\draw (\angolon/2:\sraggio/\xy) node[ left]  {$\beta$};
 	\draw (oo)-- (P) ;
 	\draw (oo)-- (Q) ;	
 	
