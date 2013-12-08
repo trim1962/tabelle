@@ -10,7 +10,7 @@
 	\begin{tikzpicture}[>=triangle  45]
 	\tikzset{samples=600}
 	\pgfmathsetmacro{\raggio}{3};
-	\pgfmathsetmacro{\angolo}{40};
+	\pgfmathsetmacro{\angolo}{60};
 	\pgfmathsetmacro{\y}{3};
 	\pgfmathsetmacro{\XM}{\raggio};
 	\pgfmathsetmacro{\sraggio}{1.9*\raggio};
@@ -18,12 +18,14 @@
 	\draw[->] (-\raggio-1,0) -- (\raggio+1,0) node[above] {$x$} ;
 	\draw[->] (0,-\raggio-1) -- (0,\raggio+1) node[above] {$y$} ;
 	\draw (oo) circle (\raggio) ;
-	
-	\coordinate[label=above:$P$] (P) at ({\raggio*cos(\angolo)},{\raggio*sin(\angolo )});
-	
-	\coordinate [label=above left:$Q$] (Q) at ($((0,-\raggio)!(\angolo:\raggio)!(0,\raggio)$);
-	\coordinate [label=above left :$\sen(\alpha)$] (M) at ($(Q)!0.5!(oo)$);
-	\draw[->] (\sraggio/\y,0 ) arc (0:\angolo:\sraggio/\y) node[ right=3pt] {$\alpha$};
+	\filldraw[black] (oo) circle(1pt);
+	\coordinate [label=above right:$P$] (P) at  ({\raggio*cos(\angolo)},{\raggio*sin(\angolo )});
+	\coordinate[label=below left:$Q$] (Q) at (0,{\raggio*sin(\angolo)});
+	\draw (oo)  -- (Q) node[midway,left]{$\sin\alpha$} ;
+	\draw[->] (\sraggio/\y,0 ) arc (0:\angolo:\sraggio/\y);
+	\draw (\angolo/2:\sraggio/\y) node[ above right]  {$\alpha$};
+	\filldraw[black] (Q) circle(1pt);
+	\filldraw[black] (P) circle(1pt);
 	\draw (oo)-- (P) ;
 	\draw[dashed](Q)-- (P) ;		
 	\end{tikzpicture}
