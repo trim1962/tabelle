@@ -21,7 +21,8 @@
 	
 	\coordinate [label=below right:$Q$] (Q) at ($((-\raggio,0)!(\angolo:\raggio)!(\raggio,0)$);
 	\coordinate [label=below  :$\cos\alpha$] (M) at ($(Q)!0.5!(oo)$);
-	\draw[->] (\sraggio/\y,0 ) arc (0:\angolo:\sraggio/\y) node[ right=7pt] {$\alpha$};
+	\draw[->] (\sraggio/\y,0 ) arc (0:\angolo:\sraggio/\y);
+	\draw (\angolo/2:\sraggio/\y) node[ above right]  {$\alpha$};
 	\draw (oo)-- (P) ;
 	\draw[dashed](Q)-- (P) ;		
 	\end{tikzpicture}
