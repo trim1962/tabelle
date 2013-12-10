@@ -190,12 +190,12 @@ Possiamo quindi dire che il coseno
 	\end{enumerate} 
 \begin{figure}
 		\centering
-\includestandalone[width=8.5cm]{funzgonioTikz/andamentocoseno1}
+\includestandalone[width=7.5cm]{funzgonioTikz/andamentocoseno1}
 		\captionof{figure}{Andamento coseno $\ang{0}<\alpha<\ang{180}$}\label{fig:AndamentoCoseno1}
 	\end{figure}%
 	\begin{figure}
 		\centering
-\includestandalone[width=8.5cm]{funzgonioTikz/andamentocoseno2}
+\includestandalone[width=7.5cm]{funzgonioTikz/andamentocoseno2}
 		\captionof{figure}{Andamento coseno $\ang{180}<\alpha<\ang{360} $}\label{fig:AndamentoCoseno2}
 \end{figure}
 \subsection{Seno}
@@ -244,12 +244,12 @@ Possiamo quindi dire che il seno
 \end{enumerate} 
 \begin{figure}
 	\centering
-	\includestandalone[width=8.5cm]{funzgonioTikz/andamentoseno1}
+	\includestandalone[width=7.5cm]{funzgonioTikz/andamentoseno1}
 	\captionof{figure}{Andamento seno $\ang{0}<\alpha<\ang{180}$}\label{fig:AndamentoSeno1}
 \end{figure}%
 \begin{figure}
 	\centering
-	\includestandalone[width=8.5cm]{funzgonioTikz/andamentoseno2}
+	\includestandalone[width=7.5cm]{funzgonioTikz/andamentoseno2}
 	\captionof{figure}{Andamento seno $\ang{180}<\alpha<\ang{360}$}\label{fig:AndamentoSeno2}
 \end{figure}%
 \begin{figure}
@@ -316,12 +316,12 @@ Possiamo quindi dire che la tangente:
 \end{enumerate} 
 \begin{figure}
 	\centering
-\includestandalone[width=8.5cm]{funzgonioTikz/tangenteandamento1}
+\includestandalone[width=7.5cm]{funzgonioTikz/tangenteandamento1}
 	\captionof{figure}{Andamento tangente $\ang{0}<\alpha<\ang{180}$}\label{fig:AndamentoTangente1}
 \end{figure}%
 \begin{figure}
 	\centering
-	\includestandalone[width=8.5cm]{funzgonioTikz/tangenteandamento2}
+	\includestandalone[width=7.5cm]{funzgonioTikz/tangenteandamento2}
 \captionof{figure}{Andamento tangente $\ang{180}<\alpha<\ang{360}$}\label{fig:AndamentoTangente2}
 \end{figure}%
 \subsection{Cotangente}
@@ -381,12 +381,12 @@ Possiamo quindi dire che cotangente:
 \end{enumerate} 
 \begin{figure}
 	\centering
-	\includestandalone[width=8.5cm]{funzgonioTikz/cotangenteandamento1}
+	\includestandalone[width=7.5cm]{funzgonioTikz/cotangenteandamento1}
 	\captionof{figure}{Andamento cotangente $\ang{0}<\alpha<\ang{180}$}\label{fig:AndamentoCotangente1}
 \end{figure}%
 \begin{figure}
 	\centering
-	\includestandalone[width=8.5cm]{funzgonioTikz/cotangenteandamento2}
+	\includestandalone[width=7.5cm]{funzgonioTikz/cotangenteandamento2}
 	\captionof{figure}{Andamento cotangente $\ang{180}<\alpha<\ang{360}$}\label{fig:AndamentoCotangente2}
 \end{figure}%
 \section{Relazioni fondamentali}
@@ -422,30 +422,7 @@ Dato un angolo $\alpha$ allora vale quanto segue:
 \end{teorema}
 \begin{figure}
 	\centering
-\begin{tikzpicture}[>=triangle  45]
-% draw the coordinates
-
-\pgfmathsetmacro{\raggio}{4};
-\pgfmathsetmacro{\mraggio}{\raggio/6};
-
-\pgfmathsetmacro{\sraggio}{1.9*\raggio};
-\draw[->] (0,-\raggio/2-\mraggio/2) -- (0,\raggio+\mraggio) node[above,fill=white] {$y$};
-\draw[->] (-\raggio/2-\mraggio/2,0) -- (\raggio+\mraggio,0) node[right,fill=white] {$x$};
-\node(OO)at(0,0) [label= above left:$O$] {};
-\foreach \x/ \y/\arco  in {
-	55/5/{\alpha}%,
-}
-{
-	\draw[->] (\sraggio/\y,0 ) arc (0:\x:\sraggio/\y);% node[above ] {$\arco$};
-	\node (aa) at   ({cos(\x/2} , {sin(\x/2} ) [label=above:$\arco$] {};
-	\draw(0,0) -- ({\raggio*cos(\x} , {\raggio*sin(\x})node[midway ]{a} node [above]{P};
-	\draw[dashed] ({\raggio*cos(\x} , 0 ) -- ({\raggio*cos(\x} , {\raggio*sin(\x} )node[midway ]{c}  ;
-	\draw [dashed](0, {\raggio*sin(\x} ) -- ({\raggio*cos(\x} , {\raggio*sin(\x} );
-	\draw[dashed] (0 , 0 ) -- (0 , {\raggio*sin(\x} )node [above]{K};
-	\draw [dashed](0, 0 ) -- ({\raggio*cos(\x} , 0 )node[midway ]{b} node [above]{H};;
-}
-\draw plot[domain=0:90,smooth] ({\raggio*cos(\x} , {\raggio*sin(\x});
-\end{tikzpicture}
+	\includestandalone[width=7.5cm]{funzgonioTikz/RelFondGoniometria}
 \caption{Relazione fondamentale goniometria}
 \label{fig:relFondGonio}
 \end{figure}
