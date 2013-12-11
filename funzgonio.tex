@@ -33,7 +33,6 @@ Le  semirette formano due angoli  uno convesso\index{Angolo!convesso} l'altro co
 \begin{definizione}[Angoli Positivi e Negativi]
 	Fissato un lato, l'angolo è  positivo\index{Angolo!positivo}  se per costruirlo ruoteremo l'altra semiretta in senso antiorario.  Un angolo è negativo\index{Angolo!negativo} se ruoteremo l'altro lato in senso orario come nella figura\nobs\vref{fig:angconconvposoneg}. ...
 \end{definizione}
-
 \begin{definizione}[Angolo giro]
 Un angolo è giro\index{Angolo!giro} quando le due semirette coincidono. 
 \end{definizione}
@@ -391,7 +390,7 @@ Possiamo quindi dire che cotangente:
 \end{figure}%
 \section{Relazioni fondamentali}
 \label{sec:RelazioniFondamentali}
-\begin{table}[tbp]
+\begin{table} %[tbp]
 	\centering
 	\renewcommand{\arraystretch}{2}
 	\begin{tabular}{rccccc}
@@ -570,8 +569,8 @@ Per questi angoli valgono le seguenti relazioni
 \tg\alpha=&{}-\tg(\ang{180}-\alpha)\\
 \cotg\alpha=&{}-\cotg(\ang{180}-\alpha)
 \end{align*}
-\subsection{Angoli che differiscono di $\ang{180}$}
-Sono angoli la cui differenza è $\ang{180}$, $\alpha$, $\ang{180}+\alpha$ la figura corrispondente è la\nobs\vref{fig:AngoliAssociatidiff180}
+\subsection{Angoli la cui differenza è $\ang{180}$}
+Gli angoli $\alpha$, $\ang{180}+\alpha$ sono angoli la cui differenza è $\ang{180}$.  Costruiamo la figura\nobs\vref{fig:AngoliAssociatidiff180}
 \begin{figure}
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angoliassociati2}
@@ -587,7 +586,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli esplementari}
 Sono angoli la cui somma è $\ang{360}$, $\alpha$, $\ang{360}-\alpha$ la figura corrispondente è la\nobs\vref{fig:Angolidif360}
-\begin{figure}[H]
+\begin{figure} %[H]
 		\centering
 			\includestandalone[width=8.5cm]{funzgonioTikz/angoliassociati3}
 			\caption{Angoli esplementari $\alpha$ e $\ang{360}-\alpha$}
@@ -602,7 +601,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli opposti}
 Sono angoli la cui somma è $\ang{0}$, $\alpha$, $-\alpha$ la figura corrispondente è la\nobs\vref{fig:angoliopposti}
-\begin{figure}[H]
+\begin{figure} %[H]
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angoliopposti}
 	\caption{Angoli opposti}
@@ -617,7 +616,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli complementari}
 Sono angoli la cui somma è $\ang{90}$, $\alpha$ e $\ang{90}-\alpha$ la figura corrispondente è la\nobs\vref{fig:angolicomplementari1}
-\begin{figure}[H]
+\begin{figure} %[H]
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angolicomplementari1}
 		\caption{Angoli complementari $\alpha$ e  $\ang{90}-\alpha$}
@@ -632,7 +631,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli la cui differenza è $\ang{90}$}
 Sono angoli la cui differenza è $\ang{90}$, $\alpha$ e $\ang{90}+\alpha$ la figura corrispondente è la\nobs\vref{fig:angolicomplementari2}
-\begin{figure}[H]
+\begin{figure} %[H]
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angolicomplementari2}
 \caption{Angoli che differiscono di $\ang{90}$, $\alpha$ e $\ang{90}+\alpha$}
@@ -647,7 +646,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli la cui somma è $\ang{270}$}
 Sono angoli la cui somma è $\ang{270}$, $\alpha$ e $\ang{270}-\alpha$ la figura corrispondente è la\nobs\vref{tab:angolicomplementari3}
-\begin{figure}[H]
+\begin{figure} %[H]
 	\centering
 		\includestandalone[width=8.5cm]{funzgonioTikz/angolicomplementari3}
 		\caption{Angoli la cui somma è $\ang{270}$,  $\alpha$ e $\ang{270}-\alpha$}
@@ -662,7 +661,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli la cui differenza è $\ang{270}$}
 Sono angoli la cui differenza è $\ang{270}$, $\alpha$ e $\ang{270}+\alpha$ la figura corrispondente è la\nobs\vref{tab:angolicomplementari4}
-\begin{figure}[H]
+\begin{figure} %[H]
 	\centering
 		\includestandalone[width=8.5cm]{funzgonioTikz/angolicomplementari4}
 		\caption{Angoli la cui differenza è $\ang{270}$, $\alpha$ e $\ang{270}+\alpha$}
@@ -727,106 +726,22 @@ Le funzioni goniometriche elementari sono equazioni del tipo
 \subsection{$\sen x=m$}
 Il seno di un angolo è una funzione limitata con valori compresi tra meno uno ed uno $(1\leq\sen x\leq 1)$ quindi l'equazione è impossibile per valori di $m$ esterni a tale intervallo. Abbiamo vari casi:
 \begin{description}
-	\item[$0<m<1$] In questo caso le soluzioni sono due come nella figura\nobs\vref{fig:senelemen1} $x=\alpha+k\ang{360}$ e $x=\ang{180}-\alpha+k\ang{360}$
+	\item[$0<m<1$] In questo caso le soluzioni sono due come nella figura\nobs\vref{fig:EquaElementareSeno1} $x=\alpha+k\ang{360}$ e $x=\ang{180}-\alpha+k\ang{360}$
 \end{description} 
-
 \begin{figure}
 	\centering
-		\begin{tikzpicture}[>=triangle 45]
-		% draw the coordinates
-		\pgfmathsetmacro{\raggio}{4};
-		\pgfmathsetmacro{\pangolo}{20};
-		\pgfmathsetmacro{\sangolo}{{180-\pangolo}};
-		\pgfmathsetmacro{\mraggio}{\raggio/3};
-		\pgfmathsetmacro{\sraggio}{1.9*\raggio};
-		% draw the unit circle
-		\draw[->] (0,-\raggio-\mraggio) -- (0,\raggio+\mraggio) node[above,fill=white] {$y$};
-		\draw[->] (-\raggio-\mraggio,0) -- (\raggio+\mraggio,0) node[right,fill=white] {$x$};
-		\draw[thick] (0,0) circle(\raggio);
-		\coordinate [label= below left:$O$] (OO)at(0,0);
-		\coordinate (P)  at ({\raggio*cos(\pangolo},{\raggio*sin(\pangolo});
-		\coordinate (Pr)  at ({\mraggio+\raggio*cos(\pangolo},{\raggio*sin(\pangolo});
-		\coordinate (PX)  at ({\raggio*cos(\pangolo},0);
-		\coordinate (PY)  at (0,{\raggio*sin(\pangolo});
-		\coordinate (Q)  at ({\raggio*cos(\sangolo},{\raggio*sin(\sangolo});
-		\coordinate (Qr)  at ({-\mraggio+\raggio*cos(\sangolo},{\raggio*sin(\sangolo});
-		\coordinate (QX)  at ({\raggio*cos(\sangolo},0);
-		\coordinate (QY)  at (0,{\raggio*sin(\sangolo});
-		\coordinate (M)  at (0,{\raggio*sin(\sangolo});
-		\node at (P) [label=above right:$m$]{};
-		%\node at (Q) [label=left:$Q$]{};
-		\fill [color=black] (OO) circle (1.5pt);
-		\fill [color=black] (P) circle (1.5pt);
-		%\fill [color=black] (PX) circle (1.5pt);
-		%\fill [color=black] (PY) circle (1.5pt);
-		%\fill [color=black] (M) circle (1.5pt);
-		\fill [color=black] (Q) circle (1.5pt);
-		%\fill [color=black] (QX) circle (1.5pt);
-		%\fill [color=black] (QY) circle (1.5pt);
-		%\draw[->] {(\sraggio/2.5},0 ) arc (0:\pangolo:\sraggio/2.5) node[above] {$\arco$};
-		\draw(Pr)--(Qr);
-		\draw(P)--(PY);% node[midway,above] {$ cos(\alpha)$};
-		\draw(Q)--(QY);% node[midway,above] {$cos(ang{180}-\alpha)$};
-		%\draw(P)--(PX);% node[midway,above,right] {$sen(\alpha)$};
-		%\draw(Q)--(QX);%node[midway,below,left] {$sen(ang{180}-\alpha)$};
-		\draw [->] (0:\sraggio/3) arc (0:\sangolo:\sraggio/3) node[sloped,below right] {$\ang{180}-\alpha$};
-		\draw [->] (0:\sraggio/4) arc (0:\pangolo:\sraggio/4) node[above] {$\alpha$};
-		\draw(OO)--(P);
-		\draw(OO)--(Q);
-		\end{tikzpicture} 
+	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno1}
 	\captionof{figure}{$\sen x=m$ $0<m<1$}
-	\label{fig:senelemen1}
+	\label{fig:EquaElementareSeno1}
 \end{figure}
 \subsection{$\cos x=m$}
-Il coseno di un angolo è una funzione limitata con valori compresi tra meno uno ed uno $(1\leq\cos x\leq 1)$ quindi l'equazione è impossibile per valori di $m$ esterni a tale intervallo. Abbimo vari casi:
+Il coseno di un angolo è una funzione limitata con valori compresi tra meno uno ed uno $(1\leq\cos x\leq 1)$ quindi l'equazione è impossibile per valori di $m$ esterni a tale intervallo. Abbiamo vari casi:
 \begin{description}
-	\item[$0<m<1$] In questo caso le soluzioni sono due come nella figura\nobs\vref{fig:coselemen1} $x=\alpha+k\ang{360}$ e $x=-\alpha+k\ang{360}$
+	\item[$0<m<1$] In questo caso le soluzioni sono due come nella figura\nobs\vref{fig:EquaElementareCoseno1} $x=\alpha+k\ang{360}$ e $x=-\alpha+k\ang{360}$
 \end{description} 
 \begin{figure}
 	\centering
-		\begin{tikzpicture}[>=triangle 45]
-		% draw the coordinates
-		\pgfmathsetmacro{\raggio}{4};
-		\pgfmathsetmacro{\pangolo}{40};
-		\pgfmathsetmacro{\sangolo}{{-\pangolo}};
-		\pgfmathsetmacro{\mraggio}{\raggio/3};
-		\pgfmathsetmacro{\sraggio}{1.9*\raggio};
-		% draw the unit circle
-		\draw[->] (0,-\raggio-\mraggio) -- (0,\raggio+\mraggio) node[above,fill=white] {$y$};
-		\draw[->] (-\raggio-\mraggio,0) -- (\raggio+\mraggio,0) node[right,fill=white] {$x$};
-		\draw[thick] (0,0) circle(\raggio);
-		\coordinate [label= below left:$O$] (OO)at(0,0);
-		\coordinate (P)  at ({\raggio*cos(\pangolo},{\raggio*sin(\pangolo});
-		\coordinate (Pr)  at ({\mraggio+\raggio*cos(\pangolo},{\raggio*sin(\pangolo});
-		\coordinate (PX)  at ({\raggio*cos(\pangolo},0);
-		\coordinate (PY)  at (0,{\raggio*sin(\pangolo});
-		\coordinate (Q)  at ({\raggio*cos(\sangolo},{\raggio*sin(\sangolo});
-		\coordinate (Qr)  at ({-\mraggio+\raggio*cos(\sangolo},{\raggio*sin(\sangolo});
-		\coordinate (QX)  at ({\raggio*cos(\sangolo},0);
-		\coordinate (QY)  at (0,{\raggio*sin(\sangolo});
-		\coordinate (M)  at (0,{\raggio*sin(\sangolo});
-		\node at (PX) [label=above right:$m$]{};
-		%\node at (Q) [label=left:$Q$]{};
-		\fill [color=black] (OO) circle (1.5pt);
-		\fill [color=black] (P) circle (1.5pt);
-		\fill [color=black] (PX) circle (1.5pt);
-		%\fill [color=black] (PY) circle (1.5pt);
-		%\fill [color=black] (M) circle (1.5pt);
-		\fill [color=black] (Q) circle (1.5pt);
-		\fill [color=black] (QX) circle (1.5pt);
-		%\fill [color=black] (QY) circle (1.5pt);
-		%\draw[->] {(\sraggio/2.5},0 ) arc (0:\pangolo:\sraggio/2.5) node[above] {$\arco$};
-		%\draw(Pr)--(Qr);
-		%\draw(P)--(PY);% node[midway,above] {$ cos(\alpha)$};
-		%\draw(Q)--(QY);% node[midway,above] {$cos(ang{180}-\alpha)$};
-		\draw(P)--(PX);% node[midway,above,right] {$sen(\alpha)$};
-		\draw(Q)--(QX);%node[midway,below,left] {$sen(ang{180}-\alpha)$};
-		\draw [->] (0:\sraggio/3) arc (0:\sangolo:\sraggio/3) node[sloped,below right] {$-\alpha$};
-		
-		\draw [->] (0:\sraggio/4) arc (0:\pangolo:\sraggio/4) node[above] {$\alpha$};
-		\draw(OO)--(P);
-		\draw(OO)--(Q);
-		\end{tikzpicture} 
+ 	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno1}
 		\captionof{figure}{$\cos x=m$ $0<m<1$}
-		\label{fig:coselemen1}
+		\label{fig:EquaElementareCoseno1}
 \end{figure}
