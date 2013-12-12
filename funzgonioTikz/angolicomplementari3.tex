@@ -42,8 +42,10 @@
 	\draw(Q)--(QY) node[midway,above] {$\cos(\ang{270}-\alpha)$};
 	\draw(P)--(PX) node[midway,right] {$\sen(\alpha)$};
 	\draw(Q)--(QX)node[midway,left] {$\sen(\ang{270}-\alpha)$};
-	\draw [->] (0:\sraggio/3) arc (0:\sangolo:\sraggio/3) node[right] {$\ang{270}-\alpha$};
-	\draw [->] (0:\sraggio/4) arc (0:\pangolo:\sraggio/4) node[above] {$\alpha$};
+	\draw [->] (0:\sraggio/3) arc (0:\sangolo:\sraggio/3); 
+		\draw (\sangolo/2:\sraggio/3) node[left] {$\ang{270}-\alpha$};
+	\draw [->] (0:\sraggio/4) arc (0:\pangolo:\sraggio/4);
+		\draw (\pangolo/2:\sraggio/4) node[right] {$\alpha$};
 	\draw(OO)--(P);
 	\draw(OO)--(Q);
 	\end{tikzpicture}
