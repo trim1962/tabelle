@@ -620,6 +620,7 @@ Per questi angoli valgono le seguenti relazioni
 \cotg\alpha=&{}\cotg(-\alpha)
 \end{align*}
 \subsection{Angoli complementari}
+\label{sub:AngoliComp}
 Sono angoli la cui somma è $\ang{90}$, $\alpha$ e $\ang{90}-\alpha$ la figura corrispondente è la\nobs\vref{fig:angolicomplementari1}
 \begin{figure} %[H]
 	\centering
@@ -798,17 +799,41 @@ L'esempio che segue è quasi analogo al precedente, bisogna prima procedere ad u
 3x-\ang{10}&=\ang{180}+5x+\ang{40}+k\ang{360}\\
 3x-5x&=\ang{10}+\ang{180}+\ang{40}+k\ang{360}\\
 -2x&=\ang{230}+k\ang{360}\\
-x&=-\ang{115}+k\ang{180}\\
+x&=-\ang{115}+k\ang{180}
 \intertext{La soluziione associata è}
 3x-\ang{10}&=\ang{180}-(\ang{180}+5x+\ang{40})+k\ang{360}\\
 3x-\ang{10}&=-5x-\ang{40}+k\ang{360}\\
 3x+5x&=\ang{10}-\ang{40}+k\ang{360}\\
 8x&=-\ang{30}+k\ang{360}\\
-x&=-\dfrac{\ang{30}}{8}+k\dfrac{\ang{360}}{8}\\
+x&=-\dfrac{\ang{30}}{8}+k\dfrac{\ang{360}}{8}
 \intertext{Le due soluzioni sono}
 x&=-\ang{115}+k\ang{180}\\
 x&=-\dfrac{\ang{30}}{8}+k\ang{45}
 \end{align*}
+\end{esempio}
+Esempio uguale a precedente. Prima di risolvere l'equazione bisogna trasformare il secondo membro utilizzando\nobs\vref{sub:AngoliComp}  
+\begin{esempio}
+	\begin{align*}
+\intertext{Supponiamo di dover risolvere}
+\sen(2x+\ang{30})&=\cos(x+\ang{40})\\
+\intertext{Consideriamo l'angolo complementare}
+\cos(\alpha)&=\sen(90-\alpha)
+\intertext{L'equazione di partenza diventa}
+\sen(2x+\ang{30})&=\sen([\ang{90}-(x+\ang{40})])+k\ang{360}
+\intertext{Uguaglio gli argomenti e trovo la prima soluzione}
+2x+\ang{30}&=\ang{90}-(x+\ang{40})+k\ang{360}\\
+2x+x&=\ang{90}-\ang{40}-\ang{30}+k\ang{360}\\
+3x&=\ang{20}+k\ang{360}\\
+x&=\dfrac{\ang{20}}{3}+k\ang{120}
+\intertext{La soluziione associata è}
+2x+\ang{30}&=\ang{180}-[\ang{90}-(x+\ang{40})]+k\ang{360}\\
+2x+\ang{30}&=\ang{180}-\ang{90}+x+\ang{40}+k\ang{360}\\
+2x-x&=\ang{180}-\ang{90}+x+\ang{40}-\ang{30}+k\ang{360}\\
+x&=\ang{100}+k\ang{360}
+\intertext{Le due soluzioni sono}
+x&=\dfrac{\ang{20}}{3}+k\ang{120}\\
+x&=\ang{100}+k\ang{360}
+	\end{align*}
 \end{esempio}
 \subsection{$\cos x=m$}
 Il coseno di un angolo è una funzione limitata con valori compresi tra meno uno ed uno $(1\leq\cos x\leq 1)$ quindi l'equazione è impossibile per valori di $m$ esterni a tale intervallo. Abbiamo vari casi:
