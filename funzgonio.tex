@@ -736,10 +736,20 @@ Il seno di un angolo è una funzione limitata con valori compresi tra meno uno e
 	\item [$m=-1$] Guardando la figura\nobs\vref{fig:EquaElementareSeno2} la soluzione  è unica, $x=\ang{270}+k\ang{360}$
 \end{description} 
 \begin{figure}
-	\centering
-	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno1}
-	\captionof{figure}{$\sen x=m$\  $0<m<1$}
-	\label{fig:EquaElementareSeno1}
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+			\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno1}
+			\captionof{figure}{$\sen x=m$\  $0<m<1$}
+			\label{fig:EquaElementareSeno1}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+		\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno1}
+		\captionof{figure}{$\cos x=m$ $0<m<1$}
+		\label{fig:EquaElementareCoseno1}
+	\end{subfigure}
+	\captionof{figure}{Equazioni Elementari}
+	\label{fig:EquaElementareSenoCoseno}
 \end{figure}
 \begin{esempio}
 \begin{align*}
@@ -754,12 +764,24 @@ x&=\ang{45}+k\ang{360}\\
  x&=\ang{180}-\ang{45}+k\ang{360}\\
 \end{align*}
 \end{esempio}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \begin{figure}
-	\centering
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
 	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno2}
 	\captionof{figure}{$\sen x=1$}
 	\label{fig:EquaElementareSeno2}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno3}
+	\captionof{figure}{$\sen x=-1$}
+	\label{fig:EquaElementareSeno3}
+	\end{subfigure}
+	\captionof{figure}{Seno casi particolari}
+	\label{fig:EquaElementareSeno3a}
 \end{figure}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \begin{esempio}
 \begin{align*}
 \intertext{Supponiamo di dover risolvere}
@@ -803,12 +825,6 @@ x&=-\dfrac{\ang{30}}{8}+k\dfrac{\ang{360}}{8}
 x&=-\ang{115}+k\ang{180}\\
 x&=-\dfrac{\ang{30}}{8}+k\ang{45}
 \end{align*}
-\begin{figure}
-	\centering
-	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno3}
-	\captionof{figure}{$\sen x=-1$}
-	\label{fig:EquaElementareSeno3}
-\end{figure}
 \end{esempio}
 Esempio uguale a precedente. Prima di risolvere l'equazione bisogna trasformare il secondo membro utilizzando\nobs\vref{sub:AngoliComp}  
 \begin{esempio}
@@ -841,12 +857,6 @@ Il coseno di un angolo\index{Equazione!elementare!coseno} è una funzione limita
 	\item [$m=+1$]La figura\nobs\vref{fig:EquaElementareCoseno2} mostra la soluzione che è $\alpha=0 + k\ang{360}$
 	\item [$m=-1$] La soluzione è $\alpha=\ang{180}+k\ang{360}$ o analogamente $\alpha=-\ang{180}+k\ang{360}$, come segue dal grafico\nobs\vref{fig:EquaElementareCoseno3} 
 \end{description} 
-\begin{figure}
-	\centering
- 	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno1}
-		\captionof{figure}{$\cos x=m$ $0<m<1$}
-		\label{fig:EquaElementareCoseno1}
-\end{figure}
 \begin{esempio}
 \begin{align*}
 \intertext{Supponiamo di dover risolvere}
@@ -861,10 +871,20 @@ x&=\ang{180}-\ang{60}+k\ang{360}\\
 \end{align*}
 \end{esempio}
 \begin{figure}
-	\centering
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
 	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno3}
 	\captionof{figure}{$\cos x=m$ $m=-1$}
 	\label{fig:EquaElementareCoseno3}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+		\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno2}
+		\captionof{figure}{$\cos x=m$ $m=+1$}
+		\label{fig:EquaElementareCoseno2}
+	\end{subfigure}
+	\captionof{figure}{Coseno casi particolari}
+	\label{fig:EquaElementareCoseno1a}
 \end{figure}
 \begin{esempio}
 \begin{align*}
@@ -886,12 +906,6 @@ x&=-\dfrac{\ang{10}}{3} +k\ang{120}\\
 x&=-\ang{10}+k\dfrac{\ang{360}}{7}
 \end{align*}
 \end{esempio}
-\begin{figure}
-	\centering
-	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno2}
-	\captionof{figure}{$\cos x=m$ $m=+1$}
-	\label{fig:EquaElementareCoseno2}
-\end{figure}
 \begin{esempio}
 	\begin{align*}
 \intertext{Supponiamo di dover risolvere}
@@ -915,3 +929,10 @@ x&=\ang{30}+k\ang{45}\\
 x&=\ang{80}+k\ang{180}
 	\end{align*}
 \end{esempio}
+\subsection{$\tg x=m$}
+La tangente è una funzione non limitata che  esiste per valori di $x\neq\ang{90}+k\ang{180}$ 
+\begin{figure}
+	\centering
+	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementaretangente1}
+	\captionof{figure}{Tangente equazione elementare}\label{fig:EquaElementaretangente1}
+\end{figure}%
