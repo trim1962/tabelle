@@ -65,7 +65,7 @@ Un angolo giro\index{Angolo!giro} è quindi ampio \ang{360} gradi. L'angolo piat
 
 Un angolo espresso in gradi sessagesimali può essere scritto in forma decimale. 
 \begin{esempio}
- Abbiamo un angolo di ampiezza pari a \ang{44;58;48} e vogliamo scriverlo in forma decimale\index{Grado!dorma decimale} .Dato che $\ang{;1;}=\dfrac{\ang{1}}{60}$ e che $\ang{;;1}=\dfrac{\ang{;1;}}{60}=\dfrac{\ang{1}}{3600}$  avremo
+ Abbiamo un angolo di ampiezza pari a \ang{44;58;48} e vogliamo scriverlo in forma decimale\index{Grado!forma decimale} .Dato che $\ang{;1;}=\dfrac{\ang{1}}{60}$ e che $\ang{;;1}=\dfrac{\ang{;1;}}{60}=\dfrac{\ang{1}}{3600}$  avremo
 \begin{align*}
 	\ang{44;58;48}&=\ang{44}+\left(\dfrac{58}{60}\right)^{\circ}+\left(\dfrac{48}{3600} \right)^{\circ}\\
 	&=\ang{44}+\left(\dfrac{29}{30}\right)^{\circ}+\left(\dfrac{3}{225} \right)^{\circ}\\
@@ -102,7 +102,8 @@ Avremo quindi che un angolo ha l'ampiezza di un radiante\index{Radiante} se l'ar
 
 In un angolo giro\index{Angolo!giro} l'arco è lungo quanto la circonferenza. La sua misura in radianti è \[\rho=\dfrac{2\pi r}{r}=2\pi\]
 
-Un angolo piatto, meta di un giro,  misura  \[\rho=\pi\]\index{Angolo!piatto} e  un angolo retto\index{Angolo!retto} misura \[\rho=\dfrac{\pi}{2} \] 
+Un angolo piatto, meta di un giro,  misura  \[\rho=\pi\]\index{Angolo!piatto} e  un angolo
+retto\index{Angolo!retto} misura \[\rho=\dfrac{\pi}{2} \] 
 
 Per convertire  da gradi sessagesimali a radianti\index{Grado!radiante!conversione} si procede in questo modo:
 \begin{align*}
@@ -137,12 +138,6 @@ Quanto corrisponde in gradi un radiante
 \begin{definizione}[Circonferenza goniometrica]
 	Dato un sistema di riferimento cartesiano ortogonale, una circonferenza goniometrica\index{Circonferenza!goniometrica} è una circonferenza con centro nell'origine e raggio uguale a uno. 
 \end{definizione}
-\begin{figure}
-	\centering
-\includestandalone[width=7.5cm]{funzgonioTikz/circonferenzagoniometrica}
-	\captionof{figure}{Circonferenza goniometrica}
-	\label{fig:circonferenzagonimetricagonio}
-\end{figure}
  La circonferenza incontra gli assi in quattro punti. $A(1,0)$, $B(0,1)$, $C(-1,0)$ e $D(-1,0)$. Costruiamo un angolo  $\alpha$  in modo che il suo vertice coincida con il centro della circonferenza. L'angolo incontra la circonferenza nei punti $A$ e $P$ come nella  figura\nobs\vref{fig:circonferenzagonimetricagonio}. 
 \subsection{Coseno}
 \label{sec:cosenogonio}
@@ -173,6 +168,12 @@ Al variare dell'angolo varia anche il valore del coseno\index{Funzione!Coseno}, 
 	\item [$\alpha_3$]  L'angolo è ottuso. La proiezione del punto $P_3$ incontra  l'asse $x$ nel semiasse negativo. Quindi $\cos\alpha_2$ è negativo.
 	\item [$\alpha_4$] L'angolo  è  piatto. Il  $P_4$ incontra l'asse $x$ nel punto $(-1;0)$. In questo  $\cos\alpha_4$ vale meno uno.
 \end{description}
+\begin{figure}
+	\centering
+	\includestandalone[width=7.5cm]{funzgonioTikz/circonferenzagoniometrica}
+	\captionof{figure}{Circonferenza goniometrica}
+	\label{fig:circonferenzagonimetricagonio}
+\end{figure}
 Analogo discorso per angoli di ampiezza  maggiore di un angolo  piatto come nella figura~\vref{fig:AndamentoCoseno2}.
 \begin{description}
 	\item [$\alpha_4$] L'angolo è piatto. Il  $P_4$ incontra l'asse $x$ nel punto $(-1;0)$. In questo  $\cos\alpha_4$ vale meno uno.
@@ -356,7 +357,12 @@ Possiamo quindi dire che la tangente:
 \end{definizione}
 \subsection{Andamento Cotangente}
 \label{sec:AndamentoCotangente}
-Al variare dell'angolo varia anche il valore della cotangente\index{Funzione!Cotangente}, consideriamo la figura\nobs\vref{fig:AndamentoCotangente1}. Supponiamo di far variare l'angolo $\alpha$ da zero a centottanta gradi, quindi che $\ang{0}\leq\alpha\leq\ang{180}$ o se utilizziamo i radianti $0\leq\alpha\leq\pi$. 
+Al variare dell'angolo varia anche il valore della cotangente\index{Funzione!Cotangente}, consideriamo la figura\nobs\vref{fig:AndamentoCotangente1}. Supponiamo di far variare l'angolo $\alpha$ da zero a centottanta gradi, quindi che $\ang{0}\leq\alpha\leq\ang{180}$ o se utilizziamo i radianti $0\leq\alpha\leq\pi$.
+\begin{figure}
+	\centering
+	\includestandalone[width=7.5cm]{funzgonioTikz/cotangenteandamento1}
+	\captionof{figure}{Andamento cotangente $\ang{0}<\alpha<\ang{180}$}\label{fig:AndamentoCotangente1}
+\end{figure}% 
 \begin{description}
 	\item[$\alpha_0$] L'angolo ha ampiezza zero. Il raggio non incontra la retta tangente. In questo caso  la cotangente  dell'angolo $\alpha$ cioè $\cotg\alpha_0$  non esiste.
 	\item [$\alpha_1$] l'angolo è compreso fra zero e novanta gradi, il prolungamento del raggio  incontra la retta nel punto $T_1$. La cotangente di $\alpha_1$ è un numero positivo.
@@ -378,11 +384,6 @@ Possiamo quindi dire che cotangente:
 	\item è illimitata.
 	\item è periodica, di periodo pari a \ang{180} o $\pi$
 \end{enumerate} 
-\begin{figure}
-	\centering
-	\includestandalone[width=7.5cm]{funzgonioTikz/cotangenteandamento1}
-	\captionof{figure}{Andamento cotangente $\ang{0}<\alpha<\ang{180}$}\label{fig:AndamentoCotangente1}
-\end{figure}%
 \begin{figure}
 	\centering
 	\includestandalone[width=7.5cm]{funzgonioTikz/cotangenteandamento2}
@@ -435,7 +436,7 @@ Dato un angolo $\alpha$ allora vale quanto segue:
 	1&=cos^2\alpha+\sen^2\alpha\\
 	\end{align*}
 \end{proof}
-Dalla relazione\nobs\vref{eqn:RelazioneFondamentaleTrigonometria1} è possibile ottenere le seguenti
+Dalla relazione\nobs\vref{eqn:RelazioneFondamentaleTrigonometria1} è possibile ottenere le seguenti\index{Coseno!noto!seno}\index{Seno!noto!coseno}
 \begin{align*}
 &\cos^{2}\alpha={}1-\sen^{2}\alpha\\
 &\cos\alpha={}\pm\sqrt{1-\sen^{2}\alpha}\\
@@ -463,8 +464,7 @@ Geometricamente il doppio segno davanti alla radice è spiegabile in questo modo
 	\item  Da questi angoli ottengo due valori opposti per il coseno $x_1$ e $x_2$\nobs\vref{fig:CosenoNotoSeno4}
 	\end{enumerate}
 e quindi il doppio segno.
-
-Analogo ragionamento vale per il coseno basta guardare la figura\nobs\vref{fig:senoNotoCosenoEs1}
+Analogo ragionamento vale per il coseno basta guardare la figura\nobs\vref{fig:senoNotoCosenoEs1a}
 \begin{figure}
 	\begin{subfigure}[b]{.5\linewidth}
 		\centering\includestandalone[width=0.6\textwidth]{funzgonioTikz/CosenoNotoSeno1}
@@ -503,7 +503,7 @@ Analogo ragionamento vale per il coseno basta guardare la figura\nobs\vref{fig:s
 		\caption{E due valori opposti per il seno}\label{fig:senoNotoCoseno4}
 	\end{subfigure}
 	\captionof{figure}{Seno Noto Coseno}
-	\label{fig:senoNotoCosenoEs1}
+	\label{fig:senoNotoCosenoEs1a}
 \end{figure}
 \subsection{Tangente cotangente}
 \label{sec:TangenteCotangente}
@@ -553,13 +553,13 @@ Supponiamo di conoscere un valore di $\tg\alpha$
 		\caption{E due valori opposti per il seno e il coseno}\label{fig:SenoCosenoNototangente4}
 	\end{subfigure}
 	\captionof{figure}{Seno Coseno nota la tangente}
-	\label{fig:senoNotoCosenoEs1}
+	\label{fig:senocosenoNototangentEs1}
 \end{figure}
 \section{Angoli associati}
 \label{sec:goniometriaAngoliAssociati}
 \altapriorita{Inserire esempi}
 \subsection{Angoli supplementari}
-Sono angoli la cui somma è $\ang{180}$, $\alpha$, $\ang{180}-\alpha$ la figura corrispondente è la\nobs\vref{fig:AngoliAssociatisupplementari}
+Sono angoli la cui somma\index{Angoli!Somma!$\ang{180}$} è $\ang{180}$, $\alpha$, $\ang{180}-\alpha$ la figura corrispondente è la\nobs\vref{fig:AngoliAssociatisupplementari}
 \begin{figure}
 	\centering
 \includestandalone[width=8.5cm]{funzgonioTikz/angoliassociati1}
@@ -575,7 +575,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli la cui differenza è $\ang{180}$}
 \label{sub:Dif180}
-Gli angoli $\alpha$, $\ang{180}+\alpha$ sono angoli la cui differenza è $\ang{180}$.  Costruiamo la figura\nobs\vref{fig:AngoliAssociatidiff180}
+Gli angoli $\alpha$, $\ang{180}+\alpha$ sono angoli la cui differenza\index{Angoli!Differenza!$\ang{180}$} è $\ang{180}$.  Costruiamo la figura\nobs\vref{fig:AngoliAssociatidiff180}
 \begin{figure}
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angoliassociati2}
@@ -590,7 +590,7 @@ Per questi angoli valgono le seguenti relazioni
 \cotg\alpha=&{}\cotg(\ang{180}+\alpha)
 \end{align*}
 \subsection{Angoli esplementari}
-Sono angoli la cui somma è $\ang{360}$, $\alpha$, $\ang{360}-\alpha$ la figura corrispondente è la\nobs\vref{fig:Angolidif360}
+Sono angoli la cui somma\index{Angoli!Somma!$\ang{360}$} è $\ang{360}$, $\alpha$, $\ang{360}-\alpha$ la figura corrispondente è la\nobs\vref{fig:Angolidif360}
 \begin{figure} %[H]
 		\centering
 			\includestandalone[width=8.5cm]{funzgonioTikz/angoliassociati3}
@@ -605,7 +605,7 @@ Per questi angoli valgono le seguenti relazioni
 \cotg\alpha=&{}-\cotg(\ang{360}-\alpha)
 \end{align*}
 \subsection{Angoli opposti}
-Sono angoli la cui somma è $\ang{0}$, $\alpha$, $-\alpha$ la figura corrispondente è la\nobs\vref{fig:angoliopposti}
+Sono angoli la cui somma\index{Angoli!Somma!$\ang{0}$} è $\ang{0}$, $\alpha$, $-\alpha$ la figura corrispondente è la\nobs\vref{fig:angoliopposti}
 \begin{figure} %[H]
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angoliopposti}
@@ -621,7 +621,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 \subsection{Angoli complementari}
 \label{sub:AngoliComp}
-Sono angoli la cui somma è $\ang{90}$, $\alpha$ e $\ang{90}-\alpha$ la figura corrispondente è la\nobs\vref{fig:angolicomplementari1}
+Sono angoli la cui somma\index{Angoli!Somma!$\ang{90}$} è $\ang{90}$, $\alpha$ e $\ang{90}-\alpha$ la figura corrispondente è la\nobs\vref{fig:angolicomplementari1}
 \begin{figure} %[H]
 	\centering
 	\includestandalone[width=8.5cm]{funzgonioTikz/angolicomplementari1}
@@ -635,7 +635,7 @@ Per questi angoli valgono le seguenti relazioni
 \tg\alpha=&{}\cotg(\ang{90}-\alpha)\\
 \cotg\alpha=&{}\tg(\ang{90}-\alpha)
 \end{align*}
-\subsection{Angoli la cui differenza è $\ang{90}$}
+\subsection{Angoli la cui differenza\index{Angoli!Differenza!$\ang{90}$} è $\ang{90}$}
 Sono angoli la cui differenza è $\ang{90}$, $\alpha$ e $\ang{90}+\alpha$ la figura corrispondente è la\nobs\vref{fig:angolicomplementari2}
 \begin{figure} %[H]
 	\centering
@@ -651,7 +651,7 @@ Per questi angoli valgono le seguenti relazioni
 \cotg\alpha=&{}-\tg(\ang{90}+\alpha)
 \end{align*}
 \subsection{Angoli la cui somma è $\ang{270}$}
-Sono angoli la cui somma è $\ang{270}$, $\alpha$ e $\ang{270}-\alpha$ la figura corrispondente è la\nobs\vref{tab:angolicomplementari3}
+Sono angoli la cui somma\index{Angoli!Somma!$\ang{270}$} è $\ang{270}$, $\alpha$ e $\ang{270}-\alpha$ la figura corrispondente è la\nobs\vref{tab:angolicomplementari3}
 \begin{figure} %[H]
 	\centering
 		\includestandalone[width=8.5cm]{funzgonioTikz/angolicomplementari3}
@@ -665,7 +665,7 @@ Per questi angoli valgono le seguenti relazioni
 \tg\alpha=&{}\cotg(\ang{270}-\alpha)\\
 \cotg\alpha=&{}\tg(\ang{270}-\alpha)
 \end{align*}
-\subsection{Angoli la cui differenza è $\ang{270}$}
+\subsection{Angoli la cui differenza\index{Angoli!Differenza!$\ang{270}$} è $\ang{270}$}
 Sono angoli la cui differenza è $\ang{270}$, $\alpha$ e $\ang{270}+\alpha$ la figura corrispondente è la\nobs\vref{tab:angolicomplementari4}
 \begin{figure} %[H]
 	\centering
@@ -682,8 +682,7 @@ Per questi angoli valgono le seguenti relazioni
 \end{align*}
 %\mediapriorita{Manca la tabella 270+$\alpha$}
 \begin{table}
-
-	\centering
+\centering
 	\footnotesize
 	\begin{tabular}{rlllllll}
 	\toprule
@@ -725,7 +724,7 @@ La tabella\nobs\vref{tab:differnzediangoli} riassume i risultati precedenti.
 %\end{table}
 \section{Equazioni goniometriche elementari}
 \label{sec:EquazioniGoniometricheElementari}
-Le funzioni goniometriche elementari sono equazioni del tipo
+Le equazioni goniometriche elementari\index{Equazione!elementare!seno} sono equazioni del tipo
 \begin{align*}
 	\sen x&=m&\cos x&=n&\tg x&=q
 \end{align*}
@@ -742,18 +741,6 @@ Il seno di un angolo è una funzione limitata con valori compresi tra meno uno e
 	\captionof{figure}{$\sen x=m$\  $0<m<1$}
 	\label{fig:EquaElementareSeno1}
 \end{figure}
-\begin{figure}
-	\centering
-	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno2}
-	\captionof{figure}{$\sen x=1$}
-	\label{fig:EquaElementareSeno2}
-\end{figure}
-\begin{figure}
-	\centering
-	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno3}
-	\captionof{figure}{$\sen x=-1$}
-	\label{fig:EquaElementareSeno3}
-\end{figure}
 \begin{esempio}
 \begin{align*}
 \intertext{Supponiamo di dover risolvere}
@@ -767,6 +754,12 @@ x&=\ang{45}+k\ang{360}\\
  x&=\ang{180}-\ang{45}+k\ang{360}\\
 \end{align*}
 \end{esempio}
+\begin{figure}
+	\centering
+	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno2}
+	\captionof{figure}{$\sen x=1$}
+	\label{fig:EquaElementareSeno2}
+\end{figure}
 \begin{esempio}
 \begin{align*}
 \intertext{Supponiamo di dover risolvere}
@@ -810,6 +803,12 @@ x&=-\dfrac{\ang{30}}{8}+k\dfrac{\ang{360}}{8}
 x&=-\ang{115}+k\ang{180}\\
 x&=-\dfrac{\ang{30}}{8}+k\ang{45}
 \end{align*}
+\begin{figure}
+	\centering
+	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno3}
+	\captionof{figure}{$\sen x=-1$}
+	\label{fig:EquaElementareSeno3}
+\end{figure}
 \end{esempio}
 Esempio uguale a precedente. Prima di risolvere l'equazione bisogna trasformare il secondo membro utilizzando\nobs\vref{sub:AngoliComp}  
 \begin{esempio}
@@ -836,9 +835,11 @@ x&=\ang{100}+k\ang{360}
 	\end{align*}
 \end{esempio}
 \subsection{$\cos x=m$}
-Il coseno di un angolo è una funzione limitata con valori compresi tra meno uno ed uno $(1\leq\cos x\leq 1)$ quindi l'equazione è impossibile per valori di $m$ esterni a tale intervallo. Abbiamo vari casi:
+Il coseno di un angolo\index{Equazione!elementare!coseno} è una funzione limitata con valori compresi tra meno uno ed uno $(1\leq\cos x\leq 1)$ quindi l'equazione è impossibile per valori di $m$ esterni a tale intervallo. Abbiamo vari casi:
 \begin{description}
-	\item[$0<m<1$] In questo caso le soluzioni sono due come nella figura\nobs\vref{fig:EquaElementareCoseno1} $x=\alpha+k\ang{360}$ e $x=-\alpha+k\ang{360}$
+	\item[$0<m<1$]Le soluzioni sono due come dalla figura\nobs\vref{fig:EquaElementareCoseno1} $x=\alpha+k\ang{360}$ e $x=-\alpha+k\ang{360}$
+	\item [$m=+1$]La figura\nobs\vref{fig:EquaElementareCoseno2} mostra la soluzione che è $\alpha=0 + k\ang{360}$
+	\item [$m=-1$] La soluzione è $\alpha=\ang{180}+k\ang{360}$ o analogamente $\alpha=-\ang{180}+k\ang{360}$, come segue dal grafico\nobs\vref{fig:EquaElementareCoseno3} 
 \end{description} 
 \begin{figure}
 	\centering
@@ -846,3 +847,71 @@ Il coseno di un angolo è una funzione limitata con valori compresi tra meno uno
 		\captionof{figure}{$\cos x=m$ $0<m<1$}
 		\label{fig:EquaElementareCoseno1}
 \end{figure}
+\begin{esempio}
+\begin{align*}
+\intertext{Supponiamo di dover risolvere}
+\sen x& =\dfrac{1}{2}
+\intertext{quindi}
+m& =\dfrac{1}{2}
+\intertext{In questo caso vale la figura\nobs\vref{fig:EquaElementareCoseno1} m è un valore noto quindi l'angolo è}
+\alpha&=\ang{60}
+\intertext{le due soluzioni sono}
+x&=\ang{60}+k\ang{360}\\
+x&=\ang{180}-\ang{60}+k\ang{360}\\
+\end{align*}
+\end{esempio}
+\begin{figure}
+	\centering
+	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno3}
+	\captionof{figure}{$\cos x=m$ $m=-1$}
+	\label{fig:EquaElementareCoseno3}
+\end{figure}
+\begin{esempio}
+\begin{align*}
+\intertext{Supponiamo di dover risolvere}
+\cos(5x+\ang{40})&=\cos(2x+\ang{30})
+\intertext{Uguaglio gli argomenti e trovo la prima soluzione}
+5x+\ang{40}&=2x+\ang{30}+k\ang{360}\\
+5x-2x&=\ang{30}-\ang{40} +k\ang{360}\\
+3x&=-\ang{10} +k\ang{360}\\
+x&=-\dfrac{\ang{10}}{3} +k\ang{120}
+\intertext{La soluziione associata è}
+5x+\ang{40}&=-(2x+\ang{30})+k\ang{360}\\
+5x+\ang{40}&=-2x-\ang{30}+k\ang{360}\\
+5x+2x&=-\ang{30}-\ang{40}+k\ang{360}\\
+7x&=-\ang{70}+k\ang{360}\\
+x&=-\ang{10}+k\dfrac{\ang{360}}{7}
+\intertext{Le due soluzioni sono}
+x&=-\dfrac{\ang{10}}{3} +k\ang{120}\\
+x&=-\ang{10}+k\dfrac{\ang{360}}{7}
+\end{align*}
+\end{esempio}
+\begin{figure}
+	\centering
+	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno2}
+	\captionof{figure}{$\cos x=m$ $m=+1$}
+	\label{fig:EquaElementareCoseno2}
+\end{figure}
+\begin{esempio}
+	\begin{align*}
+\intertext{Supponiamo di dover risolvere}
+\cos(3x-\ang{40})&=-\cos(5x-\ang{20})\\
+\cos(\ang{180}-\alpha)&=-\cos(\alpha)\\
+\cos(3x-\ang{40})&=\cos(\ang{180}-(5x-\ang{20}))
+\intertext{Uguaglio gli argomenti e trovo la prima soluzione}
+3x-\ang{40}&=\ang{180}-(5x-\ang{20})+k\ang{360}\\
+3x-\ang{40}&=\ang{180}-5x+\ang{20}+k\ang{360}\\
+3x+5x&=\ang{180}-5x+\ang{20}+\ang{40}+k\ang{360}\\
+8x&=\ang{240}+k\ang{360}\\
+x&=\ang{30}+k\ang{45}
+\intertext{La soluziione associata è}
+3x-\ang{40}&=-(\ang{180}-(5x-\ang{20}))+k\ang{360}\\
+3x-\ang{40}&=-\ang{180}+5x-\ang{20}+k\ang{360}\\
+3x-5x&=-\ang{180}-\ang{20}+\ang{40}+k\ang{360}\\
+-2x&=-\ang{160}+k\ang{360}\\
+x&=\ang{80}+k\ang{180}\\
+\intertext{Le due soluzioni sono}
+x&=\ang{30}+k\ang{45}\\
+x&=\ang{80}+k\ang{180}
+	\end{align*}
+\end{esempio}
