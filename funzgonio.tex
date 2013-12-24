@@ -728,7 +728,7 @@ Le equazioni goniometriche elementari\index{Equazione!elementare!seno} sono equa
 \begin{align*}
 	\sen x&=m&\cos x&=n&\tg x&=q
 \end{align*}
-\subsection{$\sen x=m$}
+\subsection{Equazione $\sen x=m$}
 Il seno di un angolo è una funzione limitata con valori compresi tra meno uno ed uno $(1\leq\sen x\leq 1)$ quindi l'equazione è impossibile per valori di $m$ esterni a tale intervallo. Abbiamo vari casi:
 \begin{description}
 	\item[$0<m<1$] In questo caso le soluzioni sono due come nella figura\nobs\vref{fig:EquaElementareSeno1} $x=\alpha+k\ang{360}$ e $x=\ang{180}-\alpha+k\ang{360}$
@@ -850,7 +850,7 @@ x&=\dfrac{\ang{20}}{3}+k\ang{120}\\
 x&=\ang{100}+k\ang{360}
 	\end{align*}
 \end{esempio}
-\subsection{$\cos x=m$}
+\subsection{Equazione $\cos x=m$}
 Il coseno di un angolo\index{Equazione!elementare!coseno} è una funzione limitata con valori compresi tra meno uno ed uno $(1\leq\cos x\leq 1)$ quindi l'equazione è impossibile per valori di $m$ esterni a tale intervallo. Abbiamo vari casi:
 \begin{description}
 	\item[$0<m<1$]Le soluzioni sono due come dalla figura\nobs\vref{fig:EquaElementareCoseno1} $x=\alpha+k\ang{360}$ e $x=-\alpha+k\ang{360}$
@@ -929,10 +929,21 @@ x&=\ang{30}+k\ang{45}\\
 x&=\ang{80}+k\ang{180}
 	\end{align*}
 \end{esempio}
-\subsection{$\tg x=m$}
+\subsection{Equazione $\tg x=m$}
 La tangente è una funzione non limitata che  esiste per valori di $x\neq\ang{90}+k\ang{180}$ 
 \begin{figure}
 	\centering
 	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementaretangente1}
 	\captionof{figure}{Tangente equazione elementare}\label{fig:EquaElementaretangente1}
 \end{figure}%
+Se $\alpha$ è soluzione di $\tg x=m$, come si vede dalla figura\nobs\vref{fig:EquaElementaretangente1} anche $\alpha+\ang{180}$ è soluzione. Dato che la funzione non è sempre definita, la soluzione è accettabile per $x\neq\ang{90}+k\ang{180}$
+\begin{esempio}
+\begin{align*}
+\intertext{Supponiamo di dover risolvere}
+\tg x&=1
+\intertext{m è un valore noto quindi l'angolo è}
+x&=\ang{45}
+\intertext{se \ang{45} è soluzione dalla figura\nobs\vref{fig:EquaElementaretangente1} anche \ang{45} + \ang{180} è soluzione. Quindi le soluzioni sono:}
+x&=\ang{45}+k\ang{180}
+	\end{align*}
+\end{esempio}

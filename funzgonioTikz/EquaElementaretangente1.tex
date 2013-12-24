@@ -22,9 +22,9 @@
 		\draw (\raggio,-\raggio-1) -- (\raggio,\raggio+1) ;
 		\draw (oo) circle (\raggio) ;
 		\draw[->] (\raggio/\y,0 ) arc (0:\angolo:\raggio/\y) ;
-		\draw (\angolo/2:\raggio/\y) node[ above right]  {$\ang{180}-\alpha$};
-		\draw[->] (\raggio/\y,0 ) arc (0:\angolob:\raggio/\y) ;
-		\draw (\angolob/2:\raggio/\y) node[ above right]  {$\alpha$};
+		\draw (\angolo/2:\raggio/\y) node[ above right]  {$\ang{180}+\alpha$};
+		\draw[->] (\raggio/1.5,0 ) arc (0:\angolob:\raggio/1.5) ;
+		\draw (\angolob/2:\raggio/1.5) node[ above right]  {$\alpha$};
 		\draw (oo)-- (P) ;
 		\draw (T)-- (oo) ;
 		\filldraw[black] (oo) circle(1pt);
