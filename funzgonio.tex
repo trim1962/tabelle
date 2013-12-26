@@ -800,6 +800,22 @@ x&=\ang{10}+k\ang{360}\\
 x&=\ang{130}+k\ang{360}
 \end{align*}
 \end{esempio}
+\begin{table}
+\[
+\begin{array}{cccc}
+\toprule
+Equazione &Soluzione & Soluzione & Trasformazione  \\ 
+\midrule
+\sen\alpha=\sen\beta & \alpha=\beta+k\ang{360} & \alpha=\ang{180}-\beta+k\ang{360} &\\
+\midrule
+\sen\alpha=-\sen\beta&&&\sen(-\beta)=-\sen\beta\\
+& \alpha=-\beta+k\ang{360} & \alpha=\ang{180}+\beta+k\ang{360} &\\
+\bottomrule
+\end{array}
+\] 
+\caption{Equazioni elementari in seno}
+\label{tab:EquazioniElementariInSeno}
+\end{table}
 L'esempio che segue è quasi analogo al precedente, bisogna prima procedere ad una trasformazione del secondo membro utilizzando gli angoli associati\nobs\vref{sub:Dif180}. 
 \begin{esempio}
 \begin{align*}
@@ -906,6 +922,22 @@ x&=-\dfrac{\ang{10}}{3} +k\ang{120}\\
 x&=-\ang{10}+k\dfrac{\ang{360}}{7}
 \end{align*}
 \end{esempio}
+\begin{table}
+\[
+\begin{array}{cccc}
+\toprule
+Equazione &Soluzione & Soluzione & Trasformazione  \\ 
+\midrule
+\cos\alpha=\cos\beta & \alpha=\beta+k\ang{360} & \alpha=-\beta+k\ang{360} &\\
+\midrule
+\cos\alpha=-\cos\beta&&&\cos(\ang{180}-\beta)=-\cos\beta\\
+& \alpha=\ang{180}-\beta+k\ang{360} & \alpha=\ang{180}+\beta+k\ang{360} &\\
+\bottomrule
+\end{array}
+\] 
+\caption{Equazioni elementari in coseno}
+\label{tab:EquazioniElementariInCoseno}
+\end{table}
 \begin{esempio}
 	\begin{align*}
 \intertext{Supponiamo di dover risolvere}
@@ -930,7 +962,7 @@ x&=\ang{80}+k\ang{180}
 	\end{align*}
 \end{esempio}
 \subsection{Equazione $\tg x=m$}
-La tangente è una funzione non limitata che  esiste per valori di $x\neq\ang{90}+k\ang{180}$ 
+La tangente\index{Equazione!elementare!tangente} è una funzione non limitata che  esiste per valori di $x\neq\ang{90}+k\ang{180}$ 
 \begin{figure}
 	\centering
 	\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementaretangente1}
@@ -947,3 +979,50 @@ x&=\ang{45}
 x&=\ang{45}+k\ang{180}
 	\end{align*}
 \end{esempio}
+Un esempio leggermente più complesso. Qui bisogna prima verificare quando esistono le tangenti.
+\begin{esempio}
+\begin{align*}
+\intertext{Supponiamo di dover risolvere}
+\tg (3x+\ang{50})&=\tg(x-\ang{30})
+\intertext{Discuto il lato sinistro}
+3x+\ang{50}&=\ang{90}+k\ang{180}\\
+3x&=\ang{90}-\ang{50}+k\ang{180}\\
+x&=\dfrac{\ang{40}}{3}+k\ang{180}
+\intertext{quindi}
+x&\neq\dfrac{\ang{40}}{3}+k\ang{180}
+\intertext{Discuto il lato destro}
+x-\ang{30}&=\ang{90}+k\ang{180}\\
+x&=\ang{90}+\ang{30}+k\ang{180}\\
+x&=\ang{120}+k\ang{180}
+\intertext{quindi}
+x&\neq\ang{120}+k\ang{180}
+\intertext{Uguaglio gli argomenti e trovo le soluzioni}
+3x+\ang{50}&=x-\ang{30}+k\ang{180}\\
+3x-x&=-\ang{50}-\ang{30}+k\ang{180}\\
+2x&=-\ang{80}+k\ang{180}
+\intertext{La soluzione è}
+x&=-\ang{40}+k\ang{180}
+\intertext{La soluzione è accettabile perchè}
+x&\neq\dfrac{\ang{40}}{3}+k\ang{180}\\
+x&\neq\ang{120}+k\ang{180}
+\end{align*}
+\end{esempio}
+\begin{table}
+\[
+\begin{array}{cccc}
+\toprule
+Equazione &Esistenza & Soluzione & Trasformazione  \\ 
+\midrule
+\tg\alpha=\tg\beta &\alpha\neq\ang{90}+k\ang{180} & &\\
+& \beta\neq\ang{90}+k\ang{180}& &\\
+&&\alpha=\beta+k\ang{180}  &\\
+\midrule
+\tg\alpha=-\tg\beta & \alpha\neq\ang{90}+k\ang{180} & &\tg(\ang{180}-\beta)=-\tg(\beta)\\
+& \beta\neq\ang{90}+k\ang{180}& &\\
+&&\alpha=\ang{180}-\beta+k\ang{180} &\\
+\bottomrule
+\end{array}
+\] 
+\caption{Equazioni elementari in tangente}
+\label{tab:EquazioniElementariInTangente}
+\end{table}
