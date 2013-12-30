@@ -6,44 +6,44 @@
 \mtcskip                                % put some skip here
 \minilot
 \begin{figure}
-	\begin{subfigure}[b]{.5\linewidth}
-		\centering\input{triangolorettangolotri}
-		\caption{Triangolo rettangolo}\label{fig:TrigTriangoloRettangolo}
-	\end{subfigure}%
-	\begin{subfigure}[b]{.5\linewidth}
-		\centering
-		\begin{tabular}{L}
-			\toprule
-			b=a\cos\alpha\\
-			c=a\sen\alpha\\
-			c=b\tg\alpha\\
-			b=c\cotg\alpha\\
-			\bottomrule
-		\end{tabular}
-		\caption{Relazioni triangolo rettangolo}\label{fig:TeoremiTrinagoloRettangolo}
-	\end{subfigure}
-\caption{Trigonometria triangolo rettangolo}
-\label{tab:trigonometriatriangolorettangolo}
+	\centering
+	\includestandalone{trigonometria/triangolopitagorico1}
+	\caption{Triangolo rettangolo}
+	\label{fig:triangolopitagorico1}
 \end{figure}
-%\begin{table}[H]
-%\centering
-%\subfloat[][]{
-%\input{triangolorettangolotri}
-%}
-%\subfloat[][]{
-%\begin{tabular}{L}
-%\toprule
-%b=a\cos\alpha\\
-%c=a\sen\alpha\\
-%c=b\tg\alpha\\
-%b=c\cotg\alpha\\
-%\bottomrule
-%\end{tabular}
-%}
-%
-%\caption{Trigonometria triangolo rettangolo}
-%\label{tab:trigonometriatriangolorettangolo}
-%\end{table}
+\section{I triangoli rettangoli}
+Iniziamo con un po di notazione. I punti si indicano con le lettere maiuscole, la lunghezza dei segmenti con le lettere minuscole e le ampiezze degli angoli con le lettere greche. All'angolo di ampiezza corrisponde la lettera A. Le rimanenti partendo da A e muovendosi in senso antiorario si assegnano gli altri vertici. Un triangolo rettangolo è formato da due lati chiamati cateti\index{Triangolo!rettangolo!cateto} e un lato chiamato ipotenusa.
+
+ L'ipotenusa\index{Triangolo!rettangolo!ipotenusa} è il lato di lunghezza maggiore. I lati di un triangolo sono classificati, rispetto ad un angolo, come opposti o adiacenti. Guardando la figura\nobs\vref{fig:triangolooppostoadiacente}, rispetto all'angolo $\gamma$ il cateto AC è adiacente perché lato dell'angolo, mentre il cateto AB è opposto perché non fa parte dell'angolo. 
+ 
+ Per convenzione, si dice che il cateto opposto all'angolo $\alpha$ ha lunghezza a, il lato opposto all'angolo $\beta$ ha lunghezza b e infine, il lato opposto al vertice C ha lunghezza C. La figura\nobs\vref{fig:triangolopitagorico1} mostra come devono essere assegnati i nomi.
+ 
+ La somma degli angoli interni di un triangolo è un angolo piatto. Quindi $\alpha+\beta+\gamma=\ang{180}$. 
+\begin{figure}
+	\centering
+	\includestandalone{trigonometria/triangolooppostoadiacente}
+	\caption{Elementi di un triangolo rettangolo}
+	\label{fig:triangolooppostoadiacente}
+\end{figure}
+\subsection{Relazioni fondamentali}
+Valgono le seguenti relazioni fra i cateti gli angoli e l'ipotenusa
+\begin{align*}
+c&=a\sen\gamma&b&=a\cos\gamma\\
+b&=a\sen\beta&c&=a\cos\beta
+\end{align*}
+Quindi
+
+Un cateto è uguale  al prodotto dell'ipotenusa per il seno dell'angolo opposto
+
+oppure
+
+Un cateto è uguale al prodotto dell'ipotenusa per il coseno dell'angolo opposto.
+
+Valgono le seguenti relazioni
+\begin{align*}
+\dfrac{c}{a}&=\sen\gamma&\dfrac{b}{a}&=\cos\gamma\\
+\dfrac{b}{a}&=\sen\beta&\dfrac{c}{a}&=\cos\beta
+\end{align*}
 \altapriorita{Esempi pratici}
 \altapriorita{Teoremi dei seni}
 \altapriorita{Teorema di Carnot}
