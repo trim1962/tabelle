@@ -152,7 +152,7 @@ La figura\nobs\vref{fig:TeoremDeiSeni} mostra le relazioni.
 \begin{figure}
 	\centering
 	\includestandalone{trigonometria/canot_1}
-	\caption{Teorema dei seni}
+	\caption{Teorema di Carnot}
 	\label{fig:TeoremDiCarnot_1}
 \end{figure}
 Una versione più generale del teorema di Pitagora è il teorema di Carnot\index{Teorema!Carnot}. Partendo dalla figura\nobs\vref{fig:TeoremDiCarnot_1} avremo queste relazioni:
@@ -167,23 +167,69 @@ Possiamo scrivere le precedenti equazioni isolando i coseni cioè:
 \cos\beta&=\dfrac{a^2+c^2-b^2}{2ac}\\
 \cos\gamma&=\dfrac{a^2+b^2-c^2}{2ab}\\
 \end{align*}
+queste soluzioni possono servire per definire gli angoli del triangolo cioè:
+\begin{align*}
+\alpha&=\arccos(\dfrac{b^2+c^2-a^2}{2bc})\\
+\beta&=\arccos(\dfrac{a^2+c^2-b^2}{2ac})\\
+\gamma&=\arccos(\dfrac{a^2+b^2-c^2}{2ab})\\
+\end{align*}
 \begin{figure}
-	\centering
-	\includestandalone{trigonometria/risTriangQualunque_1}
-	
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+\includestandalone{trigonometria/risTriangQualunque_1}
 	\caption{Un lato e due angoli noti}
 	\label{fig:risTriangQqualunque_1}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+	\includestandalone{trigonometria/risTriangQualunque_2}
+		\caption{Due lati l'angolo fra loro compreso noti}
+		\label{fig:risTriangQqualunque_2}
+	\end{subfigure}
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+		\includestandalone{trigonometria/risTriangQualunque_3}
+		\caption{Due lati l'angolo fra loro non compreso noti}
+		\label{fig:risTriangQqualunque_3}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+		\includestandalone{trigonometria/risTriangQualunque_4}
+		\caption{Due lati l'angolo fra loro non compreso noti}
+		\label{fig:risTriangQqualunque_4}
+	\end{subfigure}
+	\captionof{figure}{Risoluzione triangoli rettangoli}
+	\label{fig:RisoluzioneTriangoliQualunque}
 \end{figure}
 \section{Risoluzione di triangolo qualunque}
 \subsection{Un lato e due angoli}
-Se è noto il lato $c$ e gli angoli $\alpha$ e $\beta$ avremo:
-
+Se è noto il lato $c$ e gli angoli $\alpha$ e $\beta$ come nella figura\nobs\vref{fig:risTriangQqualunque_1} avremo:
 \begin{align*}
 \gamma&=\ang{180}-(\alpha+\beta)\\
 a&=c\dfrac{\sen\alpha}{\sen\gamma}\\
 b&=c\dfrac{\sen\beta}{\sen\gamma}\\
 \end{align*}
 \subsection{Due lati e l'angolo fra essi compreso} 
-
+In questo caso supponiamo noti i lati $b$ e $c$ e l'angolo $\alpha$ fra loro compreso, come nella figura\nobs\vref{fig:risTriangQqualunque_2} avremo:
+\begin{align*}
+a&=\sqrt{b^2+c^2-2bc\cos\alpha}\\
+\beta&=\arccos(\dfrac{a^2+c^2-b^2}{2ac})\\
+\gamma&=\arccos(\dfrac{a^2+b^2-c^2}{2ab})
+\intertext{verificando che}
+\alpha+&\beta+\gamma=\ang{180}
+\end{align*}
 \subsection{Due lati e l'angolo apposto a quello compreso}
+In questo caso supponiamo noti i lati $b$ e $c$ e l'angolo $\beta$ fra loro non compreso, come nella figura\nobs\vref{fig:risTriangQqualunque_3} avremo:
+\begin{align*}
+\intertext{verificando le soluzioni}
+\gamma&=\arcsen(\dfrac{c}{b}{\sen\beta}) \\
+\alpha&=\ang{180}-(\beta+\gamma)\\
+a&=b\dfrac{\sen\alpha}{\sen\beta}
+\end{align*}
 \subsection{Tre lati}
+In questo caso supponiamo noti i lati $a$ $b$ e $c$  come nella figura\nobs\vref{fig:risTriangQqualunque_4} avremo:
+\begin{align*}
+\alpha&=\arccos(\dfrac{b^2+c^2-a^2}{2bc})\\
+\beta&=\arccos(\dfrac{a^2+c^2-b^2}{2ac})\\
+\gamma&=\arccos(\dfrac{a^2+b^2-c^2}{2ab})\\
+\end{align*}
