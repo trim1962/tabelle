@@ -127,8 +127,8 @@ c&=a\cos\beta&c&a\sen\gamma
 \begin{esempio}
 Trovare gli elementi ignoti di un triangolo rettangolo sapendo che l'ipotenusa $a=2$  il cateto $b=\sqrt{5}$
 \begin{align*}
-a&=2\\
-b&=\sqrt{3}\\
+a&=\num{2}\\
+b&=\sqrt{\num{3}}\\
 \beta&=\arcsen\dfrac{b}{a}\\
 \beta&=\arcsen\dfrac{\sqrt{3}}{2}=\ang{60}\\
 \gamma&=\ang{90}-\ang{60}=\ang{30}\\
@@ -143,6 +143,18 @@ Risolviamo questo caso, conosciamo, come nella figura\nobs\vref*{fig:risTriangRe
 \beta&=\ang{90}-\gamma&\gamma&=\ang{90}-\beta\\
 a&=\dfrac{c}{\sen\gamma}&a&=\dfrac{c}{\cos\beta}
 \end{align*}
+\begin{esempio}
+Trovare gli elementi ignoti di un triangolo rettangolo sapendo che  il cateto $b=5$ e il lato $c=12$
+\begin{align*}
+b&=5\\
+c&=12\\
+\gamma&=\arctg\dfrac{c}{b}\\
+\gamma&=\arctg\dfrac{12}{5}\approxeq\ang{67.38}\\
+\beta&=\ang{90}-\gamma=\ang{67.38}\\
+a&=\dfrac{c}{\sen\gamma}\\
+a&=\dfrac{12}{\sen\ang{67.38}}\approxeq\dfrac{12}{\num{0.92}}\approxeq\num{13.0}
+\end{align*}
+\end{esempio}
 \begin{figure}
 	\begin{subfigure}[b]{.5\linewidth}
 		\centering
@@ -181,9 +193,20 @@ a&=\dfrac{c}{\sen\gamma}&a&=\dfrac{c}{\cos\beta}
 \end{figure}
 Per un triangolo qualunque\index{Teorema!seni} valgono le seguenti uguaglianze\[\dfrac{a}{\sen\alpha}=\dfrac{b}{\sen\beta}=\dfrac{c}{\sen\beta}=2R \]
 
-Quindi in un triangolo qualunque il rapporto fra il lato e il seno dell'angolo opposto è costante ed è uguale al diametro della circonferenza circoscritta. 
+Quindi in un triangolo qualunque il rapporto fra il lato e il seno dell'angolo opposto è costante ed è uguale al diametro della circonferenza circoscritta. La figura\nobs\vref{fig:TeoremDeiSeni} mostra le relazioni.
 
-La figura\nobs\vref{fig:TeoremDeiSeni} mostra le relazioni.
+Possiamo riscrivere il teorema dei seni in questa maniera 
+\begin{align*}
+a&=b\dfrac{\sen\alpha}{\sen\beta}& a&=c\dfrac{\sen\alpha}{\sen\gamma}\\
+b&=a\dfrac{\sen\beta}{\sen\beta}& b&=c\dfrac{\sen\beta}{\sen\gamma}\\
+c&=a\dfrac{\sen\gamma}{\sen\alpha}& c&=b\dfrac{\sen\gamma}{\sen\beta}
+\end{align*}
+o in questa
+\begin{align*}
+\sen\alpha&=\dfrac{a}{b}\sen\beta&\sen\alpha&=\dfrac{a}{c}\sen\gamma\\
+\sen\beta&=\dfrac{b}{a}\sen\alpha&\sen\beta&=\dfrac{b}{c}\sen\gamma\\
+\sen\gamma&=\dfrac{c}{a}\sen\alpha&\sen\gamma&=\dfrac{c}{b}\sen\beta\\
+\end{align*}
 \subsection{Teorema di Carnot}
 \begin{figure}
 	\centering
@@ -234,7 +257,7 @@ queste soluzioni possono servire per definire gli angoli del triangolo cioè:
 		\caption{Due lati l'angolo fra loro non compreso noti}
 		\label{fig:risTriangQqualunque_4}
 	\end{subfigure}
-	\captionof{figure}{Risoluzione triangoli rettangoli}
+	\captionof{figure}{Risoluzione triangoli qualunque}
 	\label{fig:RisoluzioneTriangoliQualunque}
 \end{figure}
 \section{Risoluzione di triangolo qualunque}

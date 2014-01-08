@@ -40,4 +40,5 @@
 *.toc
 *.sta
 *.stp
-funzgonioTikz/cotangenteandamento1.pdf
+*.gnuplot
+*.table

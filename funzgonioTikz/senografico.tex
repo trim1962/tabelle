@@ -5,8 +5,6 @@
 
 %\usetikzlibrary{...}
 \begin{document}
-	
-
 	\begin{tikzpicture}[>=triangle  45]
 	\tikzset{samples=600}
 	\pgfmathsetmacro{\a}{4};
@@ -17,7 +15,6 @@
 	\coordinate (B) at (3/4*pi,{\a*sin(3/4*pi r)});
 	\node (C )at (0,\a)[above right] {$1$};
 	\node (D )at (0,-\a)[above right] {$-1$};
-	
 	\draw[->] (\Xm,0) -- (\XM,0) node[above] {$\alpha$} ;
 	\draw[->] (0,-\a-1) -- (0,\a+1) node[above] {$\sen\alpha$} ;;
 	\draw (\Xm,\a) -- (\XM,\a) ;
