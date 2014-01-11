@@ -153,7 +153,7 @@ Quanto corrisponde in gradi un radiante
 		\caption{Coseno grafico}\label{sub:cosenograf}
 	\end{subfigure}
 	\captionof{figure}{Coseno}
-	\label{tab:funzcos}
+	\label{ztzcos}
 \end{figure}
 \begin{definizione}[Coseno]
 Data una circonferenza goniometrica\nobs\vref{sub:cosenodef}, disegno un angolo con centro nell'origine e di ampiezza $\alpha$. Un lato dell'angolo incontra la circonferenza in un punto $P$.  Chiamo coseno\index{Funzione!Coseno!definizione} dell'angolo $\alpha$ e lo indico con $\cos\alpha$ l'ascissa del punto $P$.
@@ -337,7 +337,7 @@ Possiamo quindi dire che la tangente:
 		\caption{Cotangente grafico}\label{fig:CotangenteGrafico}
 	\end{subfigure}
 	\captionof{figure}{Tangente}
-	\label{tab:funztg}
+	\label{tab:funzcotg}
 \end{figure}
 %\begin{figure}
 %	\begin{subfigure}[b]{.5\linewidth}
@@ -391,16 +391,33 @@ Possiamo quindi dire che cotangente:
 \end{figure}%
 \section{Funzioni goniometriche inverse}
 Una funzione goniometrica inversa associa ad un valore numerico un angolo.
-\subsection{Arcoseno}
-La funzione inversa $\yb=\arcsen x$ associa ad un valore numerico compreso fra$[-1,+1]$ un angolo compreso in $[-\dfrac{\pi}{2},\dfrac{\pi}{2}]$. Il grafico\nobs\vref{fig:ArcSenGrafico} 
 \begin{figure}
-	\centering
-\includestandalone[width=8.5cm]{funzgonioTikz/acrsengrafico}
-	\caption{Grafico di $\arcsen x$}
-	\label{fig:ArcSenGrafico}
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+	\includestandalone[width=8.5cm]{funzgonioTikz/acrsengrafico}
+		\caption{Grafico di $\arcsen x$}
+			\label{fig:ArcSenGrafico}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+	\includestandalone[width=8.5cm]{funzgonioTikz/acrcosengrafico}
+		\caption{Grafico di $\arccos x$}
+		\label{fig:ArcCosenGrafico}
+	\end{subfigure}
+		\begin{subfigure}[b]{\linewidth}
+			\centering
+	\includestandalone[width=8.5cm]{funzgonioTikz/arcotangente}
+		\caption{Grafico di $\arctg x$}
+		\label{fig:ArcTangenteGrafico}
+		\end{subfigure}
+			\caption{Funzioni inverse}
+	\label{tab:funzinverse_1}
 \end{figure}
-\subsection{Arcoseno}
-\subsection{Arcotangente}
+\subsection{Arcoseno}\index{Funzione!Arcocoseno!definizione}
+La funzione inversa $\yb=\arcsen x$ associa ad un valore numerico compreso fra$[-1,+1]$ un angolo compreso in $[-\dfrac{\pi}{2},\dfrac{\pi}{2}]$. Il grafico\nobs\vref{fig:ArcSenGrafico} 
+\subsection{Arcoseno}\index{Funzione!Arcoseno!definizione}
+La funzione inversa del coseno è l'arcocoseno, è definita  in $[-1,+1]$ e ha come valori in uscita angoli in $[0,\pi]$ come appare dal grafico\nobs\vref{fig:ArcCosenGrafico} 
+\subsection{Arcotangente}\index{Funzione!Arcotangente!definizione}
 \section{Relazioni fondamentali}
 \label{sec:RelazioniFondamentali}
 \begin{table} %[tbp]

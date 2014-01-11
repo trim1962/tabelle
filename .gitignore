@@ -42,3 +42,5 @@
 *.stp
 *.gnuplot
 *.table
+*.ml*
+*.mtc*
