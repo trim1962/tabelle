@@ -7,12 +7,13 @@
 \minilot
 \section{Somme}
 \label{sec:somme}
-La somma fra polinomi\index{Polinomi!somma} si ottiene sommando, se vi sono, i monomi simili che li compongono. La somma cambia solo la parte numerica di un monomio mai la sua parte letterale. Un esempio di somma è\nobs\vref{Fig:esempiosommamomomisimili1}
-\begin{figure}
-	
+La somma fra polinomi\index{Polinomi!somma} si ottiene sommando, se vi sono, i monomi simili che li compongono. La somma cambia solo la parte numerica di un monomio mai la sua parte letterale. 
+\begin{esempio}
+Supponiamo di voler sommare\[ 3a+2b^2+4a-6b^2+2b\] procediamo come segue:
+%\begin{figure}
 	 \begin{NodesList} %[margin=-3cm]
 	 	\begin{align*}
-	 		3a+2b^2+4a-6b^2  +2b&                           \AddNode\\
+	 		3a+2b^2+4a-6b^2+2b&                           \AddNode\\
 	 		(3+4)a+(2-6)b^2+2b&          \AddNode\\                                       		
 	 		7a-4b^2+2b&   \AddNode\\
 	 		\AddNode
@@ -20,17 +21,18 @@ La somma fra polinomi\index{Polinomi!somma} si ottiene sommando, se vi sono, i m
 	 	\LinkNodes{individuo i monomi simili}%
 	 	%\LinkNodes{sommo i monomi simili}%
 	 	\LinkNodes{$3+4$ e $2-6$}%
-	 	
-	 \end{NodesList}
-	\caption{Esempio somma monomi simili}
-	\label{Fig:esempiosommamomomisimili1}
-\end{figure}
+	  \end{NodesList}
+%	\caption{Esempio somma monomi simili}
+%	\label{Fig:esempiosommamomomisimili1}
+%\end{figure}
+\end{esempio}
 \section{Prodotti}
 Il prodotto fra due polinomi\index{Polinomi!prodotto} si ottiene moltiplicando tutti i termini di un polinomio per tutti i termini dell'altro. 
 \subsection{Monomio per un polinomio}
-Il caso più semplice è il prodotto di un monomio per un binomio. Il monomio fuori della parentesi moltiplica il binomio all'interno come nella figura\nobs\vref{fig:prodottomonomiopolinomio}.
-\begin{figure}
-	\centering
+Il caso più semplice è il prodotto di un monomio per un binomio. Il monomio fuori della parentesi moltiplica il binomio all'interno
+\begin{center}
+%\begin{figure}
+%	\centering
 	\begin{tikzpicture} [baseline]
 	\node (a) {$A$};
 	\node  (b)[right of=a, node distance=15]{$(B$};
@@ -41,16 +43,14 @@ Il caso più semplice è il prodotto di un monomio per un binomio. Il monomio fu
 	\path (a.north) edge [bend left=45,-triangle 90](b.north);
 	\path(a.south)edge [bend right=45,-triangle 90](c.south);
 	\end{tikzpicture}
-	\caption{Prodotto monomio polinomio}
-	\label{fig:prodottomonomiopolinomio}
-\end{figure}
-
+%	\caption{Prodotto monomio polinomio}
+%	\label{fig:prodottomonomiopolinomio}
+%\end{figure}
+\end{center}
+\begin{esempio}
 Supponiamo di avere \[3(2a-5b)-7a(2a+3b)+5(a^2+3b)\]
-si  procede come nella figura\nobs\vref{fig:monomiperpolinomi1}. In questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. A destra si vedono i risultati parziali e che poi sommati danno il risultato.
-
-Supponiamo di avere \[2a(3a-6)-(6a^2-2b)-3a(a-2b)\]
-si  procede come nella figura\nobs\vref{fig:monomiperpolinomi2}.Anche in questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio nel secondo prodotto notare il $-1$ fuori della parentesi tonda che, pur non essendo indicato, in pratica cambia di segno i termini all'interno della parentesi. Anche qui a destra abbiamo  i risultati parziali delle tre moltiplicazioni e per finire la somma dei termini che da il risultato.
-\begin{figure}
+In questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. A destra si vedono i risultati parziali e che poi sommati danno il risultato.
+%\begin{figure}
 %\begin{NodesList}
 %	\begin{displaymath}
 %	\begin{aligned}
@@ -99,11 +99,14 @@ si  procede come nella figura\nobs\vref{fig:monomiperpolinomi2}.Anche in questo 
 	\LinkNodes[margin=2cm]{otteniamo}% 
 	\LinkNodes[margin=2cm]{sommando}% 
 \end{NodesList}
-	\caption[]{Monomi per polinomi 1}
-	\label{fig:monomiperpolinomi1}
-\end{figure}
-
-\begin{figure}
+%	\caption[]{Monomi per polinomi 1}
+%	\label{fig:monomiperpolinomi1}
+%\end{figure}
+\end{esempio}
+\begin{esempio}
+Supponiamo di avere \[2a(3a-6)-(6a^2-2b)-3a(a-2b)\]
+Anche in questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio nel secondo prodotto notare il $-1$ fuori della parentesi tonda che in pratica cambia di segno i termini all'interno della parentesi. Anche qui a destra abbiamo  i risultati parziali delle tre moltiplicazioni e per finire la somma dei termini che da il risultato.
+%\begin{figure}
 \begin{NodesList}
 	\begin{align*}
 		\overbrace{2a(3a-6)}^{1}-\overbrace{(6a^2-2b)}^{2}-\overbrace{3a(a-2b)}^{3}&\AddNode[1]\AddNode[2]\\
@@ -128,21 +131,15 @@ si  procede come nella figura\nobs\vref{fig:monomiperpolinomi2}.Anche in questo 
 	\LinkNodes[margin=2cm]{otteniamo}% 
 	\LinkNodes[margin=2cm]{sommando}% 
 \end{NodesList}
-	\caption[]{Monomi per polinomi 2}
-	\label{fig:monomiperpolinomi2}
-\end{figure}
-
+%	\caption[]{Monomi per polinomi 2}
+%	\label{fig:monomiperpolinomi2}
+%\end{figure}
+\end{esempio}
 \subsection{Polinomio per polinomio}
-In questo caso il polinomio nella prima parentesi moltiplica il polinomio della seconda parentesi. In pratica ogni monomio della prima parentesi moltiplica ogni monomio della seconda come nella figura\nobs\vref{fig:prodottopolinomiopolinomio}
-
-Supponiamo di avere \[(3a-2b)(2a-b)+(2a^2-2)(2-a)\]
-si  procede come nella figura\nobs\vref{fig:polinomioperpolinomio1}. In questo esempio abbiamo due moltiplicazioni di un binomio per un binomio. A destra i passaggi parziali. Infine sommiamo  gli elementi simili e otteniamo la soluzione.
-
-
-Supponiamo di avere \[(xy-2)[(xy-2)xy+4+2xy]-(xy-2)(x^2y^2+2xy+4)\]
-si  procede come nella figura\nobs\vref{fig:polinomioperpolinomio2}. In questo esempio abbiamo quattro moltiplicazioni  fra vari polinomi. A complicare le cose vi sono le regole di precedenza. A destra i vari risultati parziali. Si procede seguendo l'ordine indicato sopra l'espressione. 
-\begin{figure}
-	\centering
+In questo caso il polinomio nella prima parentesi moltiplica il polinomio della seconda parentesi. In pratica ogni monomio della prima parentesi moltiplica ogni monomio della seconda.
+\begin{center}
+%\begin{figure}
+%	\centering
 	\begin{tikzpicture}
 	\node (a) {$(A$};
 	\node (p1)[right of=a, node distance=15]{$+$};
@@ -157,46 +154,50 @@ si  procede come nella figura\nobs\vref{fig:polinomioperpolinomio2}. In questo e
 	\path(a.north)edge [bend left=45,-triangle 90](d.north);
 	\path(b.south)edge [bend right=45,-triangle 90](c.south);
 	\path(b.south)edge [bend right=45,-triangle 90](d.south);
-	
 	\end{tikzpicture}
-	\caption{Prodotto polinomio polinomio}
-	\label{fig:prodottopolinomiopolinomio}
-\end{figure}
-\begin{figure}
-\begin{NodesList}
-	\begin{align*}
-		\overbrace{(3a-2b)(2a-b)}^{1}+\overbrace{(2a^2-2)(2-a)}^{2}&\nonumber\AddNode[1]\AddNode[2]\AddNode[3]\AddNode[4]\\
-		6a^2&\AddNode[1]&\tag{1}\\ 
-		-3ab&\AddNode[2]&\\
-		-4ab&\AddNode[3]&\\    
-		+2b^2&\AddNode[4]&\\
-		6a^2-7ab+2b^2+(2a^2-2)(2-a)&\nonumber\AddNode[5]\AddNode[6]\AddNode[7]\AddNode[8]\\
-		4a^2&\AddNode[5]&\tag{2}\\
-		-2a^3&\AddNode[6]&\\
-		-4 &\AddNode[7]&\\   
-		2a&\AddNode[8]&\\   
-		6a^2-7ab+2b^2+4a^2-2a^3-4+2a&\nonumber\AddNode[9]\\
-		10a^2+2b^2-7ab-2a^3-4+2a&\nonumber\AddNode[9]
-	\end{align*}
-	\tikzset{LabelStyle/.style = {left=.5cm,pos=.5,text=red,fill=white}}
-	\LinkNodes[margin=2cm]{$3a\cdot 2a$}%    
-	\LinkNodes[margin=2cm]{$3a\cdot(-b)$}%
-	\LinkNodes[margin=2cm]{$-2b\cdot(2a)$}%
-	\LinkNodes[margin=2cm]{$-2b\cdot(-b)$}%
-	\LinkNodes[margin=2cm]{$2a^2\cdot(2)$}%
-	\LinkNodes[margin=2cm]{$2a^2\cdot(-a)$}%  
-	\LinkNodes[margin=2cm]{$-2\cdot 2$}% 
-	\LinkNodes[margin=2cm]{$-2\cdot -a$}% 
-	\LinkNodes[margin=2cm]{Sommando}%
-\end{NodesList}
-
-	\caption[]{Polinomio per polinomio 1}
-	\label{fig:polinomioperpolinomio1}
-\end{figure}
-
-\begin{figure}
+%	\caption{Prodotto polinomio polinomio}
+%	\label{fig:prodottopolinomiopolinomio}
+%\end{figure}
+\end{center}
+\begin{esempio}
+Supponiamo di avere \[(3a-2b)(2a-b)+(2a^2-2)(2-a)\]
+ In questo esempio abbiamo due moltiplicazioni di un binomio per un binomio. A destra i passaggi parziali. Infine sommiamo  gli elementi simili e otteniamo la soluzione.
+ %\begin{figure}
+ \begin{NodesList}
+ 	\begin{align*}
+ 		\overbrace{(3a-2b)(2a-b)}^{1}+\overbrace{(2a^2-2)(2-a)}^{2}&\nonumber\AddNode[1]\AddNode[2]\AddNode[3]\AddNode[4]\\
+ 		6a^2&\AddNode[1]&\tag{1}\\ 
+ 		-3ab&\AddNode[2]&\\
+ 		-4ab&\AddNode[3]&\\    
+ 		+2b^2&\AddNode[4]&\\
+ 		6a^2-7ab+2b^2+(2a^2-2)(2-a)&\nonumber\AddNode[5]\AddNode[6]\AddNode[7]\AddNode[8]\\
+ 		4a^2&\AddNode[5]&\tag{2}\\
+ 		-2a^3&\AddNode[6]&\\
+ 		-4 &\AddNode[7]&\\   
+ 		2a&\AddNode[8]&\\   
+ 		6a^2-7ab+2b^2+4a^2-2a^3-4+2a&\nonumber\AddNode[9]\\
+ 		10a^2+2b^2-7ab-2a^3-4+2a&\nonumber\AddNode[9]
+ 	\end{align*}
+ 	\tikzset{LabelStyle/.style = {left=.5cm,pos=.5,text=red,fill=white}}
+ 	\LinkNodes[margin=2cm]{$3a\cdot 2a$}%    
+ 	\LinkNodes[margin=2cm]{$3a\cdot(-b)$}%
+ 	\LinkNodes[margin=2cm]{$-2b\cdot(2a)$}%
+ 	\LinkNodes[margin=2cm]{$-2b\cdot(-b)$}%
+ 	\LinkNodes[margin=2cm]{$2a^2\cdot(2)$}%
+ 	\LinkNodes[margin=2cm]{$2a^2\cdot(-a)$}%  
+ 	\LinkNodes[margin=2cm]{$-2\cdot 2$}% 
+ 	\LinkNodes[margin=2cm]{$-2\cdot -a$}% 
+ 	\LinkNodes[margin=2cm]{Sommando}%
+ \end{NodesList}
+ %	\caption[]{Polinomio per polinomio 1}
+ %	\label{fig:polinomioperpolinomio1}
+ %\end{figure}
+\end{esempio}
+\begin{esempio}
+Supponiamo di avere \[(xy-2)[(xy-2)xy+4+2xy]-(xy-2)(x^2y^2+2xy+4)\]
+In questo esempio abbiamo quattro moltiplicazioni  fra vari polinomi. A complicare le cose vi sono le regole di precedenza. A destra i vari risultati parziali. Si procede seguendo l'ordine indicato sopra l'espressione. 
+%\begin{figure}
 	\begin{NodesList}
-		
 		\begin{align*}
 			\overbrace{(xy-2)\overbrace{[\underbrace{(xy-2)xy}_{1}+4+2xy]}^{2}}^{3}-\overbrace{(xy-2)(x^2y^2+2xy+4)}^{4} &\AddNode[1]\AddNode[2]\\
 			x^2y^2&\AddNode[1]\\ 
@@ -234,13 +235,15 @@ si  procede come nella figura\nobs\vref{fig:polinomioperpolinomio2}. In questo e
 		\LinkNodes[margin=0cm]{$(-1)\cdot (-2)\cdot 4$}%
 		\LinkNodes[margin=0cm]{Sommando}%
 	\end{NodesList}
-\caption[]{Polinomio per polinomio 2}
-\label{fig:polinomioperpolinomio2}
-\end{figure}
+%\caption[]{Polinomio per polinomio 2}
+%\label{fig:polinomioperpolinomio2}
+%\end{figure}
+\end{esempio}
 \subsection{Quadrato del binomio}
-Il quadrato di un binomio è un particolare prodotto di un binomio per se stesso. Si calcola utilizzando la regola\[(A+B)^2=A^2+B^2+2AB\] che va letto:<< Il quadrato di in binomio è uguale al quadrato del primo termine più il quadrato del secondo termine più il doppio del prodotto del primo termine per il secondo termine>>. La figura\nobs\vref{fig:prodottoquadrattobinomio} spiega quanto detto prima.
-\begin{figure}
-	\centering
+Il quadrato di un binomio è un particolare prodotto di un binomio per se stesso. Si calcola utilizzando la regola\[(A+B)^2=A^2+B^2+2AB\] che va letto:<< Il quadrato di in binomio è uguale al quadrato del primo termine più il quadrato del secondo termine più il doppio del prodotto del primo termine per il secondo termine>>. 
+%\begin{figure}
+%	\centering
+\begin{center}
 \begin{tikzpicture}
 \node (a) {$(A$};
 \node (p1)[right of=a, node distance=15]{$+$};
@@ -256,10 +259,14 @@ Il quadrato di un binomio è un particolare prodotto di un binomio per se stesso
 \path(b.south)edge [bend right=45,-triangle 90](bs.south);
 \path(b.south)edge [bend right=45,-triangle 90](dp.south);
 \end{tikzpicture}
-	\caption{Quadrato del binomio}
-	\label{fig:prodottoquadrattobinomio}
-\end{figure}
-\begin{figure}
+\end{center}
+%	\caption{Quadrato del binomio}
+%	\label{fig:prodottoquadrattobinomio}
+%\end{figure}
+\begin{esempio}
+Supponiamo di voler calcolare il quadrato del binomio \[\left(a+2b\right)^2 \]
+procediamo come segue:
+%\begin{figure}
 \begin{NodesList}
 	\begin{align*}
 		\left(a+2b\right)^2&\AddNode[1]\AddNode[2]\AddNode[3]\AddNode[4]\\
@@ -274,10 +281,14 @@ Il quadrato di un binomio è un particolare prodotto di un binomio per se stesso
 	\LinkNodes[margin=2cm]{$2\cdot a \cdot 2b$}%
 	\LinkNodes[margin=2cm]{ottengo}% 
 \end{NodesList}
-	\caption[]{Quadrato binomio 1}
-	\label{fig:polinomiquadratobinomio1}
-\end{figure}
-\begin{figure}
+%	\caption[]{Quadrato binomio 1}
+%	\label{fig:polinomiquadratobinomio1}
+%\end{figure}
+\end{esempio}
+\begin{esempio}
+Supponiamo di voler calcolare il quadrato di \[ \left(2x-3y\right)^2\]
+procediamo come segue:
+%\begin{figure}
 \begin{NodesList}
 	\begin{align*}
 		\left(2x-3y\right)^2&\AddNode[1]\AddNode[2]\AddNode[3]\AddNode[4]\\
@@ -292,10 +303,13 @@ Il quadrato di un binomio è un particolare prodotto di un binomio per se stesso
 	\LinkNodes[margin=2cm]{$2\cdot (2x) \cdot(-3y)$}%
 	\LinkNodes[margin=2cm]{ottengo}% 
 \end{NodesList}
-	\caption[]{Quadrato binomio 2}
-	\label{fig:polinomiquadratobinomio2}
-\end{figure}
-\begin{figure}
+%	\caption[]{Quadrato binomio 2}
+%	\label{fig:polinomiquadratobinomio2}
+%\end{figure}
+\end{esempio}
+\begin{esempio}
+Supponiamo di voler calcolare il quadrato di \[\left(2-z\right)^2\]
+%\begin{figure}
 \begin{NodesList}
 	\begin{align*}
 		\left(2-z\right)^2&\AddNode[1]\AddNode[2]\AddNode[3]\AddNode[4]\\
@@ -310,13 +324,15 @@ Il quadrato di un binomio è un particolare prodotto di un binomio per se stesso
 	\LinkNodes[margin=2cm]{$2\cdot (2) \cdot(-z)$}%
 	\LinkNodes[margin=2cm]{ottengo}% 
 \end{NodesList}
-	\caption[]{Quadrato binomio 3}
-	\label{fig:polinomiquadratobinomio3}
-\end{figure}
+%	\caption[]{Quadrato binomio 3}
+%	\label{fig:polinomiquadratobinomio3}
+%\end{figure}
+\end{esempio}
 \subsection{Differenza di quadrati}
-In questo caso il prodotto è fra due binomi in cui un termine mantiene il suo segno mentre l'altro lo cambia. Si calcola utilizzando la regola \[(A+B)(A-B)=A^2-B^2 \] che va letto:<< Al prodotto fra la somma di due termini con la loro differenza è uguale al quadrato del primo termine meno il quadrato del secondo termine>>. La figura\nobs\vref{fig:prodottodifferenzaquadrati} mostra come procedere.
-\begin{figure}
-	\centering
+In questo caso il prodotto è fra due binomi in cui un termine mantiene il suo segno mentre l'altro lo cambia. Si calcola utilizzando la regola \[(A+B)(A-B)=A^2-B^2 \] che va letto:<< Al prodotto fra la somma di due termini con la loro differenza è uguale al quadrato del primo termine meno il quadrato del secondo termine>>.
+\begin{center}
+%\begin{figure}
+%	\centering
 \begin{tikzpicture}
 \node (ap) {$(A$};	
 \node (P)[right of=ap, node distance=15]{$+$};
@@ -333,7 +349,35 @@ In questo caso il prodotto è fra due binomi in cui un termine mantiene il suo s
 \path(am.south)edge [bend right=45,-triangle 90](aq.south);
 \path(bm.south)edge [bend right=45,-triangle 90](bq.south);
 \end{tikzpicture}
-	\caption{Differenza di quadrati}
-	\label{fig:prodottodifferenzaquadrati}
-\end{figure}
-
+%	\caption{Differenza di quadrati}
+%	\label{fig:prodottodifferenzaquadrati}
+%\end{figure}
+\end{center}
+\subsection{Cubo del Binomio}
+Un altro prodotto notevole è il cubo del binomio. Si calcola utilizzando la regola\[(A+B)^3=A^3+B^3+3A^2B+3AB^2\] che va letto:<< Il cubo di in binomio è uguale al cubo del primo termine più il cubo del secondo termine più il triplo del prodotto del quadrato primo termine per il secondo  più il triplo del prodotto del primo per il quadrato del secondo>>. 
+\begin{center}
+%\begin{figure}
+%	\centering
+\begin{tikzpicture}
+\node (a) {$(A$};
+\node (p1)[right of=a, node distance=15]{$+$};
+\node (b)[right of=p1, node distance=15]{$B)^3$};
+\node (R)[right of=b, node distance=15]{$=$};
+\node (as)[right of=R, node distance=15]{$A^3$};
+\node (s1)[right of=as, node distance=15]{$+$};
+\node (bs)[right of=s1, node distance=15]{$B^3$};
+\node (s2)[right of=bs, node distance=15]{$+$};
+\node (dp)[right of=s2, node distance=15]{$3A^2B$};
+\node (s3)[right of=dp, node distance=15]{$+$};
+\node (dp2)[right of=s3, node distance=15]{$3AB^2$};
+\path (a.north) edge [bend left=45,-triangle 90](as.north);
+\path (a.north) edge [bend left=45,-triangle 90](dp.north);
+\path (a.north) edge [bend left=45,-triangle 90](dp2.north);
+\path(b.south)edge [bend right=45,-triangle 90](bs.south);
+\path(b.south)edge [bend right=45,-triangle 90](dp.south);
+\path(b.south)edge [bend right=45,-triangle 90](dp2.south);
+\end{tikzpicture}
+%	\caption{Cubo del binomio}
+%	\label{fig:prodottocubobinomio}
+%\end{figure}
+\end{center}
