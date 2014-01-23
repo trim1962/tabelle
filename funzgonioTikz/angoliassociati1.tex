@@ -1,8 +1,7 @@
 % Tikz File 'mytikz.tex'
 \documentclass{standalone}
 \input{../Mod_base/grafica}
-
-\input{simboli_operatori}
+\input{../Mod_base/simboli_operatori}
 \input{../Mod_base/unita_misura}
 %\usetikzlibrary{...}
 \begin{document}
@@ -39,8 +38,8 @@
 %\draw[->] {(\sraggio/2.5},0 ) arc (0:\pangolo:\sraggio/2.5) node[above] {$\arco$};
 \draw(P)--(PY) node[midway,above] {$ \cos(\alpha)$};
 \draw(Q)--(QY) node[midway,above] {$\cos(\ang{180}-\alpha)$};
-\draw(P)--(PX) node[midway,above,right] {$\sen(\alpha)$};
-\draw(Q)--(QX)node[midway,below,left] {$\sen(\ang{180}-\alpha)$};
+\draw(P)--(PX) node[midway,above,right] {$\sin(\alpha)$};
+\draw(Q)--(QX)node[midway,below,left] {$\sin(\ang{180}-\alpha)$};
 \draw [->] (0:\sraggio/3) arc (0:\sangolo:\sraggio/3);
 \draw (\sangolo/3:\sraggio/2) node[ below left]   {$\ang{180}-\alpha$};
 \draw [->] (0:\sraggio/4) arc (0:\pangolo:\sraggio/4);
