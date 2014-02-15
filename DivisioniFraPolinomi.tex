@@ -1,0 +1,154 @@
+\chapter{Divisioni fra polinomi}
+\label{cha:Divisionipolinomi}
+\minitoc
+\mtcskip                                % put some skip here
+\minilof                                % a minilof
+\mtcskip                                % put some skip here
+\minilot
+\section{Divisioni fra monomi}
+Un monomio è divisibile per un altro monomio se il grado del dividendo per ciascuna lettera è minore o uguale al grado della stessa lettera del divisore.
+\begin{esempio}
+Le seguenti divisioni sono possibili
+\begin{align*}
+3x^3y^2:x^y=&3x^0y^1=3y\\
+4x^5a^2b:2x^2a=&2x^3ab
+\end{align*}
+La seguente divisione è impossibile
+\begin{align*}
+x^4y^3:y^5=&x^4y^{-2}
+\end{align*}
+\end{esempio}
+\section{Divisioni fra Polinomi e monomi}
+La divisione di un polinomio per un monomio è possibile se è possibile la divisione fra ogni termine del polinomio con il monomio.
+\section{Divisione fra polinomi}
+\begin{esempio}
+Supponiamo di voler fare la seguente divisione $(x^3-x^4+1):(x^2+1)$
+\begin{NodesList}
+\begin{align*}
+(x^3-x^4+1):(x^2+1)&\AddNode\\
+(-x^4+x^3+1):(x^2+1)&\AddNode\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{tabular}{lllll|l}
+$-x^4$& $+x^3$ & \phantom{$-x^2$} &\phantom{$-x$}  &$+1$&$ x^2+1$\\ 
+\cline{6-6}&&&&&
+%  \vrule height 2.5ex width 0pt $-x^4$& &$-x^2$  &  &&$-x^2+x+1$\\ 
+%\cline{1-5}
+%  \vrule height 2.5ex width 0pt &$+x^3$ & $+x^2$ &  &$+1$&  \\ 
+% &$+x^3$& &$+x$&&  \\ 
+%\cline{2-5}
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&$-x$&$+1$&  \\ 
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&&$+1$&  \\ 
+%\cline{3-5}
+% &  &  &$-x$&&  \\ 
+\\
+\end{tabular}
+\end{minipage}&\AddNode\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{tabular}{lllll|l}
+$-x^4$& $+x^3$ &\phantom{$-x^2$}  &\phantom{$-x$}  &$+1$&$ x^2+1$\\ 
+\cline{6-6}&&&&&$-x^2$
+%  \vrule height 2.5ex width 0pt $-x^4$& &$-x^2$  &  &&$-x^2+x+1$\\ 
+%\cline{1-5}
+%  \vrule height 2.5ex width 0pt &$+x^3$ & $+x^2$ &  &$+1$&  \\ 
+% &$+x^3$& &$+x$&&  \\ 
+%\cline{2-5}
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&$-x$&$+1$&  \\ 
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&&$+1$&  \\ 
+%\cline{3-5}
+% &  &  &$-x$&&  \\ 
+\\
+\end{tabular}
+\end{minipage}&\AddNode\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{tabular}{lllll|l}
+$-x^4$& $+x^3$ & \phantom{$-x^2$} & \phantom{$-x$} &$+1$&$ x^2+1$\\ 
+\cline{6-6}
+  \vrule height 2.5ex width 0pt $-x^4$& &$-x^2$  &  &&$-x^2$\\ 
+\cline{1-5}
+  \vrule height 2.5ex width 0pt &$+x^3$ & $+x^2$ &  &$+1$&  \\ 
+% &$+x^3$& &$+x$&&  \\ 
+%\cline{2-5}
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&$-x$&$+1$&  \\ 
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&&$+1$&  \\ 
+%\cline{3-5}
+% &  &  &$-x$&&  \\ 
+\\
+\end{tabular}
+\end{minipage}&\AddNode\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{tabular}{lllll|l}
+$-x^4$& $+x^3$ & \phantom{$-x^2$} & \phantom{$-x$} &$+1$&$ x^2+1$\\ 
+\cline{6-6}
+  \vrule height 2.5ex width 0pt $-x^4$& &$-x^2$  &  &&$-x^2+x$\\ 
+\cline{1-5}
+  \vrule height 2.5ex width 0pt &$+x^3$ & $+x^2$ &  &$+1$&  \\ 
+% &$+x^3$& &$+x$&&  \\ 
+%\cline{2-5}
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&$-x$&$+1$&  \\ 
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&&$+1$&  \\ 
+%\cline{3-5}
+% &  &  &$-x$&&  \\ 
+\\
+\end{tabular}
+\end{minipage}&\AddNode\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{tabular}{lllll|l}
+$-x^4$& $+x^3$ & \phantom{$-x^2$} & \phantom{$-x$} &$+1$&$ x^2+1$\\ 
+\cline{6-6}
+  \vrule height 2.5ex width 0pt $-x^4$& &$-x^2$  &  &&$-x^2+x$\\ 
+\cline{1-5}
+  \vrule height 2.5ex width 0pt &$+x^3$ & $+x^2$ &  &$+1$&  \\ 
+ &$+x^3$& &$+x$&&  \\ 
+\cline{2-5}
+   \vrule height 2.5ex width 0pt&  &$+x^2$&$-x$&$+1$&  \\ 
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&&$+1$&  \\ 
+%\cline{3-5}
+% &  &  &$-x$&&  \\ 
+\\
+\end{tabular}
+\end{minipage}&\AddNode\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{tabular}{lllll|l}
+$-x^4$& $+x^3$ & \phantom{$-x^2$} & \phantom{$-x$} &$+1$&$ x^2+1$\\ 
+\cline{6-6}
+  \vrule height 2.5ex width 0pt $-x^4$& &$-x^2$  &  &&$-x^2+x+1$\\ 
+\cline{1-5}
+  \vrule height 2.5ex width 0pt &$+x^3$ & $+x^2$ &  &$+1$&  \\ 
+ &$+x^3$& &$+x$&&  \\ 
+\cline{2-5}
+   \vrule height 2.5ex width 0pt&  &$+x^2$&$-x$&$+1$&  \\ 
+%   \vrule height 2.5ex width 0pt&  &$+x^2$&&$+1$&  \\ 
+%\cline{3-5}
+% &  &  &$-x$&&  \\ 
+\\
+\end{tabular}
+\end{minipage}&\AddNode\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{tabular}{lllll|l}
+$-x^4$& $+x^3$ & \phantom{$-x^2$} & \phantom{$-x$} &$+1$&$ x^2+1$\\ 
+\cline{6-6}
+  \vrule height 2.5ex width 0pt $-x^4$& &$-x^2$  &  &&$-x^2+x+1$\\ 
+\cline{1-5}
+  \vrule height 2.5ex width 0pt &$+x^3$ & $+x^2$ &  &$+1$&  \\ 
+ &$+x^3$& &$+x$&&  \\ 
+\cline{2-5}
+   \vrule height 2.5ex width 0pt&  &$+x^2$&$-x$&$+1$&  \\ 
+   \vrule height 2.5ex width 0pt&  &$+x^2$&&$+1$&  \\ 
+\cline{3-5}
+ &  &  &$-x$&&  \\ 
+\\
+\end{tabular}
+\end{minipage}&\AddNode\\
+\end{align*}
+\LinkNodes{Ordino i polinomi}
+\LinkNodes{\begin{minipage}{5cm}
+Scrivo la divisione lasciando spazi vuoti dove necessario
+\end{minipage}}%
+  \LinkNodes{$\dfrac{-x^4}{x^2}=-x^2$}%
+ \LinkNodes{Calcolo il primo resto}%
+  \LinkNodes{$\dfrac{x^3}{x^2}=x$}%
+   \LinkNodes{Calcolo il secondo resto}%
+   \LinkNodes{$\dfrac{x^2}{x^2}=1$}%
+    \LinkNodes{Calcolo l'ultimo resto}%
+   \end{NodesList}
+\end{esempio}
