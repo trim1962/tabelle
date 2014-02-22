@@ -1,6 +1,6 @@
 % Tikz File 'mytikz.tex'
 \documentclass{standalone}
-%\input{../../Mod_base/grafica}
+
 \input{../Mod_base/grafica}
 
 %\usetikzlibrary{...}
@@ -22,12 +22,12 @@
 }
 {
 	\draw[->] (\sraggio/\y,0 ) arc (0:\x:\sraggio/\y);% node[above ] {$\arco$};
-	\node (aa) at   ({cos(\x/2} , {sin(\x/2} ) [label=above right:$\arco$] {};
+	\node (aa) at   ({cos(\x/2} , {sin(\x/2} ) [label= right:$\arco$] {};
 	\draw(0,0) -- ({\raggio*cos(\x} , {\raggio*sin(\x})node[midway,left ]{a} node [above]{P};
-	\draw[dashed] ({\raggio*cos(\x} , 0 ) -- ({\raggio*cos(\x} , {\raggio*sin(\x} )node[midway,left]{c}  ;
+	\draw[dashed] ({\raggio*cos(\x} , 0 ) -- ({\raggio*cos(\x} , {\raggio*sin(\x} )node[midway,right]{c}  ;
 	\draw [dashed](0, {\raggio*sin(\x} ) -- ({\raggio*cos(\x} , {\raggio*sin(\x} );
 	\draw[dashed] (0 , 0 ) -- (0 , {\raggio*sin(\x} )node [above left]{K};
-	\draw [dashed](0, 0 ) -- ({\raggio*cos(\x} , 0 )node[midway,above]{b} node [below]{H};;
+	\draw [dashed](0, 0 ) -- ({\raggio*cos(\x} , 0 )node[midway,below]{b} node [below]{H};;
 }
 \draw plot[domain=0:90,smooth] ({\raggio*cos(\x} , {\raggio*sin(\x});
 \end{tikzpicture}

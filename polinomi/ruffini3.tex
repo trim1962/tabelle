@@ -1,0 +1,55 @@
+% Tikz File 'mytikz.tex'
+\documentclass{standalone}
+%\input{../../Mod_base/grafica}
+\input{../Mod_base/grafica}
+
+%\usetikzlibrary{...}
+\begin{document}
+\begin{tikzpicture}
+\tikzset{tondo/.style={draw,circle,minimum width=2.5em}};
+\tikzset{notondo/.style={circle,minimum width=2.5em}};
+\tikzset{freccia/.style={-triangle 90,very thick}};
+\tikzstyle{etichetta}=[midway,fill=black!20]
+
+%A
+\pgfmathsetmacro{\xa}{0};
+\pgfmathsetmacro{\ya}{0};
+%B
+\pgfmathsetmacro{\xb}{4};
+\pgfmathsetmacro{\yb}{\ya};
+%C
+\pgfmathsetmacro{\xc}{\xb};
+\pgfmathsetmacro{\yc}{3};
+%D
+\pgfmathsetmacro{\xd}{\xa};
+\pgfmathsetmacro{\yd}{\yc};
+\pgfmathsetmacro{\deltac}{1.5};
+\pgfmathsetmacro{\deltar}{1};
+\draw(\xa-\deltar,\ya)--(\xb+\deltar,\yb);
+\draw(\xb,\yb-\deltac)--(\xc,\yc+\deltac);
+\draw(\xc+\deltar,\yc)--(\xd-\deltar,\yd);
+\draw(\xd,\yd+\deltac)--(\xa,\ya-\deltac);
+
+\node[notondo] (A1) at (1,3.5) {$1$};
+\node[notondo] (A2) at (3,3.5) {$2$};
+\node[notondo] (AT) at (4.5,3.5) {$1$};
+
+\node[tondo] (D1) at (-0.5,0.5) {$-1$};
+\node[tondo] (M2) at (3,0.5) {$-1$};
+%\node[tondo] (MR) at (4.5,0.5) {$-1$};
+
+\node[tondo] (B1) at (1,-1.2) {$1$};
+%\node[tondo] (B2) at (3,-1.2) {$1$};
+%\node[tondo] (R) at (4.5,-1.2) {$0$};
+
+%\draw [freccia] (A1)--(B1);
+\draw [freccia] (D1)--(B1) node[etichetta]{$*$};
+\draw [freccia] (B1)--(M2) node[etichetta]{$=$};
+%\draw [freccia] (A2)--(M2)node[etichetta]{$+$};
+%\draw [freccia] (M2)--(B2)node[etichetta]{$=$};;
+%\draw [freccia] (D1)--(B2)node[etichetta]{$*$};;
+%\draw [freccia] (B2)--(MR)node[etichetta]{$=$};;
+%\draw [freccia] (AT)--(MR)node[etichetta]{$+$};;
+%\draw [freccia] (MR)--(R)node[etichetta]{$=$};;
+\end{tikzpicture}
+\end{document}
