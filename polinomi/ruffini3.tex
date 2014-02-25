@@ -1,6 +1,5 @@
-% Tikz File 'mytikz.tex'
 \documentclass{standalone}
-%\input{../../Mod_base/grafica}
+
 \input{../Mod_base/grafica}
 
 %\usetikzlibrary{...}
@@ -10,12 +9,16 @@
 \tikzset{notondo/.style={circle,minimum width=2.5em}};
 \tikzset{freccia/.style={-triangle 90,very thick}};
 \tikzstyle{etichetta}=[midway,fill=black!20]
+\tikzstyle{noetichetta}=[]
+
+
+\pgfmathsetmacro{\np}{2};
 
 %A
 \pgfmathsetmacro{\xa}{0};
 \pgfmathsetmacro{\ya}{0};
 %B
-\pgfmathsetmacro{\xb}{4};
+\pgfmathsetmacro{\xb}{\np*2};
 \pgfmathsetmacro{\yb}{\ya};
 %C
 \pgfmathsetmacro{\xc}{\xb};
@@ -23,33 +26,52 @@
 %D
 \pgfmathsetmacro{\xd}{\xa};
 \pgfmathsetmacro{\yd}{\yc};
-\pgfmathsetmacro{\deltac}{1.5};
-\pgfmathsetmacro{\deltar}{1};
-\draw(\xa-\deltar,\ya)--(\xb+\deltar,\yb);
-\draw(\xb,\yb-\deltac)--(\xc,\yc+\deltac);
-\draw(\xc+\deltar,\yc)--(\xd-\deltar,\yd);
-\draw(\xd,\yd+\deltac)--(\xa,\ya-\deltac);
+%disegno righe castello
+\pgfmathsetmacro{\extrac}{1.5};
+\pgfmathsetmacro{\extrar}{1};
+\draw(\xa-\extrar,\ya)--(\xb+\extrar,\yb);
+\draw(\xb,\yb-\extrac)--(\xc,\yc+\extrac);
+\draw(\xc+\extrar,\yc)--(\xd-\extrar,\yd);
+\draw(\xd,\yd+\extrac)--(\xa,\ya-\extrac);
+%aggiustamento punti prima riga 
+\pgfmathsetmacro{\deltaa}{3.5};
+%posizionamento coefficienti in alto
+\foreach \n/\x/\st/\co in{
+a1/1/notondo/1,
+a2/3/notondo/2,
+a3/4.5/notondo/1}
+%\draw(\x,\deltaa) node[tondo] {\co};
+\node[\st] (\n) at (\x,\deltaa){$\co$};
 
-\node[notondo] (A1) at (1,3.5) {$1$};
-\node[notondo] (A2) at (3,3.5) {$2$};
-\node[notondo] (AT) at (4.5,3.5) {$1$};
+\pgfmathsetmacro{\deltam}{0.5};
+%%posizionamento coefficienti in mezzo
+\foreach \n/\x/\st/\co in{
+m1/-0.5/tondo/-1 ,
+m2/3/tondo/-1 %,
+%m3/4.5/tondo/-1%
+}
+\node[\st] (\n) at (\x,\deltam){$\co$};
 
-\node[tondo] (D1) at (-0.5,0.5) {$-1$};
-\node[tondo] (M2) at (3,0.5) {$-1$};
-%\node[tondo] (MR) at (4.5,0.5) {$-1$};
+\pgfmathsetmacro{\deltab}{-1.2};
+%posizionamento coefficienti in mezzo
+\foreach \n/\x/\st/\co in{
+b1/1/tondo/1 %,
+%b2/3/notondo/1 ,
+%b3/4.5/tondo/1%
+}
+\node[\st] (\n) at (\x,\deltab){\co};
 
-\node[tondo] (B1) at (1,-1.2) {$1$};
-%\node[tondo] (B2) at (3,-1.2) {$1$};
-%\node[tondo] (R) at (4.5,-1.2) {$0$};
-
-%\draw [freccia] (A1)--(B1);
-\draw [freccia] (D1)--(B1) node[etichetta]{$*$};
-\draw [freccia] (B1)--(M2) node[etichetta]{$=$};
-%\draw [freccia] (A2)--(M2)node[etichetta]{$+$};
-%\draw [freccia] (M2)--(B2)node[etichetta]{$=$};;
-%\draw [freccia] (D1)--(B2)node[etichetta]{$*$};;
-%\draw [freccia] (B2)--(MR)node[etichetta]{$=$};;
-%\draw [freccia] (AT)--(MR)node[etichetta]{$+$};;
-%\draw [freccia] (MR)--(R)node[etichetta]{$=$};;
+\foreach \a/\b/\st/\op in{
+%a1/b1/noetichetta/ %,
+m1/b1/etichetta/* ,
+b1/m2/etichetta/=%
+%a2/m2/etichetta/+,
+%m2/b2/etichetta/=
+%m1/b2/etichetta/*,
+%b2/m3/etichetta/=
+%a3/m3/etichetta/+,
+%m3/b3/etichetta/=
+}
+\draw[freccia](\a)--(\b)node[\st]{$\op$};
 \end{tikzpicture}
 \end{document}
