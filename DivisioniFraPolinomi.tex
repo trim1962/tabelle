@@ -26,7 +26,9 @@ Supponiamo di voler fare la seguente divisione $(x^3-x^4+1):(x^2+1)$
 \begin{NodesList}
 \begin{align*}
 (x^3-x^4+1):(x^2+1)&\AddNode\\
+&\\
 (-x^4+x^3+1):(x^2+1)&\AddNode\\
+&\\
 \begin{minipage}[t]{0.5\textwidth}
 \begin{tabular}{lllll|l}
 $-x^4$& $+x^3$ & \phantom{$-x^2$} &\phantom{$-x$}  &$+1$&$ x^2+1$\\ 
@@ -140,17 +142,72 @@ $-x^4$& $+x^3$ & \phantom{$-x^2$} & \phantom{$-x$} &$+1$&$ x^2+1$\\
 \end{tabular}
 \end{minipage}&\AddNode\\
 \end{align*}
-\LinkNodes{Ordino i polinomi}
-\LinkNodes{\begin{minipage}{5cm}
-Scrivo la divisione lasciando spazi vuoti dove necessario
+\LinkNodes{Ordino i polinomi\\ }
+\LinkNodes{\begin{minipage}{3.5cm}
+
+Scrivo la divisione lasciando spazi vuoti dove necessario\\
 \end{minipage}}%
-  \LinkNodes{$\dfrac{-x^4}{x^2}=-x^2$}%
+  \LinkNodes{\begin{minipage}{3.5cm}
+  
+ \[\dfrac{-x^4}{x^2}=-x^2\]
+  \end{minipage}
+}%
  \LinkNodes{Calcolo il primo resto}%
   \LinkNodes{$\dfrac{x^3}{x^2}=x$}%
-   \LinkNodes{Calcolo il secondo resto}%
+\LinkNodes{\begin{minipage}{3.5cm}
+Calcolo il secondo resto
+\end{minipage}}%
    \LinkNodes{$\dfrac{x^2}{x^2}=1$}%
     \LinkNodes{Calcolo l'ultimo resto}%
    \end{NodesList}
+\end{esempio}
+\begin{esempio}
+Supponiamo di voler dividere \[(x^4+2x+1):(x^2+1)\]
+\begin{figure}
+\rotatebox{90}{
+\begin{minipage}[b]{.35\linewidth}
+\centering\includestandalone[width=5.5cm]{polinomi/divpolinomi7}
+\subcaption{Sette}\label{fig:divpol2g}
+\end{minipage}%
+}
+\rotatebox{90}{
+\begin{minipage}[b]{.35\linewidth}
+\centering\includestandalone[width=5.5cm]{polinomi/divpolinomi6}
+\subcaption{Sei}\label{fig:divpol2f}
+\end{minipage}%
+}
+\rotatebox{90}{
+\begin{minipage}[b]{.35\linewidth}
+\centering\includestandalone[width=5.5cm]{polinomi/divpolinomi5}
+\subcaption{Cinque}\label{fig:divpol2e}
+\end{minipage}%
+}
+\rotatebox{90}{
+\begin{minipage}[b]{.35\linewidth}
+\centering\includestandalone[width=5.5cm]{polinomi/divpolinomi4}
+\subcaption{Quattro}\label{fig:divpol2d}
+\end{minipage}%
+}
+\rotatebox{90}{
+\begin{minipage}[b]{.35\linewidth}
+\centering\includestandalone[width=5.5cm]{polinomi/divpolinomi3}
+\subcaption{Tre}\label{fig:divpol2c}
+\end{minipage}
+}
+\rotatebox{90}{
+\begin{minipage}[b]{.35\linewidth}
+\centering\includestandalone[width=5.5cm]{polinomi/divpolinomi2}
+\subcaption{Due}\label{fig:divpol2b}
+\end{minipage}
+}
+\rotatebox{90}{
+\begin{minipage}[b]{.35\linewidth}
+\centering\includestandalone[width=5.5cm]{polinomi/divpolinomi1}
+\subcaption{Uno}\label{fig:divpol2a}
+\end{minipage}%
+}
+\caption{Divisione fra polinomi}\label{fig:divpolinomi2}
+\end{figure}
 \end{esempio}
 \section{Metodo di Ruffini}
 \begin{esempio}

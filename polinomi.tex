@@ -23,15 +23,15 @@ Supponiamo di voler sommare\[ 3a+2b^2+4a-6b^2+2b\] procediamo come segue:
 	  \end{NodesList}
 \end{esempio}
 \section{Prodotti}
-Il prodotto fra due polinomi\index{Polinomi!prodotto} si ottiene moltiplicando tutti i termini di un polinomio per tutti i termini dell'altro. 
+Il prodotto fra due polinomi\index{Polinomi!prodotto} si ottiene moltiplicando tutti i termini di un polinomio per tutti i monomi dell'altro. 
 \subsection{Monomio per un polinomio}
-Il caso più semplice è il prodotto di un monomio per un binomio. Il monomio fuori della parentesi moltiplica il binomio all'interno
+Il caso più semplice è il prodotto di un monomio per un binomio. Il monomio fuori della parentesi moltiplica il binomio all'interno.
 \begin{center}
 \includestandalone{polinomi/monomioperpolinomio}
 \end{center}
 \begin{esempio}
 Supponiamo di avere \[3(2a-5b)-7a(2a+3b)+5(a^2+3b)\]
-In questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. A destra si vedono i risultati parziali e che poi sommati danno il risultato.
+In questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. A destra si vedono i risultati parziali  che poi sommati, danno il risultato finale.
 \begin{NodesList}
 	\begin{align*}
 		\overbrace{3(2a-5b)}^{1}-\overbrace{7a(2a+3b)}^{2}+\overbrace{5(a^2+3b)}^{3}&\AddNode[1]\AddNode[2]\\
@@ -59,7 +59,7 @@ In questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. A de
 \end{esempio}
 \begin{esempio}
 Supponiamo di avere \[2a(3a-6)-(6a^2-2b)-3a(a-2b)\]
-Anche in questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio nel secondo prodotto notare il $-1$ fuori della parentesi tonda che in pratica cambia di segno i termini all'interno della parentesi. Anche qui a destra abbiamo  i risultati parziali delle tre moltiplicazioni e per finire la somma dei termini che da il risultato.
+Anche in questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. Nel secondo prodotto si nota il segno meno fuori della parentesi tonda che in pratica cambierà di segno dei termini all'interno della parentesi. Anche qui a destra abbiamo  i risultati parziali delle tre moltiplicazioni e per finire la somma dei termini che da il risultato finale.
 %\begin{figure}
 \begin{NodesList}
 	\begin{align*}
@@ -87,7 +87,7 @@ Anche in questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio
 \end{NodesList}
 \end{esempio}
 \subsection{Polinomio per polinomio}
-In questo caso il polinomio nella prima parentesi moltiplica il polinomio della seconda parentesi. In pratica ogni monomio contenuto nella prima parentesi moltiplica ogni monomio nella seconda.
+In questo caso il polinomio nella prima parentesi moltiplica il polinomio della seconda parentesi. In pratica ogni monomio contenuto nella prima parentesi moltiplica tutti i monomi della seconda.
 \begin{center}
 \includestandalone{polinomi/polinomioperpolinomio}
 \end{center}
@@ -167,7 +167,7 @@ In questo esempio abbiamo quattro moltiplicazioni  fra vari polinomi. A complica
 	\end{NodesList}
 \end{esempio}
 \subsection{Quadrato del binomio}
-Il quadrato di un binomio è un particolare prodotto di un binomio per se stesso. Si calcola utilizzando la regola\[(A+B)^2=A^2+B^2+2AB\] che va letto:<< Il quadrato di in binomio è uguale al quadrato del primo termine più il quadrato del secondo termine più il doppio del prodotto del primo termine per il secondo termine>>. 
+Il quadrato di un binomio\index{Quadrato!binomio} è il  prodotto di un binomio per se stesso. Si calcola utilizzando la regola\[(A+B)^2=A^2+B^2+2AB\] che va letta: << Il quadrato di in binomio è uguale al quadrato del primo termine più il quadrato del secondo termine più il doppio del prodotto del primo termine per il secondo>>. 
 \begin{center}
 \includestandalone{polinomi/quadratobinomio}
 \end{center}
@@ -246,7 +246,7 @@ Supponiamo di voler calcolare il quadrato di \[\left(1-\dfrac{1}{2}z\right)^2\]
 \end{NodesList}
 \end{esempio}
 \subsection{Differenza di quadrati}
-In questo caso il prodotto è fra due binomi in cui un termine mantiene il suo segno mentre l'altro lo cambia. Si calcola utilizzando la regola \[(A+B)(A-B)=A^2-B^2 \] che va letto:<< Al prodotto fra la somma di due termini con la loro differenza è uguale al quadrato del primo termine meno il quadrato del secondo termine>>.
+In questo caso il prodotto\index{Differenza!quadrati} è fra due binomi in cui un termine mantiene il suo segno mentre l'altro lo cambia. Si calcola utilizzando la regola \[(A+B)(A-B)=A^2-B^2 \] che va letta: << Al prodotto fra la somma di due termini con la loro differenza è uguale al quadrato del primo termine meno il quadrato del secondo>>.
 \begin{center}
 \includestandalone{polinomi/differenzadquadrati}
 \end{center}
@@ -305,7 +305,7 @@ L'esempio non sembra una differenza di quadrati ma anche qui abbiamo un termine 
 \end{NodesList}
 \end{esempio}
 \subsection{Cubo del Binomio}
-Un altro prodotto notevole è il cubo del binomio. Si calcola utilizzando la regola\[(A+B)^3=A^3+B^3+3A^2B+3AB^2\] che va letto:<< Il cubo di un binomio è uguale al cubo del primo termine più il cubo del secondo termine più il triplo del prodotto del quadrato primo termine per il secondo  più il triplo del prodotto del primo per il quadrato del secondo>>. 
+Un altro prodotto notevole è il cubo del binomio\index{Cubo!binomio}. Si calcola utilizzando la regola\[(A+B)^3=A^3+B^3+3A^2B+3AB^2\] che va letta: << Il cubo di un binomio è uguale al cubo del primo termine più il cubo del secondo termine più il triplo del prodotto del quadrato primo termine per il secondo  più il triplo del prodotto del primo per il quadrato del secondo>>. 
 \begin{center}
 \includestandalone{polinomi/cubobinomio}
 \end{center}
@@ -330,7 +330,7 @@ procediamo come segue:
 \end{NodesList}
 \end{esempio}
 \subsection{Quadrato del trinomio}
-Il quadrato del trinomio si calcola utilizzando la regola\[(A+B+c)=A^2+B^2+C^2+2AB+2AC+2BC\] che va letto:<< Il quadrato di un trinomio è uguale al quadrato del primo termine più il quadrato del secondo termine più il quadrato del terzo termine, più la somma del doppio del prodotto del primo per il secondo, più la somma del doppio del prodotto del primo per il terzo, più la somma del doppio del prodotto del secondo per il terzo>>. 
+Il quadrato del trinomio si calcola utilizzando la regola\[(A+B+c)=A^2+B^2+C^2+2AB+2AC+2BC\] che va letta: << Il quadrato di un trinomio è uguale al quadrato del primo termine più il quadrato del secondo termine più il quadrato del terzo termine, più la somma del doppio del prodotto del primo per il secondo, più la somma del doppio del prodotto del primo per il terzo, più la somma del doppio del prodotto del secondo per il terzo>>. 
 \begin{center}
 \includestandalone{polinomi/quadratotrinomio}
 \end{center}
