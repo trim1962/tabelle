@@ -2,7 +2,7 @@
 \documentclass{standalone}
 %\input{../../Mod_base/grafica}
 \input{../Mod_base/grafica}
-\input{simboli_operatori}
+\input{../Mod_base/simboli_operatori}
 \input{../Mod_base/unita_misura}
 %\usetikzlibrary{...}
 \begin{document}
@@ -39,10 +39,10 @@
 	\fill [color=black] (QX) circle (1.5pt);
 	\fill [color=black] (QY) circle (1.5pt);
 	%\draw[->] {(\sraggio/2.5},0 ) arc (0:\pangolo:\sraggio/2.5) node[above] {$\arco$};
-	\draw(P)--(PY) node[midway,above] {$cos(\alpha)$};
-	\draw(Q)--(QY) node[midway,below] {$cos(-\alpha)$};
-	\draw(P)--(PX) node[midway,right=10pt] {$sen(\alpha)$};
-	\draw(Q)--(QX)node[midway,right=10pt] {$sen(-\alpha)$};
+	\draw(P)--(PY) node[midway,above] {$\cos(\alpha)$};
+	\draw(Q)--(QY) node[midway,below] {$\cos(-\alpha)$};
+	\draw(P)--(PX) node[midway,right=10pt] {$\sen(\alpha)$};
+	\draw(Q)--(QX)node[midway,right=10pt] {$\sen(-\alpha)$};
 	\draw [->] (0:\sraggio/3) arc (0:\pangolo:\sraggio/3);
 	\draw (\pangolo/2:\sraggio/3) node[right] {$+\alpha$};
 	\draw [->] (0:\sraggio/3) arc (0:-\pangolo:\sraggio/3);
