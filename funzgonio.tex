@@ -780,6 +780,22 @@ Il seno di un angolo è una funzione limitata con valori compresi tra meno uno e
 	\captionof{figure}{Equazioni Elementari}
 	\label{fig:EquaElementareSenoCoseno}
 \end{figure}
+\begin{figure}
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+			\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareSeno4}
+			\captionof{figure}{$\sin x=m$\  $-1<m<0$}
+			\label{fig:EquaElementareSeno4}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\linewidth}
+		\centering
+		\includestandalone[width=7.5cm]{funzgonioTikz/EquaElementareCoseno4}
+		\captionof{figure}{$\cos x=m$ $-1<m<0$}
+		\label{fig:EquaElementareCoseno4}
+	\end{subfigure}
+	\captionof{figure}{Equazioni Elementari}
+	\label{fig:EquaElementareSenoCoseno2}
+\end{figure}
 \begin{esempio}
 \begin{align*}
 \intertext{Supponiamo di dover risolvere}
@@ -791,6 +807,19 @@ m& =\dfrac{\sqrt{2}}{2}
 \intertext{le due soluzioni sono}
 x&=\ang{45}+k\ang{360}\\
  x&=\ang{180}-\ang{45}+k\ang{360}\\
+\end{align*}
+\end{esempio}
+\begin{esempio}
+\begin{align*}
+\intertext{Supponiamo di dover risolvere}
+\sin x& =-\dfrac{\sqrt{2}}{2}
+\intertext{quindi}
+m& =-\dfrac{\sqrt{2}}{2}
+\intertext{In questo caso vale la figura\nobs\vref{fig:EquaElementareSeno4} m è un valore noto quindi l'angolo è}
+\alpha&=\ang{45}
+\intertext{le due soluzioni sono}
+x&=\ang{180}+\ang{45}+k\ang{360}\\
+ x&=\ang{360}-\ang{45}+k\ang{360}\\
 \end{align*}
 \end{esempio}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -811,6 +840,23 @@ x&=\ang{45}+k\ang{360}\\
 	\label{fig:EquaElementareSeno3a}
 \end{figure}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{esempio}
+\begin{align*}
+\intertext{Supponiamo di dover risolvere}
+\sin(x+\ang{30})&=\dfrac{\sqrt{2}}{2}
+\intertext{Trovo la prima soluzione}
+x+\ang{30}&=3x+\ang{45}+k\ang{360}\\
+x&=\ang{45}-\ang{30}+k\ang{360}\\
+x&=\ang{15}+k\ang{360}
+\intertext{La soluziione associata è}
+x+\ang{30}&=\ang{180}-\ang{45}+k\ang{360}\\
+x&=\ang{180}-\ang{45}-\ang{30}+k\ang{360}\\
+x&=\ang{105}+k\ang{360}
+\intertext{Le due soluzioni sono}
+x&=\ang{15}+k\ang{360}\\
+x&=\ang{105}+k\ang{360}
+\end{align*}
+\end{esempio}
 \begin{esempio}
 \begin{align*}
 \intertext{Supponiamo di dover risolvere}
@@ -885,7 +931,7 @@ Esempio uguale a precedente. Prima di risolvere l'equazione bisogna trasformare 
 2x+x&=\ang{90}-\ang{40}-\ang{30}+k\ang{360}\\
 3x&=\ang{20}+k\ang{360}\\
 x&=\dfrac{\ang{20}}{3}+k\ang{120}
-\intertext{La soluziione associata è}
+\intertext{La soluzione associata è}
 2x+\ang{30}&=\ang{180}-[\ang{90}-(x+\ang{40})]+k\ang{360}\\
 2x+\ang{30}&=\ang{180}-\ang{90}+x+\ang{40}+k\ang{360}\\
 2x-x&=\ang{180}-\ang{90}+x+\ang{40}-\ang{30}+k\ang{360}\\
