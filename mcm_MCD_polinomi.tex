@@ -1,0 +1,72 @@
+\chapter{MCD e mcm}
+\label{cha:mcmmcdpolinomi}
+\minitoc
+\mtcskip                                % put some skip here
+\minilof                                % a minilof
+\mtcskip                                % put some skip here
+\minilot
+\section{MCD}\index{Polinomi!MCD}
+\label{secMCDpolinomi}
+
+\section{mcm}\index{Polinomi!mcm}
+\label{sec:mcmpolinomi}
+Il $\mcm$ fra più polinomi si ottiene moltiplicando i fattori comuni  e non comuni con il massimo esponente.
+
+In genere, i polinomi sono una somma di più termini (addendi) quindi non è possibile,in genere, calcolare subito il $\mcm$.  
+\begin{esempio}
+Supponiamo di voler trovare il $\mcm$ fra $a^3-2a^2b$ e $a^2-4b^2$ i due polinomi sono somme di addendi quindi 
+\begin{center}
+\begin{tikzpicture}
+\tikzset{notondo/.style={ellipse}};
+\tikzset{tondo/.style={draw,notondo}};
+\tikzset{linea/.style={very thick}};
+\tikzset{freccia/.style={-triangle 90,linea}};
+\tikzstyle{etichetta}=[tondo,node distance = 2
+cm];
+\tikzstyle{noetichetta}=[];
+\tikzset{freccialta/.style={freccia,bend left=45}};
+\tikzset{frecciabassa/.style={freccia,bend right=45}};
+\node [notondo] (p1)  {$a^3$};
+\node [notondo,right of=p1] (p2)  {$-$};
+\node [notondo,right of=p2] (p3)  {$2a^2b$};
+\node [notondo,right of=p3] (p4)  {};
+\node [notondo,right of=p4] (p5)  {$a^2$};
+\node [notondo,right of=p5 ] (p6)  {$-$};
+\node [notondo,right of=p6] (p7)  {$4b^2$};
+\node [etichetta,below of=p6] (p9)  {Addendi};
+\node [etichetta,below of=p2] (p8)  {Addendi};
+\draw[freccia] (p8)--(p1);
+\draw[freccia] (p8)--(p3);
+\draw[freccia] (p9)--(p5);
+\draw[freccia] (p9)--(p7);
+\end{tikzpicture}
+\end{center}
+raccogliendo a fattore comune nel primo e osservando che nel secondo abbiamo una differenza di quadrati otteniamo 
+\begin{center}
+\begin{tikzpicture}
+\tikzset{notondo/.style={ellipse}};
+\tikzset{tondo/.style={draw,notondo}};
+\tikzset{linea/.style={very thick}};
+\tikzset{freccia/.style={-triangle 90,linea}};
+\tikzstyle{etichetta}=[tondo,node distance = 2cm];
+\tikzstyle{noetichetta}=[];
+\tikzset{freccialta/.style={freccia,bend left=45}};
+\tikzset{frecciabassa/.style={freccia,bend right=45}};
+\node [notondo,node distance=0.5cm] (p1)  {$a^2$};
+\node [notondo,right of=p1] (p2)  {$$};
+\node [notondo,right of=p2,,node distance=0.1cm] (p3)  {$(a-2b)$};
+\node [notondo,right of=p3,node distance=2cm ] (p4)  {};
+\node [notondo,right of=p4,] (p5)  {$(a-2b)$};
+\node [notondo,right of=p5,,node distance=0.5cm ] (p6)  {$$};
+\node [notondo,right of=p6] (p7)  {$(a+2b)$};
+\node [etichetta,below of=p4] (p9)  {Fattori comuni};
+\node [etichetta,above of=p4] (p8)  {Fattori non comuni};
+\draw[freccia] (p8)--(p1);
+\draw[freccia] (p8)--(p7);
+\draw[freccia] (p9)--(p3);
+\draw[freccia] (p9)--(p5);
+\end{tikzpicture}
+\end{center}
+Abbiamo trasformato le due somme in un prodotto di fattori. Possiamo dividere i fattori  in fattori comuni e in fattori non comuni. Il $\mcm$ fra i due polinomi sarà\[a^2(a-2b)(a+2b) \]
+\end{esempio}
+
