@@ -17,6 +17,7 @@ Supponiamo di voler sommare\[ 3a+2b^2+4a-6b^2+2b\] procediamo come segue:
 	 		7a-4b^2+2b&   \AddNode\\
 	 		\AddNode
 	 	\end{align*}
+	 	\tikzset{LabelStyle/.style = {left=0.1cm,pos=0.5,text=red,fill=white}}
 	 	\LinkNodes{individuo i simili}%
 	 	%\LinkNodes{sommo i monomi simili}%
 	 	\LinkNodes{$3+4$ e $2-6$}%
@@ -57,70 +58,41 @@ In questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. A de
 	\LinkNodes[margin=2cm]{sommando}% 
 \end{NodesList}
 \end{esempio}
-%\begin{esempio}
-%Supponiamo di avere \[2a(3a-6)-(6a^2-2b)-3a(a-2b)\]
-%Anche in questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. Nel secondo prodotto si nota il segno meno fuori della parentesi tonda che in pratica cambierà il segno dei termini all'interno della parentesi. A destra abbiamo  i risultati parziali delle tre moltiplicazioni.
-%\begin{NodesList}
-%	\begin{align*}
-%		\overbrace{2a(3a-6)}^{1}-\overbrace{(6a^2-2b)}^{2}-\overbrace{3a(a-2b)}^{3}&\AddNode[1]\AddNode[2]\\
-%		6a^2+&\AddNode[1]&\tag{1}\\ 
-%		-12a&\AddNode[2]&\\
-%		6a^2-12a-(6a^2-2b)-3a(a-2b)&\AddNode[3]\AddNode[4]\\
-%		-6a^2&\AddNode[3]&\tag{2}\\    
-%		+2b&\AddNode[4]&\\
-%		6a^2-12a-6a^2+2b-3a(a-2b)&\AddNode[5]\AddNode[6]\\
-%		-6a&\AddNode[5]&\tag{3}\\
-%		+6ab&\AddNode[6]&\\
-%		6a^2-12a-6a^2+2b-6a+6ab&\AddNode[7]\\   
-%		-18a+2b+6ab&\AddNode[7]   
-%	\end{align*}
-%	%\tikzset{LabelStyle/.style ={left=0.1cm,pos=0.5,text=red,fill=white}}
-%	\LinkNodes[margin=2cm]{$2a\cdot 3a$}%    
-%	\LinkNodes[margin=2cm]{$3\cdot(-5b)$}%
-%	\LinkNodes[margin=2cm]{$-1\cdot(6a^2)$}%
-%	\LinkNodes[margin=2cm]{$-1\cdot(-2b)$}%
-%	\LinkNodes[margin=2cm]{$-3a\cdot(a)$}%
-%	\LinkNodes[margin=2cm]{$-3a\cdot(-2b)$}%  
-%	\LinkNodes[margin=2cm]{otteniamo}% 
-%	\LinkNodes[margin=2cm]{sommando}% 
-%\end{NodesList}
-%\end{esempio}
+\newpage
+\begin{esempio}
+Supponiamo di avere \[2a(3a-6)-(6a^2-2b)-3a(a-2b)\]
+Anche in questo esempio abbiamo tre moltiplicazioni di un monomio per un binomio. Nel secondo prodotto si nota il segno meno fuori della parentesi tonda che in pratica cambierà il segno dei termini all'interno della parentesi. A destra abbiamo  i risultati parziali delle tre moltiplicazioni.
+% % % % % % % %
+\begin{NodesList}
+	\begin{align*}
+\overbrace{2a(3a-6)}^{1}-\overbrace{(6a^2-2b)}^{2}-\overbrace{3a(a-2b)}^{3}&\AddNode[1]\AddNode[2]\\ %
+		6a^2+&\AddNode[1]&\tag{1}\\%
+		-12a&\AddNode[2]&\\ %
+		6a^2-12a-(6a^2-2b)-3a(a-2b)&\AddNode[3]\AddNode[4]\\
+		-6a^2&\AddNode[3]&\tag{2}\\    
+		+2b&\AddNode[4]&\\
+		6a^2-12a-6a^2+2b-3a(a-2b)&\AddNode[5]\AddNode[6]\\
+		-6a&\AddNode[5]&\tag{3}\\
+		+6ab&\AddNode[6]&\\
+		6a^2-12a-6a^2+2b-6a+6ab&\AddNode[7]\\   
+		-18a+2b+6ab&\AddNode[7]   
+	\end{align*}
+	\tikzset{LabelStyle/.style ={left=0.1cm,pos=0.5,text=red,fill=white}}
+	\LinkNodes[margin=2cm]{$2a\cdot 3a$}%1    
+	\LinkNodes[margin=2cm]{$3\cdot(-5b)$}%2
+	\LinkNodes[margin=2cm]{$-1\cdot(6a^2)$}%3
+	\LinkNodes[margin=2cm]{$-1\cdot(-2b)$}%4
+	\LinkNodes[margin=2cm]{$-3a\cdot(a)$}%5
+	\LinkNodes[margin=2cm]{$-3a\cdot(-2b)$}%6  
+	\LinkNodes[margin=2cm]{otteniamo}% 7
+	\LinkNodes[margin=2cm]{sommando}% 8
+\end{NodesList}
+\end{esempio}
 \subsection{Polinomio per polinomio}
 In questo caso il polinomio nella prima parentesi moltiplica il polinomio della seconda parentesi. In pratica ogni monomio contenuto nella prima parentesi moltiplica tutti i monomi della seconda.
 \begin{center}
 \includestandalone{polinomi/polinomioperpolinomio}
 \end{center}
-\begin{esempio}
-Supponiamo di avere \[(3a-2b)(2a-b)+(2a^2-2)(2-a)\]
- In questo esempio abbiamo due moltiplicazioni di un binomio per un binomio. A destra i passaggi parziali. Infine sommiamo  gli elementi simili e otteniamo la soluzione.
- \begin{NodesList}
- 	\begin{align*}
- 		\overbrace{(3a-2b)(2a-b)}^{1}+\overbrace{(2a^2-2)(2-a)}^{2}&\nonumber\AddNode[1]\AddNode[2]\AddNode[3]\AddNode[4]\\
- 		6a^2&\AddNode[1]&\tag{1}\\ 
- 		-3ab&\AddNode[2]&\\
- 		-4ab&\AddNode[3]&\\    
- 		+2b^2&\AddNode[4]&\\
- 		6a^2-7ab+2b^2+(2a^2-2)(2-a)&\nonumber\AddNode[5]\AddNode[6]\AddNode[7]\AddNode[8]\\
- 		4a^2&\AddNode[5]&\tag{2}\\
- 		-2a^3&\AddNode[6]&\\
- 		-4 &\AddNode[7]&\\   
- 		2a&\AddNode[8]&\\   
- 		6a^2-7ab+2b^2+4a^2-2a^3-4+2a&\nonumber\AddNode[9]\\
- 		10a^2+2b^2-7ab-2a^3-4+2a&\nonumber\AddNode[9]
- 	\end{align*}
- 	\tikzset{LabelStyle/.style ={left=.5cm,pos=.5,text=red,fill=white}}
- 	\LinkNodes[margin=2cm]{$3a\cdot 2a$}%    
- 	\LinkNodes[margin=2cm]{$3a\cdot(-b)$}%
- 	\LinkNodes[margin=2cm]{$-2b\cdot(2a)$}%
- 	\LinkNodes[margin=2cm]{$-2b\cdot(-b)$}%
- 	\LinkNodes[margin=2cm]{$2a^2\cdot(2)$}%
- 	\LinkNodes[margin=2cm]{$2a^2\cdot(-a)$}%  
- 	\LinkNodes[margin=2cm]{$-2\cdot 2$}% 
- 	\LinkNodes[margin=2cm]{$-2\cdot -a$}% 
- 	\LinkNodes[margin=2cm]{Sommando}%
- \end{NodesList}
-\end{esempio}
-un altro esempio che possiamo portare è il seguente 
 \begin{esempio}
 Supponiamo di avere \[(xy-2)[(xy-2)xy+4+2xy]-(xy-2)(x^2y^2+2xy+4)\]
 In questo esempio abbiamo quattro moltiplicazioni  fra vari polinomi. A complicare le cose vi sono le regole di precedenza. A destra i vari risultati parziali. Si procede seguendo l'ordine indicato sopra l'espressione. 
@@ -162,6 +134,39 @@ In questo esempio abbiamo quattro moltiplicazioni  fra vari polinomi. A complica
 		\LinkNodes[margin=0cm]{$(-1)\cdot (-2)\cdot 4$}%
 		\LinkNodes[margin=0cm]{Sommando}%
 	\end{NodesList}
+\end{esempio}
+\begin{esempio}
+% % % % % %
+Supponiamo di avere \[(3a-2b)(2a-b)+(2a^2-2)(2-a)\]
+ In questo esempio abbiamo due moltiplicazioni di un binomio per un binomio. A destra i passaggi parziali. Infine sommiamo  gli elementi simili e otteniamo la soluzione.
+ \begin{NodesList} % % % % % % % % % % % % % % % %
+ 	\begin{align*}
+ 		\overbrace{(3a-2b)(2a-b)}^{1}+\overbrace{(2a^2-2)(2-a)}^{2}&\AddNode[1]\AddNode[2]\AddNode[3]\AddNode[4]\\ %
+ 		6a^2&\AddNode[1]&\tag{1}\\ % 
+ 		-3ab&\AddNode[2]&\\ %
+ 		-4ab&\AddNode[3]&\\  %  
+ 		+2b^2&\AddNode[4]&\\ %
+ 		6a^2-7ab+2b^2+(2a^2-2)(2-a)&\AddNode[5]\AddNode[6]\AddNode[7]\AddNode[8]\\ %
+ 		4a^2&\AddNode[5]&\tag{2}\\ %
+ 		-2a^3&\AddNode[6]&\\ %
+ 		-4 &\AddNode[7]&\\   %
+ 		2a&\AddNode[8]&\\   %
+ 		6a^2-7ab+2b^2+4a^2-2a^3-4+2a&\AddNode[9]\\ %
+ 		10a^2+2b^2-7ab-2a^3-4+2a&\AddNode[9] %
+ 	\end{align*}
+ 	\tikzset{LabelStyle/.style ={left=.5cm,pos=.5,text=red,fill=white}}
+ 	%\tikzset{LabelStyle/.style = {left=0.2cm,pos=.5,text=red,fill=white}} %
+ 	\LinkNodes[margin=2cm]{$3a\cdot 2a$}%1    
+ 	\LinkNodes[margin=2cm]{$3a\cdot(-b)$}%2
+ 	\LinkNodes[margin=2cm]{$-2b\cdot(2a)$}%3
+ 	\LinkNodes[margin=2cm]{$-2b\cdot(-b)$}%4
+ 	\LinkNodes[margin=2cm]{$2a^2\cdot(2)$}%5
+ 	\LinkNodes[margin=2cm]{$2a^2\cdot(-a)$}%6  
+ 	\LinkNodes[margin=2cm]{$-2\cdot 2$}% 7
+ 	\LinkNodes[margin=2cm]{$-2\cdot -a$}% 8
+ 	\LinkNodes[margin=2cm]{Sommando}%9
+ 	\LinkNodes[margin=2cm]{Sommando}%9
+ \end{NodesList}
 \end{esempio}
 \subsection{Quadrato del binomio}
 Il quadrato di un binomio\index{Quadrato!binomio} è il  prodotto di un binomio per se stesso. Si calcola utilizzando la regola\[(A+B)^2=A^2+B^2+2AB\] che va letta: << Il quadrato di in binomio è uguale al quadrato del primo termine più il quadrato del secondo termine più il doppio del prodotto del primo termine per il secondo>>. 
