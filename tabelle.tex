@@ -157,7 +157,7 @@
 		
 		
 		% Upper part of the page
-		\input{../Deposito_loghi/Lgrande}\\[1cm]    
+		\input{../Mod_base/Lgrande}\\[1cm]    
 		
 		\textsc{\LARGE Claudio Duchi}\\[1.5cm]
 		
@@ -198,10 +198,8 @@
 	
 \end{titlepage}
 \setcounter{page}{2}
-\input{../Deposito_loghi/copyright}
-\dominitoc
-\dominilof                  % centers title of minilof's
-\dominilot
+\input{../Mod_base/copyright}
+
 \tableofcontents 
 \mtcaddchapter
 \cleardoublepage
@@ -219,13 +217,16 @@
 \todototoc
 \listoftodos
 \mainmatter%
+\dominitoc
+\dominilof                  % centers title of minilof's
+\dominilot
 \opt{prima}{\input{prima}}
 \opt{secondo}{\input{secondo}}
 \opt{terzo}{\input{terzo}}
 \opt{quarto}{\input{quarto}}
 \opt{extra}{\input{extra}}
 \opt{grafici}{\input{grafici}}
-\input{../Deposito_loghi/MezziUsati}
+\input{../Mod_base/MezziUsati}
 \addcontentsline{toc}{chapter}{\indexname}
 \printindex
 \end{document}
