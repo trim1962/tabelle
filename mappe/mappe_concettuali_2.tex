@@ -1,0 +1,43 @@
+\documentclass{standalone}
+\input{../Mod_base/grafica}
+\tikzset{main node/.style={rectangle, draw,
+    text width=5em, text centered, rounded corners, minimum height=4em}, }
+\tikzset{main verb/.style={minimum size=1cm,inner sep=0pt}, }
+\tikzset{linea/.style={-triangle 90}, }
+\begin{document}
+  \begin{tikzpicture}
+    \node[main node] (1) {Addizione};
+    \node[main verb] (2) [right =of 1]  {\'{e}};
+    \node[main node] (3) [right =of 2] {operazione};
+    \node[main verb] (4) [above right = 1cm and 1cm of 3] {\'{e}};
+	\node[main verb] (5) [right =of 3] {ha};
+	\node[main verb] (6) [below right = 1cm and 1cm of 3] {ha};
+	\node[main node] (7) [above right =.5cm and 1cm of 4]  {formato di addendi};
+	\node[main node] (8) [above right = .5cm and 1cm of 5] {delle propriet\'{a}};
+	\node[main node] (9) [below right = .5cm and 1cm of 5] {elemento neutro};
+    \node[main node] (10)[below right =.5cm and 1cm of 6]  {un risultato};
+    \node[main verb] (11) [right =of 8] {sono};
+    \node[main verb] (12) [right =of 9]  {\'{e}};
+    \node[main verb] (13) [right =of 10] {\'{e}};
+   	\node[main node] (14) [above right = .5cm and 1cm of 11] {associativa};
+   	\node[main node] (15) [below right = .5cm and 1cm of 11] {commutativa};
+    \node[main node] (16) [right =of 12] {lo zero};
+    \node[main node] (17) [right =of 13] {la somma};
+     \path[linea] (1) edge node {} (2);
+     \path[linea] (2) edge node {} (3);
+     \path[linea] (3.north) edge node {} (4);
+     \path[linea] (3) edge node {} (5);
+     \path[linea] (3.south) edge node {} (6);
+     \path[linea] (5) edge node {} (8);
+     \path[linea] (5) edge node {} (9);
+     \path[linea] (4) edge node {} (7);
+     \path[linea] (6) edge node {} (10);
+     \path[linea] (8) edge node {} (11);
+     \path[linea] (9) edge node {} (12);
+     \path[linea] (10) edge node {}(13);
+     \path[linea] (11) edge node {} (14);
+     \path[linea] (11) edge node {} (15);
+     \path[linea] (12) edge node {} (16);
+     \path[linea] (13) edge node {} (17);
+\end{tikzpicture}
+\end{document}
