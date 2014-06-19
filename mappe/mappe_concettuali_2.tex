@@ -9,21 +9,21 @@
     \node[main node] (1) {Addizione};
     \node[main verb] (2) [right =of 1]  {\'{e}};
     \node[main node] (3) [right =of 2] {operazione};
-    \node[main verb] (4) [above right = 1cm and 1cm of 3] {\'{e}};
-	\node[main verb] (5) [right =of 3] {ha};
-	\node[main verb] (6) [below right = 1cm and 1cm of 3] {ha};
-	\node[main node] (7) [above right =.5cm and 1cm of 4]  {formato di addendi};
-	\node[main node] (8) [above right = .5cm and 1cm of 5] {delle propriet\'{a}};
-	\node[main node] (9) [below right = .5cm and 1cm of 5] {elemento neutro};
-    \node[main node] (10)[below right =.5cm and 1cm of 6]  {un risultato};
-    \node[main verb] (11) [right =of 8] {sono};
+    \node[main verb] (4) [above  = of 3] {\'{e}};
+	%\node[main verb] (5) [right =of 3] {ha};
+	\node[main verb] (6) [below  =  of 3] {ha};
+	\node[main node] (7) [above right = of 4]  {formata di addendi};
+%	\node[main node] (8) [above right = .5cm and 1cm of 5] {delle propriet\'{a}};
+	\node[main node] (9) [right =  of 6] {elemento neutro};
+    \node[main node] (10)[left  = of 6]  {un risultato};
+    %\node[main verb] (11) [above =of 2] {};
     \node[main verb] (12) [right =of 9]  {\'{e}};
-    \node[main verb] (13) [right =of 10] {\'{e}};
-   	\node[main node] (14) [above right = .5cm and 1cm of 11] {associativa};
-   	\node[main node] (15) [below right = .5cm and 1cm of 11] {commutativa};
-    \node[main node] (16) [right =of 12] {lo zero};
-    \node[main node] (17) [right =of 13] {la somma};
-    \foreach \x /\y in{1/2,2/3,3/4,3/5,3/6,4/7,5/8,5/9,6/10,8/11,9/12,10/13,11/14,11/15,12/16,13/17}
+    \node[main verb] (13) [left =of 10] {\'{e}};
+   	\node[main node] (14) [above  =  of 4] {associativa};
+   	\node[main node] (15) [above  left = of 4] {commutativa};
+    \node[main node] (16) [below =of 12] {lo zero};
+    \node[main node] (17) [below =of 13] {la somma};
+    \foreach \x /\y in{1/2,2/3,3/4,3/6,4/7,6/9,6/10,9/12,10/13,4/15,12/16,13/17,4/14}
       \path[linea] (\x) edge node {} (\y);
  
 \end{tikzpicture}
