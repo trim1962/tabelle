@@ -1,9 +1,9 @@
 \documentclass{standalone}
 \input{../Mod_base/grafica}
-\tikzset{main node/.style={rectangle, draw,
-    text width=5em, text centered, rounded corners, minimum height=4em}, }
-\tikzset{main verb/.style={minimum size=1cm,inner sep=0pt}, }
-\tikzset{linea/.style={-triangle 90}, }
+\tikzset{main node/.style={rectangle, draw,thick,
+    text width=7em, text centered, rounded corners, minimum height=4em}, }
+\tikzset{main verb/.style={minimum size=1cm}, }
+\tikzset{linea/.style={-triangle 90,thick}, }
 \begin{document}
   \begin{tikzpicture}
     \node[main node] (1) {Addizione};
@@ -23,21 +23,8 @@
    	\node[main node] (15) [below right = .5cm and 1cm of 11] {commutativa};
     \node[main node] (16) [right =of 12] {lo zero};
     \node[main node] (17) [right =of 13] {la somma};
-     \path[linea] (1) edge node {} (2);
-     \path[linea] (2) edge node {} (3);
-     \path[linea] (3.north) edge node {} (4);
-     \path[linea] (3) edge node {} (5);
-     \path[linea] (3.south) edge node {} (6);
-     \path[linea] (5) edge node {} (8);
-     \path[linea] (5) edge node {} (9);
-     \path[linea] (4) edge node {} (7);
-     \path[linea] (6) edge node {} (10);
-     \path[linea] (8) edge node {} (11);
-     \path[linea] (9) edge node {} (12);
-     \path[linea] (10) edge node {}(13);
-     \path[linea] (11) edge node {} (14);
-     \path[linea] (11) edge node {} (15);
-     \path[linea] (12) edge node {} (16);
-     \path[linea] (13) edge node {} (17);
+    \foreach \x /\y in{1/2,2/3,3/4,3/5,3/6,4/7,5/8,5/9,6/10,8/11,9/12,10/13,11/14,11/15,12/16,13/17}
+      \path[linea] (\x) edge node {} (\y);
+ 
 \end{tikzpicture}
 \end{document}

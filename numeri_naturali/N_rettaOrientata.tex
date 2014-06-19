@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\input{../Mod_base/grafica}
+\tikzset{main node/.style={rectangle, draw,thick,
+    text width=7em, text centered, rounded corners, minimum height=4em}, }
+\tikzset{main verb/.style={minimum size=1cm}, }
+\tikzset{linea/.style={-triangle 90,thick}, }
+\begin{document}
+ \begin{tikzpicture} %[>=triangle  45]
+ 	\draw [->,linea,dotted](0,0)--(14,0);
+ 	\foreach \x in {0,1,...,13}
+ 	\draw (\x,.2) -- (\x,-.2) node[below] {$\x$};
+ 	%\node (a) at (\x,0.6) {$\x$};
+ 	\end{tikzpicture}
+\end{document}

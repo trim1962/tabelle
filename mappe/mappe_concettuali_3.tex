@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\input{../Mod_base/grafica}
+\tikzset{main node/.style={rectangle, draw,thick,
+    text width=7em, text centered, rounded corners, minimum height=4em}, }
+\tikzset{main verb/.style={minimum size=1cm}, }
+\tikzset{linea/.style={-triangle 90,thick}, }
+\begin{document}
+  \begin{tikzpicture}
+    \node[main node] (1) {Addizione};
+    \node[main verb] (2) [right =of 1]  {\'{e}};
+    \node[main node] (3) [right =of 2] {Operazione};
+\node[main verb] (4) [above right= .3cm and 1cm  of 3]  {\'{e}};
+\node[main verb] (5) [below right= .1cm and 1cm of 3]  {ha};
+\node[main verb] (6) [above  =2cm of 4]  {non è\'{e}};
+\node[main verb] (7) [below  =2cm of 5]  {ha};
+\node[main node] (8) [above right = .01cm and 1cm of 6]  {Commutativa};
+\node[main node] (9) [below right = .01cm and 1cm of 6]  {Associativa};
+\node[main node] (10) [right = of 4]  {Invariantiva};
+\node[main node] (11) [above right = .01cm and 1cm of 5]  {Primo termine};
+\node[main node] (12) [below right = .01cm and 1cm of 5]  {Secondo termine};
+\node[main node] (13) [right = of 7]  {Un risultato};
+\node[main verb] (14) [right = of 11]  {\'{e}};
+\node[main verb] (15) [right = of 12]  {\'{e}};
+\node[main verb] (16) [right = of 13]  {\'{e}};
+\node[main node] (17) [right =of 14] {Il minuendo};
+\node[main node] (18) [right =of 15] {Il sottraendo};
+\node[main node] (19) [right =of 16] {La differenza};
+\foreach \x /\y in{1/2,2/3,3/6,3/4,3/5,3/7,6/8,6/9,4/10,5/12,5/12,7/13,11/14,12/15,13/16,14/17,15/18,16/19}
+  \path[linea] (\x) edge node {} (\y);
+  
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\input{../Mod_base/grafica}
+\tikzset{main node/.style={rectangle, draw,
+    text width=5em, text centered, rounded corners, minimum height=4em}, }
+\tikzset{main verb/.style={minimum size=1cm}, }
+\tikzset{linea/.style={-triangle 90}, }
+\begin{document}
+  \begin{tikzpicture}
+    \node[main node] (1) {Operazione binaria};
+    \node[main verb] (2) [above left=0cm and 0.5cmof 1]  {Ingresso 1};
+    \node[main verb] (3) [below left=0cm and 0.5cm of 1]  {Ingresso 2};
+    \node[main verb] (4) [right=0cm and 0.5cm of 1]  {Risultato};
+    
+\foreach \x /\y in{2/1,3/1,1/4}
+  \path[linea] (\x) edge node {} (\y);
+
+\end{tikzpicture}
+\end{document}

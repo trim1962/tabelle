@@ -1,0 +1,62 @@
+\documentclass{standalone}
+\input{../Mod_base/grafica}
+\tikzset{main node/.style={rectangle, draw,thick,
+    text width=7em, text centered, rounded corners, minimum height=4em}, }
+\tikzset{main verb/.style={minimum size=1cm}, }
+\tikzset{linea/.style={-triangle 90,thick}, }
+\begin{document}
+  \begin{tikzpicture}
+    \node[main node] (1) {Divisione};
+    \node[main verb] (2) [right =of 1]  {\'{e}};
+    \node[main node] (3) [right =of 2] {Operazione};
+    \node[main verb] (4) [above right=11cm and 2cm of 3]  {ha};
+    \node[main verb] (5) [right =0cm and 2cm of 3]  {\'{e}};    
+    \node[main verb] (6) [below right=11cm and 2cm of 3]  {\'{e}};
+        
+\node[main node] (7) [above right= 0.2cm and 2cm of 4]  {Un primo termine};
+    
+\node[main node] (8) [below right= 0.2cm and 2cm of 4]  {Un secondo termine};
+
+\node[main node] (9) [above right=6cm and 2cm of 5]  {indeterminata};
+\node[main node] (10) [right =0cm and 2cm of 5]  {determinata};    
+\node[main node] (11) [below right=6cm and 2cm of 5]  {impossibile};
+\node[main node] (12) [right =0cm and 2cm of 6]  {Invariantiva}; 
+\node[main verb] (13) [right =0cm and 2cm of 7]  {\'{e}}; 
+\node[main verb] (14) [right =0cm and 2cm of 8]  {\'{e}};     
+\node[main verb] (15) [above right= 0.4cm and 2cm of 9]  {ha};
+    
+\node[main verb] (16) [below right= 0.4cm and 2cm of 9]  {ha};
+\node[main verb] (17) [right =0cm and 2cm of 10]  {ha}; 
+\node[main verb] (18) [right =0cm and 2cm of 11]  {ha}; 
+\node[main verb] (19) [above right= 0.1cm and 2cm of 12]  {moltiplicare};
+    
+\node[main verb] (20) [below right= 0.1cm and 2cm of 12]  {dividere};
+\node[main node] (21) [right =0cm and 2cm of 13]  {Il dividendo};   
+\node[main node] (22) [right =0cm and 2cm of 14]  {Il divisore};
+\node[main node] (23) [right =0cm and 2cm of 15]  {Infinite soluzioni};
+\node[main node] (24) [above right= 0.2cm and 2cm of 16]  {Dividendo uguale a zero};
+    
+\node[main node] (25) [below right= 0.2cm and 2cm of 16]  {Divisore uguale a zero};
+\node[main node] (26) [above right= 0.5cm and 2cm of 17]  {Quoziente intero};
+    
+\node[main node] (27) [below right= 0.5cm and 2cm of 17]  {Quoziente approssimato};
+\node[main node] (28) [right =0cm and 2cm of 18]  {Divisore uguale a zero};   
+\node[main node] (29) [right =0cm and 2cm of 19]  {Dividendo e divisore per lo stesso numero diveso da zero};   
+\node[main node] (30) [right =0cm and 2cm of 20]  {Dividendo e divisore per lo stesso numero diveso da zero};   
+\node[main verb] (31) [right =0cm and 2cm of 26]  {ha};
+\node[main verb] (32) [right =0cm and 2cm of 27]  {ha};
+\node[main verb] (33) [right =0cm and 2cm of 29]  {ho};
+\node[main verb] (34) [right =0cm and 2cm of 30]  {ho};
+\node[main node] (35) [right =0cm and 2cm of 31]  {Il dividendo multiplo del divisore}; 
+\node[main node] (36) [above right= 0.2cm and 2cm of 32]  {Resto};
+    
+\node[main node] (37) [below right= 0.2cm and 2cm of 32]  {Il dividendo non multiplo del divisore};
+\node[main node] (38) [right = 0.0cm and 2cm of 33]  {Il dividendo multiplo del divisore};
+\node[main node] (39) [right =0cm and 2cm of 34]  {Il dividendo multiplo del divisore};
+%\node[main verb] (4) [above right= 1.5cm and 1cm  of 3]  {ha};
+
+\foreach \x /\y in{1/2,2/3,3/4,3/5,3/6,4/7,4/8,5/9,5/10,5/11,6/12,7/13,8/14,9/15,9/16,10/17,11/18,12/19,12/20,13/21,14/22,15/23,16/24,16/25,17/26,17/27,18/28,19/29,20/30,26/31,27/32,29/33,30/34,31/35,32/36,32/37,33/38,34/39}
+  \path[linea] (\x) edge node {} (\y);
+%  
+\end{tikzpicture}
+\end{document}
