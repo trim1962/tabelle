@@ -1,7 +1,7 @@
 \documentclass{standalone}
 \input{../Mod_base/grafica}
 \tikzset{main node/.style={rectangle, draw,thick,
-    text width=7em, text centered, rounded corners, minimum height=4em}, }
+    text width=7em, text centered, rounded corners, minimum height=3em}, }
 \tikzset{main verb/.style={minimum size=1cm}, }
 \tikzset{linea/.style={-triangle 90,thick}, }
 \begin{document}
@@ -13,9 +13,8 @@
 \node[main verb] (5) [right= of 3]  {\'{e}};
 \node[main verb] (6) [above   = of 3]  {\'{e} formata};
 \node[main verb] (7) [below   = of 3]  {ha};
-
 \node[main node] (10) [above right=  of 5]  {Distributiva};
-\node[main node] (11) [below right= of 5]  {Associativa};
+\node[main node] (11) [below right= of 5]  {Associativa invariantiva};
 \node[main node] (12) [right=   of 5]  {Commutativa};
 \node[main node] (9)  [below =   of 7]   {Un risultato};
 \node[main node] (8) [above  = of 6]  {Da fattori};
