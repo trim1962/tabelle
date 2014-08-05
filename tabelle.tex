@@ -96,12 +96,13 @@
 % % % % % % % %
 % % % % % % % % % % % % % % % % % % % %TITOLO % % % % % % % % % % % % % % % % % % % % % % 
 
-\usepackage[italian,checkfiles]{minitoc}
- \usepackage{placeins} 
+%\usepackage[italian,checkfiles]{minitoc}
+%\usepackage{placeins} 
 
 
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
 \makeatletter
 \renewcommand\frontmatter{%
 	\cleardoublepage
@@ -112,8 +113,16 @@
 	\@mainmattertrue}
 \makeatother
 
+
+\input{../Mod_base/indice}
 \listfiles
 
+
+
+
+%\titlecontents*{csection}[0pt]
+%    {\centering\small\itshape\parshape 1 0cm \dimexpr\linewidth-6em\relax}{}{}
+%    {}[\space\textbullet~]
 
  \begin{document}
 \frontmatter
@@ -151,26 +160,43 @@
 \setcounter{page}{2}
 \input{../Mod_base/copyright}
 
-\tableofcontents 
-\mtcaddchapter
-\cleardoublepage
-\addcontentsline{toc}{chapter}{\numberline{}\listtablename}
-\listoftables
-\mtcaddchapter
-\adjustptc
-\cleardoublepage
-\addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
-\listoffigures
-\mtcaddchapter
+%\tableofcontents 
+%%\mtcaddchapter
+%\cleardoublepage
+%\listoftables
+%\addcontentsline{toc}{chapter}{\listtablename}
+%%\mtcaddchapter
+%%\adjustptc
+%\cleardoublepage
+%
+%\listoffigures
+%\addcontentsline{toc}{chapter}{\listfigurename}
+%%\mtcaddchapter
+%%\todototoc
+%\cleardoublepage
+%\listoftodos
+%\addcontentsline{toc}{chapter}{\listoftodos}
 %\todototoc
+
+
+\tableofcontents 
+
 \cleardoublepage
-%\addcontentsline{toc}{chapter}{\numberline{}\listoftodos}
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
+%\mtcaddchapter
+%\adjustptc
+\cleardoublepage
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+%\mtcaddchapter
 \todototoc
+\cleardoublepage
 \listoftodos
+
+
 \mainmatter%
-\dominitoc
-\dominilof                  % centers title of minilof's
-\dominilot
+
 \opt{prima}{\input{prima}}
 \opt{secondo}{\input{secondo}}
 \opt{terzo}{\input{terzo}}

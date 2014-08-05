@@ -48,3 +48,5 @@
 *.pdf
 *.png
 tabelle.primo.synctex.gz(busy)
+tabelle.primo.blg
+tabelle.primo.ptc
