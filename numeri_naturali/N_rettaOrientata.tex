@@ -1,9 +1,7 @@
-\documentclass{standalone}
+\documentclass[preview=true]{standalone}
 \input{../Mod_base/grafica}
-\tikzset{main node/.style={rectangle, draw,thick,
-    text width=7em, text centered, rounded corners, minimum height=4em}, }
-\tikzset{main verb/.style={minimum size=1cm}, }
-\tikzset{linea/.style={-triangle 90,thick}, }
+\input{../Mod_base/base}
+\input{impostazioni/impostazioniTikz}
 \begin{document}
  \begin{tikzpicture} %[>=triangle  45]
  	\draw [->,linea,dotted](0,0)--(14,0);

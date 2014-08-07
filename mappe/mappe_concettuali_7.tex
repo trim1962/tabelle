@@ -1,25 +1,23 @@
-\documentclass{standalone}
+\documentclass[preview=true]{standalone}
 \input{../Mod_base/grafica}
-\tikzset{main node/.style={rectangle, draw,
-    text width=7em, text centered, rounded corners, minimum height=3em}, }
-\tikzset{main verb/.style={minimum size=1cm}, }
-\tikzset{linea/.style={-triangle 90}, }
+\input{../Mod_base/base}
+\input{impostazioni/impostazioniTikz}
 \begin{document}
   \begin{tikzpicture}
-    \node[main node] (1) {Un numero $a$};
+    \node[main node2] (1) {Un numero $a$};
     \node[main verb] (2) [below = of 1]  {\'{e}};
   
-    \node[main node] (3) [below right=0cm and 3 cm of 2]  {Non primo};
-    \node[main node] (4) [below left=0cm and 3 cm of 2]  {Primo};
+    \node[main node2] (3) [below right=0cm and 3 cm of 2]  {Composto};
+    \node[main node2] (4) [below left=0cm and 3 cm of 2]  {Primo};
     
     \node[main verb] (5) [below =of 4]  {\'{e} divisibile};
     \node[main verb] (6) [below =of 3]  {\'{e} };
     
-     \node[main node] (7) [below left=of 5]  { Solo per $a$};
-     \node[main node] (8) [below right=of 5]  {$a$ \'{e} divisibile per uno};
+     \node[main node2] (7) [below left=of 5]  { Solo per $a$};
+     \node[main node2] (8) [below right=of 5]  {$a$ \'{e} divisibile per uno};
      
-     \node[main node] (9) [below left=of 6]  {$a$ \'{e} multiplo di $b$};
-     \node[main node] (10) [below right=of 6]  {$a$ \'{e} divisibile $b$};
+     \node[main node2] (9) [below left=of 6]  {$a$ \'{e} multiplo di $b$};
+     \node[main node2] (10) [below right=of 6]  {$a$ \'{e} divisibile $b$};
 \foreach \x /\y in{1/2,2/3,2/4,4/5,3/6,5/7,5/8,6/9,6/10}
   \path[linea] (\x) edge node {} (\y);
 %  

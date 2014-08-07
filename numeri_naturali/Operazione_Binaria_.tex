@@ -1,11 +1,10 @@
-\documentclass{standalone}
+\documentclass[preview=true]{standalone}
 \input{../Mod_base/grafica}
-\tikzset{main node/.style={rectangle, draw,
-      text centered, rounded corners}, }
-\tikzset{main verb/.style={minimum size=1cm}, }
-\tikzset{linea/.style={-triangle 90}, }
+\input{../Mod_base/base}
+\input{impostazioni/impostazioniTikz}
 \begin{document}
   \begin{tikzpicture}
+  
     \node[main node] (1) {Operazione binaria};
     \path let \p1=(1.north), \p2=(1.north) in node[main verb] (2) at (\x1-3cm,\y2){Ingresso 1};
     \path let \p1=(1.south), \p2=(1.south) in node[main verb] (3) at (\x1-3cm,\y2){Ingresso 2};

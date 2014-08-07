@@ -1,9 +1,7 @@
-\documentclass{standalone}
+\documentclass[preview=true]{standalone}
 \input{../Mod_base/grafica}
-\tikzset{main node/.style={rectangle, draw,
-      text centered, rounded corners}, }
-\tikzset{main verb/.style={minimum size=1cm}, }
-\tikzset{linea/.style={-triangle 90}, }
+\input{../Mod_base/base}
+\input{impostazioni/impostazioniTikz}
 \begin{document}
   \begin{tikzpicture}
     \node[main node] (1) {$-$};

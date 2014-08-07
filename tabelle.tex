@@ -1,29 +1,6 @@
- %\documentclass[a4paper,oneside,openany]{book}
 \input{../Mod_base/base}
 \input{../Mod_base/grafica}
-%\pgfplotsset{compat=1.8}
-%\newcommand{\stampa}[3]{%
-%	\ifcase#1\relax\or
-%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[above] {$#3$};\or
-%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[above right] {$#3$};\or
-%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[above left] {$#3$};\or
-%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[below] {$#3$};\or
-%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[below right] {$#3$};\or
-%	\draw(0,0)--(\raggio,{\raggio*tan(#2)})node[below left] {$#3$};%
-%	\fi
-%}
-%\newcommand{\stampAng}[4]{%
-%	\ifcase#1\relax\or
-%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[above] {$#4$};\or
-%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[above right] {$#4$};\or
-%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[above left] {$#4$};\or
-%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[below] {$#4$};\or
-%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[below right] {$#4$};\or
-%	\draw[->] (\sraggio/#2,0 ) arc (0:#3:\sraggio/#2) node[below left] {$#4$};%
-%	\fi
-%}
-%\usetikzlibrary{external}
-%\usepackage[mode=buildnew,subpreambles=true]{standalone}
+\input{../Mod_base/stand_class}
 \input{../Mod_base/matematica}
 \input{../Mod_base/tabelle}
 \DeclareCaptionFormat{grafico}{\textbf{Grafico \thefigure}#2#3}
@@ -84,23 +61,8 @@
 			\draw (0,0) node [#1 port] {};
 		\end{circuitikz}} 
 
-
-%todo inizio
-\usepackage[italian,colorinlistoftodos]{todonotes}
-\newcommand{\bassapriorita}[1]{\todo[color=green!40]{#1}}
-\newcommand{\mediapriorita}[1]{\todo[color=blue!40]{#1}}
-\newcommand{\altapriorita}[1]{\todo[color=red!40]{#1}}
-%todofine
-
-
 % % % % % % % %
 % % % % % % % % % % % % % % % % % % % %TITOLO % % % % % % % % % % % % % % % % % % % % % % 
-
-%\usepackage[italian,checkfiles]{minitoc}
-%\usepackage{placeins} 
-
-
-
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \makeatletter
@@ -116,14 +78,6 @@
 
 \input{../Mod_base/indice}
 \listfiles
-
-
-
-
-%\titlecontents*{csection}[0pt]
-%    {\centering\small\itshape\parshape 1 0cm \dimexpr\linewidth-6em\relax}{}{}
-%    {}[\space\textbullet~]
-
  \begin{document}
 \frontmatter
 \begin{titlepage}
@@ -132,7 +86,7 @@
 		
 		
 		% Upper part of the page
-		\input{../Mod_base/Lgrande}\\[1cm]    
+			\includestandalone{../Mod_base/Lgrande2}\\[1cm]    
 		
 		\textsc{\LARGE Claudio Duchi}\\[1.5cm]
 		
@@ -159,28 +113,7 @@
 \end{titlepage}
 \setcounter{page}{2}
 \input{../Mod_base/copyright}
-
-%\tableofcontents 
-%%\mtcaddchapter
-%\cleardoublepage
-%\listoftables
-%\addcontentsline{toc}{chapter}{\listtablename}
-%%\mtcaddchapter
-%%\adjustptc
-%\cleardoublepage
-%
-%\listoffigures
-%\addcontentsline{toc}{chapter}{\listfigurename}
-%%\mtcaddchapter
-%%\todototoc
-%\cleardoublepage
-%\listoftodos
-%\addcontentsline{toc}{chapter}{\listoftodos}
-%\todototoc
-
-
 \tableofcontents 
-
 \cleardoublepage
 \listoftables
 \addcontentsline{toc}{chapter}{\listtablename}

@@ -32,19 +32,18 @@ Prima di parlare di operazioni in $\N$ spendiamo due parole sul concetto di oper
 \end{figure}
 % % % % % % % % % % % % % % % % % %
 \begin{figure} 
-
-	\begin{subfigure}[b]{.5\linewidth}
+\begin{subfigure}[b]{.5\linewidth}
 		\centering
 \includestandalone[width=.9\textwidth]{numeri_naturali/Operazione_Addizione_}
 	\caption{Operazione addizione}
 	\label{fig:Nat_operazione_Addizione}
-	\end{subfigure}%
-	\begin{subfigure}[b]{.5\linewidth}
+\end{subfigure}%
+\begin{subfigure}[b]{.5\linewidth}
 	\centering
 \includestandalone[width=.9\textwidth]{numeri_naturali/Operazione_Sottrazione_}
 	\caption{Operazione sottrazione}
 	\label{fig:Nat_operazione_Sottrazione}
-	\end{subfigure}
+\end{subfigure}
 	\begin{subfigure}[b]{.5\linewidth}
 	\centering
 \includestandalone[width=.9\textwidth]{numeri_naturali/Operazione_Moltiplicazione_}
@@ -75,19 +74,19 @@ L'addizione\index{Operazione!addizione} è una operazione binaria come in\nobs\v
 	\caption{Proprietà addizione}
 	\label{fig:ProprietaAddizione}\end{figure}
 \subsection{Sottrazione}
+\label{sec:NumerinatDiff}
 La sottrazione\index{Operazione!sottrazione} è una operazione binaria \nobs\vref{fig:Nat_operazione_Sottrazione} non sempre interna in $\N$. I termini in ingresso si dicono minuendo\index{Operazione!sottrazione!minuendo} e sottraendo\index{Operazione!sottrazione!sottraendo}, il risultato differenza\index{Operazione!sottrazione!differenza}. Se il sottraendo è maggiore del minuendo l'operazione è esterna. Se il minuendo è uguale al sottraendo la differenza è zero. La sottrazione non è commutativa \[3-2\neq2-3\] e neppure associativa \[(4-3)-2\neq4-(3-2)\]
  L'operazione gode della proprietà invariantiva\index{Operazione!sottrazione!invariantiva}, per cui aggiungendo o sottraendo la stessa quantità al minuendo e al sottraendo la differenza non cambia\nobs\vref{fig:ProprietaSottrazione}.  
-\label{sec:NumerinatDiff}
 \begin{figure} %
 	\centering
-\includestandalone[width=.9\textwidth]{mappe/mappe_concettuali_3}
+\includestandalone[width=\textwidth]{mappe/mappe_concettuali_3}
 	\caption{Proprietà Sottrazione}
 	\label{fig:ProprietaSottrazione}\end{figure}
 \subsection{Moltiplicazione}
 \label{sec:NumerinatMolt}
 \begin{figure} %
 	\centering
-\includestandalone[width=.9\textwidth]{mappe/mappe_concettuali_4}
+\includestandalone[width=\textwidth]{mappe/mappe_concettuali_4}
 	\caption{Proprietà Moltipplicazione}
 	\label{fig:ProprietaMoltiplicazione}\end{figure}
 La moltiplicazione\index{Operazione!moltiplicazione} è una operazione binaria\nobs\vref{fig:Nat_operazione_Moltiplicazione}  interna in $\N$. I termini in ingresso si dicono fattori\index{Operazione!moltiplicazione!fattore}, il risultato prodotto\index{Operazione!moltiplicazione!prodotto}. L'operazione di moltiplicazione  è commutativa\index{Operazione!moltiplicazione!commutativa} quindi cambiando l'ordine degli fattori il risultato non cambia \[2\cdot3=3\cdot2=6\]. L'operazione ha un elemento neutro\index{Operazione!moltiplicazione!elemento neutro} uno. La moltiplicazione dell'elemento neutro e di un fattore ha per prodotto il fattore  \[4\cdot1=1\cdot4=4\]. La moltiplicazione è associativa\index{Operazione!moltiplicazione!associativa}. Nella moltiplicazione di tre numeri o più numeri il risultato finale non cambia se vengono sostituiti due fattori con il loro prodotto\nobs\vref{fig:ProprietaMoltiplicazione} \[2\cdot3\cdot4=(2\cdot3)\cdot4=2\cdot(3\cdot4)\]. La moltiplicazione è dissociativa\index{Operazione!moltiplicazione!dissociativa}. Nella moltiplicazione  il risultato finale non cambia se viene sostituito un fattore con altri fattori il cui prodotto è uguale al fattore sostituito  \[6\cdot5=2\cdot3\cdot5\]. L'elemento assorbente\index{Operazione!moltiplicazione!elemento assorbente} è lo zero. La moltiplicazione di un numero qualunque per zero ha come prodotto zero\nobs\vref{fig:ProprietaMoltiplicazione}.
@@ -96,8 +95,9 @@ La moltiplicazione\index{Operazione!moltiplicazione} è una operazione binaria\n
 \begin{figure} %
 	\centering
 \includestandalone[width=\textwidth]{mappe/mappe_concettuali_5}
-	\caption{Proprietà Divisione}\label{sec:NumerinatDiff}
-	\label{fig:ProprietaDivisione}\end{figure}
+	\caption{Proprietà Divisione}
+	\label{fig:ProprietaDivisione}
+	\end{figure}
 La divisione\index{Operazione!divisione} è una operazione binaria \nobs\vref{fig:Nat_operazione_Divisione} non sempre interna in $\N$. I termini in ingresso si dicono dividendo\index{Operazione!divisione!dividendo} e divisore\index{Operazione!divisione!divisore}, il risultato quoziente\index{Operazione!divisione!quoziente}. Se il dividendo non è  multiplo  del divisore l'operazione è esterna. La divisione non è commutativa \[3\div2\neq2\div3\] e neppure associativa \[(4\div3)\div2\neq4\div(3\div2)\]. L'operazione gode della proprietà invariantiva\index{Operazione!divisione!invariantiva}, per cui moltiplicando  o dividendo la stessa quantità diverso da zero, al dividendo e al divisore il quoziente non cambia\nobs\vref{fig:ProprietaDivisione}. Casi particolari sono \[1\div0\], \[0\div a\]. Nel primo caso la divisione è impossibile. Nel secondo è indeterminata.
 \subsection{Potenza}
 \label{sec:NumerinatPot}
@@ -114,61 +114,88 @@ Per la moltiplicazione\index{Operazione!potenza!moltiplicazione} vale che il pro
 Per la divisione\index{Operazione!potenza!divisione} vale che la divisione di potenze con base uguale, è una potenza che ha per base la stessa base e per esponente la differenza degli esponenti.\[ 2^5\div 2^3=2^2 \]Questa proprietà non è sempre definita. La proprietà è valida se il grado del dividendo è maggiore del grado del divisore e la divisione è definita.  La divisione di potenze di basi diverse ma esponente uguale è una potenza che ha per base il quoziente delle basi e per esponente lo stesso esponente. Anche in questo caso la divisione deve essere definita.\[4^3\cdot 2^3=2^3\] 
 \subsection{Distributiva}
 \label{sec:distibutivaInN}
-La proprietà distributiva\index{Operazione!addizione!distributiva}\index{Operazione!moltiplicazione!distributiva} non è un'operazione ma è una proprietà delle operazioni di addizione e moltiplicazione. Questa proprietà lega le due operazioni nel senso che è possibile invertire l'ordine fra la somma e il prodotto e il risultato non cambia. \[ 5\cdot(2+3)=5\cdot 2+ 5\cdot 3=25\]
+La proprietà distributiva\index{Operazione!addizione!distributiva}\index{Operazione!moltiplicazione!distributiva} non è un'operazione ma è una proprietà delle operazioni di addizione e moltiplicazione. Questa proprietà lega le due operazioni nel senso che è possibile cambiare l'ordine di esecuzione fra la somma e il prodotto e il risultato non cambia. \[ 5\cdot(2+3)=5\cdot 2+ 5\cdot 3=25\]
 \subsection{Espressioni}
 \label{sec:EspressioniNumeri Naturali}
-Un'espressione è la combinazione di una po più operazioni fra loro anche diverse. Per convenzione si dice che le operazioni vengono eseguite nell'ordine in cui si trovano leggendo l'espressione da sinistra. La precedenza spetta alle potenze poi alle moltiplicazioni divisioni infine alle somme differenze. A parità di precedenza viene eseguita l'operazione che s trova più a sinistra. L'ordine di esecuzione può essere  cambiato inserendo fra parentesi l'operazione da eseguire prima. vi sono tre tipi di parentesi quindi tre ivelli di priorità.
+Un'espressione è la combinazione di una o più operazioni fra loro anche diverse. Per convenzione si dice che le operazioni vengono eseguite nell'ordine in cui si trovano leggendo l'espressione da sinistra. La precedenza spetta alle potenze poi alle moltiplicazioni divisioni infine alle somme differenze. A parità di precedenza viene eseguita l'operazione che s trova più a sinistra. L'ordine di esecuzione può essere  cambiato inserendo fra parentesi l'operazione da eseguire prima. Vi sono tre tipi di parentesi quindi tre livelli di priorità.
 \section{Numeri primi e composti}
 \label{sec:Numeriprimiecomposti}
-Una possibile classificazione dei numeri naturali è la figura\nobs\vref{fig:ProprietaClassificazioneNumNat}
+Per la moltiplicazione i numeri naturali (escluso lo zero) sono divisibili in due gruppi: in numeri primi\index{Numero!primo} e in numeri composti\index{Numero!composto} o multipli. Un numero è composto se è il prodotto di due o più numeri diversi da uno e da lui stesso. Un numero è primo se non è composto. 
+
+Anche con la divisione possiamo classificare in due gruppi: i numeri primi e i numeri divisibili. Un numero è divisibile per un altro numero diverso da uno se il resto della divisione è zero. Un numero non divisibile è primo. La figura\nobs\vref{fig:ProprietaClassificazioneNumNat} riassume quanto detto.
 \begin{figure} %
 	\centering
 \includestandalone[width=.9\textwidth]{mappe/mappe_concettuali_7}
-	\caption{Claddificazione}
-	\label{fig:ProprietaClassificazioneNumNat}\end{figure}
-Quindi, per esempio, dato che $18:2=9$ con resto zero avremo:
+	\caption{Classificazione}
+	\label{fig:ProprietaClassificazioneNumNat}
+\end{figure}
+	\begin{esempio}
+Dato che $18:2=9$ con resto zero avremo:
 \begin{enumerate}
 	\item 18 è multiplo di 2 secondo 9
 	\item 18 è divisibile per 2
 \end{enumerate}
+	\end{esempio}
 \subsection{Scomposizione in fattori primi}
-Per scomporre un numero naturale come prodotto di numeri primi  si può usare  l'algoritmo\nobs\vref{fig:numnatscposizionefattori}
-\begin{figure}
-\centering
-\begin{tikzpicture}[auto, -stealth, thick]
-% Definizione dei nodi e delle loro scatole
-\tikzstyle{line} = [draw,->]
-\node[ellipse,draw ]  (primo) {Inizio};
-\node[rectangle,draw, text width=6cm,align=flush center, below of=primo, node distance=5em]  (secondo) {dividi il numero dato per
-	il più piccolo primo che lo divide};
-\node[diamond,draw, below of=secondo,node distance=10em]  (terzo) {il quoziente è uno?};
-\node[ellipse, draw,below of=terzo,node distance=10em ] (quarto) {Fine};
-
-% collegamento dei nodi
-\begin{scope}[every path/.style=line]
-\path  (primo) --  (secondo);
-\path (secondo) edge  (terzo);
-\path (terzo)  -- node  {SI} (quarto);
-\path (terzo.west)  -|  node [near start] {NO} +(-7em,0) |- (secondo);
-\end{scope}
-\end{tikzpicture}
-	\caption{Scomposizione in fattori primi}
-	\label{fig:numnatscposizionefattori}
+Iniziamo a introdurre un oggetto che utilizzeremo in seguito. Un albero binario\index{Albero Binario} è formato da una radice da cui si staccano due foglie. Ogni foglia può essere una radice da cui si staccano altre due foglie e così via. 
+\begin{figure} %
+	\centering
+\includestandalone[width=.5\textwidth]{numeri_naturali/AlberoBinario0}
+	\caption{Albero Binario}
+	\label{fig:AlberoBinarioDef}
 \end{figure}
-	
-Esempio 
 
-\primedecomp{252}
+Per scomposizione in fattori primi  di un numero si intende riscrivere quel numero come prodotto di numeri primi (fattori). Procediamo come nella figura\nobs\vref{fig:AlberoBinario1}. Per scomporre $120$ procediamo in questo modo: $120$ si può scrivere come il prodotto di $15$ per $8$. Quindi $120$ ha due foglie $15$ e $8$. Il numero  $15$ si ottiene come il prodotto fra $3$ e $5$. Questi due numeri sono primi, li cerchio e riparto da $8$. Questo numero ha due foglie $2$ e $4$. Due è primo lo cerchio. Il numero quattro ha due foglie che sono due numeri primi e li cerchio. Ho quindi tre due, un cinque e un tre. Posso dire che \[120=2\cdot 2\cdot 2 \cdot 3 \cdot5 =2^3\cdot 3\cdot 5   \]Ho ottenuto la scomposizione cercata.
 
-quindi $252=2^2\cdot 3^2\cdot 7$
+Per la scomposizione di $180$, procediamo come prima e otteniamo lo schema\nobs\vref{fig:AlberoBinario2}. Quindi la scomposizione cercata è:
+\[180=2\cdot 2\cdot 2\cdot 3\cdot 3\cdot 5=2^2\cdot 3^2\cdot 5 \]    
 
-Esempio
-\primedecomp{125}
-$125=5^3$
-	
+La scomposizione di un numero in fattori è unica. Non vi possono essere due scomposizioni in fattori diverse per lo stesso numero. L'esempio\nobs\vref{fig:UnicitaScomposizioniBianrieinN} mostra che anche procedendo in maniera diversa, la scomposizione finale è la stessa.
+\begin{figure} 
+\begin{subfigure}[b]{.5\linewidth}
+		\centering
+\includestandalone[width=.8\textwidth]{numeri_naturali/AlberoBinario1}
+	\caption{Scomposizione di $120$}
+	\label{fig:AlberoBinario1}
+\end{subfigure}%
+\begin{subfigure}[b]{.5\linewidth}
+	\centering
+\includestandalone[width=.5\textwidth]{numeri_naturali/AlberoBinario2}
+	\caption{{Scomposizione di $180$}  }
+	\label{fig:AlberoBinario2}
+\end{subfigure}
+\caption{Operazioni in $\N$}
+\label{fig:ScomposizioniBianrieinN}
+\end{figure}
+\begin{figure} 
+\begin{subfigure}[b]{.5\linewidth}
+		\centering
+\includestandalone[width=.8\textwidth]{numeri_naturali/AlberoBinario3}
+	\caption{Scomposizione di $1350$}
+	\label{fig:AlberoBinario3}
+\end{subfigure}%
+\begin{subfigure}[b]{.5\linewidth}
+	\centering
+\includestandalone[width=.5\textwidth]{numeri_naturali/AlberoBinario4}
+	\caption{{Scomposizione di $1350$}  }
+	\label{fig:AlberoBinario4}
+\end{subfigure}
+\caption{Unicità della scomposizione}
+\label{fig:UnicitaScomposizioniBianrieinN}
+\end{figure}
+%
+%Esempio 
+%
+%\primedecomp{252}
+%
+%quindi $252=2^2\cdot 3^2\cdot 7$
+%
+%Esempio
+%\primedecomp{125}
+%$125=5^3$
+%	
 \section{Massimo Comun Divisore}
 \label{sec:macdNaturali}
-
 Dati due o più numeri, il $\mcd$ è il numero\index{mcd} più grande che li divide tutti. Vi sono casi, in cui il $\mcd$ vale uno, perché uno è l'unico numero che li divide entrambi. Esempio di ciò sono il numero 8 e il numero nove, tranne l'uno non vi sono numeri naturali che li dividono entrambi. In questo caso si dice
  che i due numeri sono primi fra di loro.
  	
@@ -201,7 +228,6 @@ Dati due o più numeri, il $\mcd$ è il numero\index{mcd} più grande che li div
 	\caption{Massimo Comun Divisore}
 	\label{fig:numnatmcd}
 \end{figure}
-
 Esempio: per calcolare $\mcd(120,80,45)$ scompongo in fattori  primi i tre numeri come spiegato a\nobs\vref{fig:numnatscposizionefattori} e seguo lo schema\nobs\vref{fig:numnatmcd}     	
     \begin{tabular}{ccc}
     			\primedecomp{120}&\primedecomp{80}&\primedecomp{45}\\

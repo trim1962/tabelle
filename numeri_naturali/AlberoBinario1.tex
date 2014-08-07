@@ -1,0 +1,22 @@
+\documentclass[preview=true]{standalone}
+\input{../Mod_base/grafica}
+\input{../Mod_base/base}
+\input{impostazioni/impostazioniTikz}
+\begin{document}
+\begin{forest}
+  %for tree={l+=1cm} % increase level distance
+  [120
+    [15
+    	[3,primo]
+    	[5,primo]
+    ]
+    [8
+    	[2,primo]
+    		[4
+    			[2,primo]
+    			[2,primo]
+    		]
+    ]
+  ]
+\end{forest}
+\end{document}
