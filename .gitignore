@@ -50,3 +50,10 @@
 tabelle.primo.synctex.gz(busy)
 tabelle.primo.blg
 tabelle.primo.ptc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist

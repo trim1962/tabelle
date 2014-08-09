@@ -29,7 +29,14 @@
            & #4 & {}\mapsto{} & #5
   \end{array}}
 
+\input{../Mod_base/glossario}
 
+
+\opt{prima}{
+\loadglsentries{glossario/glossari }
+\loadglsentries[altacronym]{glossario/acronimi}
+}
+\makeglossaries
 
 
 %Simboli logici
@@ -137,6 +144,8 @@
 \opt{extra}{\input{extra}}
 \opt{grafici}{\input{grafici}}
 \input{../Mod_base/MezziUsati}
+\glsaddall
+\printglossaries
 \addcontentsline{toc}{chapter}{\indexname}
 \printindex
 \end{document}
