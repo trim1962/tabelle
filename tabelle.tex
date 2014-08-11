@@ -31,12 +31,12 @@
 
 \input{../Mod_base/glossario}
 
-
+\makeglossaries
 \opt{prima}{
-\loadglsentries{glossario/glossari }
+\loadglsentries{glossario/glossari}
 \loadglsentries[altacronym]{glossario/acronimi}
 }
-\makeglossaries
+
 
 
 %Simboli logici
@@ -47,8 +47,7 @@
 	$\vcenter{\hbox{\includestandalone[#1]{#2}}}$}
 
 %--------- Indici localixcxddd  
-\include{macro_xlop} % scomposizione in fattori primi e operazioni
-\getprime{20}%
+
 % % % % % % % % % % % % % % % % % braille
 \usepackage[puttinydots]{braille}
 

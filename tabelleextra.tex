@@ -1,11 +1,11 @@
-% arara: pdflatex: { shell: yes }
+% arara: pdflatex: { draft: true }
 % arara: makeindex
-% arara: pdflatex: { shell: yes }
-% arara: pdflatex: { shell: yes , synctex: yes }
-% !TEX encoding = UTF-8 Unicode
+% arara: makeglossaries
+% arara: pdflatex: { synctex: true }    
+% arara: pdflatex: { synctex: true } 
+
 % !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
-% !TEX root = tabelle.extra.tex
 \documentclass[a4paper,oneside]{book}
 
 \usepackage[extra]{optional}
