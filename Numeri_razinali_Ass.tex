@@ -472,28 +472,7 @@ Ordinare in modo decrescente le seguenti frazioni
 	\end{esempio}
 	\begin{table}
 		\centering
-		\begin{tikzpicture}[auto, -stealth, thick, scale=0.5]
-		% Definizione dei nodi e delle loro scatole
-		\tikzstyle{line} = [draw, -latex']
-		\node[ellipse, minimum height=4em, draw, very thick,inner xsep=3em] at (0,0) (primo) {Inizio};
-		\node[rectangle,minimum height=4em,draw, very thick, text width=5cm,align=flush center] at (0,-5) (secondo) {Calcola mcm fra i denominatori};
-		\node[rectangle,minimum height=4em,draw, very thick, text width=5cm,align=flush center] at (0,-11
-		) (terzo) {Dividi il mcm per denominatore e moltiplico il risultato per il numeratore};
-		\node[diamond,aspect=2,draw, very thick,inner xsep=3em, text width=2cm,align=flush center] at (0,-18) (quarto){ le frazioni sono finite?};
-		\node[rectangle,minimum height=4em,draw, very thick, text width=5cm,align=flush center] at (0,-25) (quinto) {Somma i valori trovati};  		
-		
-		\node[ellipse ,minimum height=4em,draw, very thick,inner xsep=3em] at (0,-29) (sesto) {Fine};
-		% collegamento dei nodi
-		\begin{scope}[every path/.style=line]
-		\path  (primo) --  (secondo);
-		\path (secondo) edge  (terzo);
-		\path (terzo)--(quarto);
-		\path (quarto)  -- node  {SI} (quinto);
-		\path (quarto.west)  -|  node [near start] {NO}+(-5em,0) |- (terzo);
-		\path(quarto)--(quinto);
-		\path(quinto)--(sesto);
-		\end{scope}
-		\end{tikzpicture}
+		\includestandalone[width=0.5\textwidth]{numeri_razionali/diagramma1}
 		\caption{Somma di frazioni}
 		\label{tab:sommadifrazioniASS}
 	\end{table}
@@ -546,12 +525,12 @@ Moltiplicazione numero con frazione
 		 %   \draw[-stealth] (\dist+\x,\h)--(\dist+\x, -\h);
 		 \end{tikzpicture}%
 		   \end{center}
-	
 	\end{esempio}
-	
 	\subsection{Semplificazioni e moltiplicazioni}
-	Semplificare una frazione è possibile quando numeratore e denominatore sono divisibili per lo stesso numero. La semplificazione avviene quindi in verticale come per esempio:
-	\begin{center}
+	Semplificare una frazione è possibile quando numeratore e denominatore sono divisibili per lo stesso numero. 
+	\begin{esempio}
+\begin{center}
+Semplificazione in verticale
 		\begin{tikzpicture}[thick]
 		\def\x{2.8mm}
 		\def\h{2.4mm}
@@ -560,51 +539,60 @@ Moltiplicazione numero con frazione
 		\draw[-stealth] (-\x,\h)--(-\x, -\h);
 		\draw[-stealth] (\x,\h)--(\x, -\h);
 		\end{tikzpicture}%
-	\end{center}
-	
-	Con la moltiplicazione è possibile anche la cosiddetta semplificazione\index{Semplificazione!in croce} in croce come per esempio: 
-	         \begin{center}
-	         	\begin{tikzpicture}[thick]
-	         	\def\x{2.8mm}
-	         	\def\h{2.4mm}
-	         	\def\dist{12mm}%1cm
-	         	\node at (0,0) {$\displaystyle \dfrac{5}{27}$};
-	         	\node  at(-0.5,0.5) {1};
-	         	\node  at(-0.5,-0.5) {3};
-	         	\node at (\dist,0) {$\displaystyle \dfrac{9}{20}$};
-	         	\node at (2*\dist+\x,0) {$\displaystyle =\dfrac{1\cdot 1}{3\cdot 4}=\dfrac{1}{12}$};
-	         	\node at (\dist+10,0.5){1};
-	         	\node at (\dist+10,-0.5){4};
-	         	\draw[-stealth] (\x, \h)--(\dist-\x,-\h);
-	         	\draw[-stealth] (\x,-\h)--(\dist -\x, \h);
-	         	%\draw[-stealth] (-\x,\h)--(-\x, -\h);
-	         	%\draw[-stealth] (\dist+\x,\h)--(\dist+\x, -\h);
-	         	\end{tikzpicture}%
-	         \end{center}	
-	
-	
-	In questo caso è possibile semplificare il denominatore della prima frazione con il numeratore della seconda e il numeratore della prima con il denominatore della seconda.
-
-\subsection{Divisione fra frazioni}
-
-Prima di parlare di divisioni fra frazioni occorre parlare di reciproci. Due numeri sono reciproci\index{Numero!reciproco} se il loro prodotto è uno. Quindi per le frazioni avremo per esempio:\[\dfrac{2}{5}\cdot\dfrac{5}{2}=1\]In questo caso si dice che $\dfrac{2}{5}$ e $\dfrac{5}{2}$ sono frazioni fra loro reciproche.
-Per un numero intero avremo per esempio\[2\cdot\dfrac{1}{2}=1\]
-
-In pratica  avremo che per trovare il reciproco di un numero avremo due casi
+\end{center}
+	\end{esempio}
+Con la moltiplicazione è possibile anche la cosiddetta semplificazione\index{Semplificazione!in croce} in croce. 	In questo caso si semplifica il denominatore della prima frazione con il numeratore della seconda e il numeratore della prima con il denominatore della seconda.
+	       \begin{esempio}
+	    Semplificazione in croce
+	\begin{center}
+		         	\begin{tikzpicture}[thick]
+		         	\def\x{2.8mm}
+		         	\def\h{2.4mm}
+		         	\def\dist{12mm}%1cm
+		         	\node at (0,0) {$\displaystyle \dfrac{5}{27}$};
+		         	\node  at(-0.5,0.5) {1};
+		         	\node  at(-0.5,-0.5) {3};
+		         	\node at (\dist,0) {$\displaystyle \dfrac{9}{20}$};
+		         	\node at (2*\dist+\x,0) {$\displaystyle =\dfrac{1\cdot 1}{3\cdot 4}=\dfrac{1}{12}$};
+		         	\node at (\dist+10,0.5){1};
+		         	\node at (\dist+10,-0.5){4};
+		         	\draw[-stealth] (\x, \h)--(\dist-\x,-\h);
+		         	\draw[-stealth] (\x,-\h)--(\dist -\x, \h);
+		         	%\draw[-stealth] (-\x,\h)--(-\x, -\h);
+		         	%\draw[-stealth] (\dist+\x,\h)--(\dist+\x, -\h);
+		         	\end{tikzpicture}%
+		         \end{center}
+	       \end{esempio} 
+	 \subsection{Divisione fra frazioni}
+Prima di parlare di divisioni fra frazioni occorre parlare di reciproci. Due numeri sono reciproci\index{Numero!reciproco} se il loro prodotto è uno.
+\begin{esempio}
+ Frazioni reciproche\[\dfrac{2}{5}\cdot\dfrac{5}{2}=1\]In questo caso si dice che $\dfrac{2}{5}$ e $\dfrac{5}{2}$ sono frazioni fra loro reciproche.
+\end{esempio}
+\begin{esempio}
+Reciproco di un intero \[2\cdot\dfrac{1}{2}=1\]
+\end{esempio}
+In pratica  vi sono due casi per trovare il reciproco di un numero:
 \begin{enumerate}
 	\item Il numero è una frazione. In questo caso basta scrivere una frazione con numeratore e denominatore scambiato fra loro.
-	\item Il numero è un numero intero. In questo caso basta scrivere una frazione che ha per numeratore uno e per denominatore il numero di partenza 
+	\item Il numero è  intero. In questo caso basta scrivere una frazione che ha per numeratore uno e per denominatore il numero di partenza 
 \end{enumerate}
-
-Per dividere due frazioni bisogna trasformare la divisione nel prodotto della prima per il reciproco della seconda. Esempio
-
+\begin{enumerate}
+\item Per dividere due frazioni bisogna trasformare la divisione nel prodotto della prima per il reciproco della seconda.
+\item Se divido una frazione per un numero, trasformerò la divisione nella moltiplicazione della frazione per il reciproco del numero.
+\end{enumerate}
+\begin{esempio}
+Divisione fra frazioni
 \[\dfrac{7}{4}:\dfrac{4}{5}=\dfrac{7}{4}\cdot\dfrac{5}{4}=\dfrac{7\cdot 5}{5\cdot 4}=\dfrac{35}{20}\]
-
-Se divido una frazione per un numero, trasformerò la divisione nella moltiplicazione della frazione per il reciproco del numero.
-
+\end{esempio}
+\begin{esempio}
+Divisione fra una frazione e un numero
 \[\dfrac{7}{4}:3=\dfrac{7}{4}\cdot\dfrac{1}{3}=\dfrac{7\cdot 1}{4\cdot 3}=\dfrac{7}{12} \]
+\end{esempio}
 \subsection{Potenze}
-
 La potenza di una frazione è uguale alla potenza del numeratore fratto la potenza del denominatore.
+\begin{esempio}
+potenza di una frazione
 \[\left( \dfrac{3}{2}\right)^3=\dfrac{3^3}{2^3}=\dfrac{27}{8} \]
+\end{esempio}
+
 

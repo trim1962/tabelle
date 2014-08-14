@@ -22,17 +22,23 @@ Quando ordiniamo due numeri relativi possiamo avere tre casi
 	\item I due numeri sono concordi negativi: In questo caso è maggiore il numero con modulo più piccolo;
 	\item  I due numeri sono discordi: In questo caso è maggiore il numero positivo;
 \end{enumerate}
-\begin{figure}[!t]
+\begin{figure} 
 	\centering
-	\begin{tikzpicture}[>=triangle  45]
-	\draw [->](-7,0)--(7,0);
-	\foreach \x in {-7,-6,...,7}
-	\draw (\x,0) -- (\x,-.1) node[below] {$\x$};
-	%\node (a) at (\x,0.6) {$\x$};
-	\end{tikzpicture}
-	\caption{Ordinamento}
-	\label{fig:ordinamentonumrel}
-\end{figure}
+\includestandalone[width=.9\textwidth]{numeri_relativi/Z_rettaOrientata}
+	\caption{Retta orientata}
+	\label{fig:ordinamentonumrel}\end{figure}
+%\begin{figure} 
+%\begin{figure}[!t]
+%	\centering
+%	\begin{tikzpicture}[>=triangle  45]
+%	\draw [->](-7,0)--(7,0);
+%	\foreach \x in {-7,-6,...,7}
+%	\draw (\x,0) -- (\x,-.1) node[below] {$\x$};
+%	%\node (a) at (\x,0.6) {$\x$};
+%	\end{tikzpicture}
+%	\caption{Ordinamento}
+%	\label{fig:ordinamentonumrel}
+%\end{figure}
 \section{Operazioni con i numeri relativi}
 \label{sec:Operazioniconnumerirelativi}
 I numeri relativi sono formati da due parti, quindi un'operazione deve definire delle regole che permettano di determinare il segno e il modulo del risultato.
