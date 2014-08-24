@@ -1,13 +1,11 @@
-% Tikz File 'mytikz.tex'
-\documentclass{standalone}
-%\input{../../Mod_base/grafica}
+\documentclass[preview=true]{standalone}
 \input{../Mod_base/grafica}
-
+\input{../Mod_base/base}
 \pgfplotsset{
 %compat=1.8,
 every axis plot/.append style={
   no marks,
-  blue,
+  black,
   thick
   },
 every axis/.style={
@@ -35,8 +33,7 @@ empty legend
 }
 
 \begin{document}
-	
-	\begin{tikzpicture}
+\begin{tikzpicture}
 	\begin{axis}[xmin=-1,xmax=1,ymin=-pi/2,ymax=pi/2,enlargelimits=true,xtick={-1,-0.5,...,1},ytick={-1.570796,-0.7853981,0,0.7853981,1.570796},
 	    yticklabels={
 	    $-\frac{\pi}{2}$,$-\frac{\pi}{4}$,$0$,$\frac{\pi}{4}$,$\frac{\pi}{2}$
