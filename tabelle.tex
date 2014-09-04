@@ -41,7 +41,10 @@
 \loadglsentries{glossario/glossari2}
 \loadglsentries[altacronym]{glossario/acronimi1}
 }
-
+\opt{terzo}{
+\loadglsentries{glossario/glossari3}
+\loadglsentries[altacronym]{glossario/acronimi1}
+}
 %Simboli logici
 \usepackage{gn-logic14}
 \newcommand{\tabincludegraphics}[2][]{%
@@ -49,7 +52,7 @@
 \newcommand{\tabincludestandalone}[2][]{%
 	$\vcenter{\hbox{\includestandalone[#1]{#2}}}$}
 
-%--------- Indici localixcxddd  
+
 
 % % % % % % % % % % % % % % % % % braille
 \usepackage[puttinydots]{braille}

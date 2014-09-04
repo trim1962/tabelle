@@ -1,33 +1,159 @@
 \chapter{Equazioni}
 \label{sec:equazioni}
-\section{definizioni}
-Un'equazione è l'uguaglianza fra due espressioni. Dato che dipende dai valori che vengono assegnati alle lettere un'equazione è un'uguaglianza condizionata. Le lettere sono chiamate variabili. 
-\begin{table}[H]
-\centering
-\begin{tabular}{LCR}
-\toprule
-+a&=&\ldots\\
-\ldots&=&-a\\
-\bottomrule
-\end{tabular}
-\caption{Regola del trasporto}
-\label{tab:regtrasporto}
-\end{table}
-\begin{table}[H]
-\centering
+\section{Definizioni}
+Un'equazione\index{Equazione} è l'uguaglianza fra due espressioni. Dato che dipende dai valori che vengono assegnati alle lettere un'equazione è un'uguaglianza condizionata. I valori, che sostituiti alle lettere rendono vere l'uguaglianza,  sono chiamate soluzioni\index{Equazione!soluzione} . 
+\begin{esempio}
+\begin{itemize}
+\item $2+3=3+5$ non è un'equazione. Mancano le lettere.
+\item $2+x=3x+5y$ è un'equazione. 
+\item $z+3x=0$ è un'equazione.
+\end{itemize}
+\end{esempio}
+\begin{esempio}
+Data l'equazione $2x-5=x+2$ $x=7$ è soluzione infatti $2\cdot 7-5=7+2$ $9=9$ l'uguaglianza è verificata. Mentre per $x=3$ $2\cdot 3-5=7+2$ $1\neq5$ quindi non è soluzione.
+\end{esempio}
+Le lettere sono chiamate variabili\index{Equazione!variabile} o costanti\index{Equazione!costante}. Una variabile o incognita è una quantità non nota a priori che può assumere qualunque valore. Una costante è una quantità non nota ma fissa. Di solito si usano $x,y,z$ per indicare le incognite $a,b,c,\dots$ per indicare le costanti.  
 
-\begin{tabular}{LCR}
-\toprule
-\dfrac{\cdots\cdots}{a}&=&\dfrac{\cdots\cdots}{a}\\
-&\\
-a\cdot\dfrac{\cdots\cdots}{a}&=&a\cdot\dfrac{\cdots\cdots}{a}\\
-&\\
-\cdots\cdots&=&\cdots\cdots\\
-\bottomrule
-\end{tabular}
-\caption{Semplificazione denominatore}
-\label{tab:Semplificazionedenominatore}
-\end{table}
+Un'equazione in cui compare una sola lettera è detta in una incognita, con due diverse in due incognite eccetera. Il segno di uguaglianza divide l'equazione in due parti, la parte a sinistra chiamata primo membro, la parte a destra secondo membro.
+\section{Principi di equivalenza}
+Due o più equazioni sono equivalenti\index{Equazione!equivalente} se hanno le stesse soluzioni.
+\begin{esempio}
+Le equazioni 
+\begin{align*}
+5x+4&=4x+3\\
+3x+2&=2x+3
+\end{align*}
+hanno la stessa soluzione
+\begin{align*}
+5x+4&=4x+3\\
+5\cdot(-1)+4&=4\cdot(-1)+3\\
+-1&=-1\\
+3x+2&=2x+3\\
+3\cdot(-1)+2&=2\cdot(-1)+3\\
+-1&=-1
+\end{align*}
+Quindi le due equazioni sono equivalenti.
+\end{esempio}
+\subsection{Primo principio di equivalenza}
+\label{sec:PrimoprincipioEquivalenza}
+Se aggiungiamo o togliamo la stessa quantità\footnote{Quantità definita} al primo e al secondo membro di una equazione,  otteniamo un'equazione  equivalente\index{Equazione!equivalente} a quella di partenza.
+\begin{esempio}
+\begin{align*}
+8x+14&=6x+10
+\intertext{aggiungendo $+10$ ad entrambi i membri}
+8x+14+10&=6x+10+10\\
+8x+24&=6x+20
+\intertext{le due equazioni sono equivalenti infatti}
+8\cdot(-2)+14&=6\cdot(-2)+10\\
+8&=8\\
+8\cdot(-2)+14&=6\cdot(-2)+10\\
+-2&=-2
+\intertext{quindi $-2$ è soluzione per entrambe}
+\end{align*}
+\end{esempio}
+\subsection{Conseguenze primo principio}
+Se un termine passa  dal primo al secondo membro di una equazione o viceversa cambia di segno.
+\begin{esempio}
+\begin{NodesList}[dy=5pt,margin=3cm]
+ \[ % formula no "inline"
+ \begin{aligned}
+ x+5 &= 8 \AddNode\\
+ x +5-5 &= 8-5 \AddNode\\
+ x + 0 &= 8-5 \AddNode
+ \end{aligned}
+ \]
+ \LinkNodes{\begin{minipage}{2cm}
+aggiungo $-5$ ad entrambi i membri
+ \end{minipage}
+ }
+ \LinkNodes{ $5-5=0$ }
+ \end{NodesList}
+ in pratica
+ \begin{NodesList}[dy=5pt,margin=3cm]
+  \[ % formula no "inline"
+  \begin{aligned}
+  x+5 &= 8 \AddNode\\
+  x  &= 8-5 \AddNode
+  \end{aligned}
+  \]
+  \LinkNodes{\begin{minipage}{2cm}
+ sposto e cambio di segno
+  \end{minipage}
+  }
+  \end{NodesList}
+\end{esempio}
+Se la stessa quantità è presente nel primo o secondo membro dell'equazione allora può essere eliminata.
+\begin{esempio}
+\begin{NodesList}[dy=5pt,margin=3cm]
+ \[ % formula no "inline"
+ \begin{aligned}
+ x+5 &= 8+5 \AddNode\\
+ x +5-5 &= 8+5-5 \AddNode\\
+ x + 0 &= 8+0 \AddNode
+ \end{aligned}
+ \]
+ \LinkNodes{\begin{minipage}{2cm}
+aggiungo $-5$ ad entrambi i membri
+ \end{minipage}
+ }
+ \LinkNodes{ $5-5=0$ }
+ \end{NodesList}
+ in pratica
+ \begin{NodesList}[dy=5pt,margin=3cm]
+  \[ % formula no "inline"
+  \begin{aligned}
+  x+5 &= 8+5 \AddNode\\
+  x  &= 8 \AddNode
+  \end{aligned}
+  \]
+  \LinkNodes{\begin{minipage}{2cm}
+semplifico
+  \end{minipage}
+  }
+  \end{NodesList}
+\end{esempio}
+\subsection{Secondo principio di equivalenza}
+\label{sec:SecondoprincipioEquivalenza}
+Se moltiplichiamo o dividiamo per  la stessa quantità diversa da zero il primo e il secondo membro di una equazione,  otteniamo un'equazione  equivalente\index{Equazione!equivalente} a quella di partenza.
+\begin{esempio}
+\begin{align*}
+2x+2&=x+5
+\intertext{moltiplico per  $+5$  entrambi i membri}
+5\cdot(2x+2)&=5\cdot(x+5)\\
+10x+10&=5x+25
+\intertext{le due sono equivalenti infatti}
+2\cdot(3)+2&=3+5\\
+8&=8\\
+10\cdot(3)+10&=5\cdot(3)+25\\
+40&=40
+\intertext{quindi $-2$ è soluzione per entrambe}
+\end{align*}
+\end{esempio}
+%\begin{table}[H]
+%\centering
+%\begin{tabular}{LCR}
+%\toprule
+%+a&=&\ldots\\
+%\ldots&=&-a\\
+%\bottomrule
+%\end{tabular}
+%\caption{Regola del trasporto}
+%\label{tab:regtrasporto}
+%\end{table}
+%\begin{table}[H]
+%\centering
+%\begin{tabular}{LCR}
+%\toprule
+%\dfrac{\cdots\cdots}{a}&=&\dfrac{\cdots\cdots}{a}\\
+%&\\
+%a\cdot\dfrac{\cdots\cdots}{a}&=&a\cdot\dfrac{\cdots\cdots}{a}\\
+%&\\
+%\cdots\cdots&=&\cdots\cdots\\
+%\bottomrule
+%\end{tabular}
+%\caption{Semplificazione denominatore}
+%\label{tab:Semplificazionedenominatore}
+%\end{table}
 %\begin{table}[H]
 %
 %\centering
