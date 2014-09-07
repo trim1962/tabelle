@@ -58,3 +58,6 @@ tabelle.primo.ptc
 *.gls
 *.ist
 *.blg
+*.sbl
+*.slg
+*.sym
